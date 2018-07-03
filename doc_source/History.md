@@ -1,9 +1,7 @@
 # Document History<a name="History"></a>
 
 The following table describes the important changes to the documentation since the last release of the AWS Support service\.
-
 + **API version:** 2013\-04\-15
-
 + **Latest documentation update:** February 19, 2018
 
 

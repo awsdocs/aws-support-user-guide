@@ -9,13 +9,9 @@ To learn more about CloudTrail, including how to configure and enable it, see th
 The CloudTrail API activity history feature lets you look up and filter events captured by CloudTrail\. You can look up events related to the creation, modification, or resolution of support cases in your AWS account\. Events can be looked up by using the CloudTrail console, or programmatically by using the AWS SDKs or AWS CLI \([lookup\-events](http://docs.aws.amazon.com/cli/latest/reference/cloudtrail/lookup-events.html)\)\. 
 
 The following actions are supported:
-
 + [AddAttachmentsToSet](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html)
-
 + [AddCommunicationToCase](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html)
-
 + [CreateCase](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html)
-
 + [ResolveCase](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html)
 
 ## AWS Support Information in CloudTrail Logging<a name="aws-support-info-in-cloudtrail-logging"></a>
@@ -23,31 +19,19 @@ The following actions are supported:
 When CloudTrail logging is enabled in your AWS account, API calls made to specific AWS Support actions are tracked in CloudTrail log files\. AWS Support actions are written with other AWS service records\. CloudTrail determines when to create and write to a new file based on a time period and file size\.
 
 The following actions are supported:
-
 + [AddAttachmentsToSet](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html)
-
 + [AddCommunicationToCase](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html)
-
 + [CreateCase](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html)
-
 + [DescribeAttachment](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeAttachment.html)
-
 + [DescribeCases](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCases.html)
-
 + [DescribeCommunications](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCommunications.html)
-
 + [DescribeServices](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeServices.html)
-
 + [DescribeSeverityLevels](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeSeverityLevels.html)
-
 + [ResolveCase](http://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html)
 
 Every log entry contains information about who generated the request\. The user identity information in the log entry helps you determine the following: 
-
 + Whether the request was made with root or IAM user credentials
-
 + Whether the request was made with temporary security credentials for a role or federated user
-
 + Whether the request was made by another AWS service
 
 For more information, see the [CloudTrail userIdentity Element](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.

@@ -2,7 +2,7 @@
 
 The AWS Support service enables you to write applications that interact with [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/)\. This topic shows you how to get a list of Trusted Advisor checks, refresh one of them, and obtain the detailed results from the check\. These tasks are demonstrated in Java\. For information about support for other languages, see [Tools for Amazon Web Services](http://aws.amazon.com/tools/)\. 
 
-
+**Topics**
 + [Get the List of Available Trusted Advisor Checks](#Get_TA_Checks)
 + [Request a Trusted Advisor Check Result](#requestcheck)
 + [Poll a Trusted Advisor Check for Status Changes](#getcheckstatus)

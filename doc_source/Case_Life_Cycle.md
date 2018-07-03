@@ -4,7 +4,7 @@ The AWS Support API enables you to create cases and add correspondence to them t
 
 For detailed information, see the [AWS Support API Reference](http://docs.aws.amazon.com/awssupport/latest/APIReference/Welcome.html)\. 
 
-
+**Topics**
 + [Overview](#Overview)
 + [Create an AWS Support Client](#getclient)
 + [Discover AWS Services and Issue Severity Levels](#discoverservices)
@@ -143,25 +143,16 @@ public static string createAttachmentSet() throws IOException
 ## Create a Support Case<a name="createcase"></a>
 
 To create an AWS Support case using the AWS Support service, populate a `CreateCaseRequest` instance with the following information:
-
 + `ServiceCode`\. The AWS Support service code you obtained by calling `DescribeServices` as described in the previous section\. 
-
 + `CategoryCode`\.The category code that describes the type of issue the support case concerns\. 
-
 + `Language`\. A code for the language in which AWS Support provides support\. Currently, AWS supports English \(`en`\) and Japanese \(`ja`\)\. 
-
 + `CcEmailAddresses`\. A list of email addresses to receive copies of subsequent communications\. 
-
 + `CommunicationBody`\. Text for the body of the initial case submission\. 
-
 + `Subject`\. A title for the support case\. 
-
 + `SeverityCode`\. One of the values returned by the call to `DescribeSeverityLevels`\. 
-
 + `AttachmentSetId`\. \(Optional\) The ID of a set of file attachments to include with the case\. The `AddAttachmentsToSet` operation returns the ID\.
 
 The following Java code snippet collects values for each of the case creation parameters from the command line\. It then populates a `CreateCaseRequest` instance and passes them to AWS Support by calling the `createCase` method on an `AWSSupportClient` instance\. If the call is successful, it returns an AWS Support `CaseId` value in the format:
-
 + ` case-123456789012-muen-2012-74a757cd8cf7558a `
 
 **Note**  
