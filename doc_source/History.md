@@ -2,11 +2,14 @@
 
 The following table describes the important changes to the documentation since the last release of the AWS Support service\.
 + **API version:** 2013\-04\-15
-+ **Latest documentation update:** February 19, 2018
++ **Latest documentation update:** January 10, 2020
 
 
 | Change | Description | Date Changed | 
 | --- | --- | --- | 
+| Security & AWS Support | Added information about security considerations when using AWS Support\. | January 10, 2020 | 
+| Using Trusted Advisor as a Web Service | Added updated instructions to refresh Trusted Advisor data after getting list of Trusted Advisor checks\. | November 01, 2018 | 
+| Using Service\-Linked Roles | Added new section\. | July 11, 2018 | 
 | Getting Started: Troubleshooting | Added troubleshooting links for Route 53 and AWS Certificate Manager\. | September 1, 2017 | 
 | Case Management Example: Creating a Case | Added a note about the CC box for users who have the Basic support plan\. | August 1, 2017 | 
 | Monitoring Trusted Advisor Check Results with CloudWatch Events | Added new section\. | November 18, 2016 | 

@@ -1,21 +1,21 @@
 # Monitoring Trusted Advisor Check Results with Amazon CloudWatch Events<a name="cloudwatch-events-ta"></a>
 
-You can use Amazon CloudWatch Events to detect and react to changes in the status of Trusted Advisor checks\. Then, based on rules you create, CloudWatch Events invokes one or more target actions when a check status changes to the value you specify in a rule\. Depending on the type of status change, you might want to send notifications, capture status information, take corrective action, initiate events, or take other actions\. You can select the following types of targets when using CloudWatch Events as a part of your Trusted Advisor workflow:
+You can use Amazon CloudWatch Events to detect and react to changes in the status of Trusted Advisor checks\. Then, based on the rules that you create, CloudWatch Events invokes one or more target actions when a check status changes to the value you specify in a rule\. Depending on the type of status change, you might want to send notifications, capture status information, take corrective action, initiate events, or take other actions\. You can select the following types of targets when using CloudWatch Events as a part of your Trusted Advisor workflow:
 + AWS Lambda functions
-+ Kinesis streams
-+ Amazon SQS queues
++ Amazon Kinesis streams
++ Amazon Simple Queue Service queues
 + Built\-in targets \(CloudWatch alarm actions\)
-+ Amazon SNS topics
++ Amazon Simple Notification Service topics
 
 The following are some use cases:
 + Use a Lambda function to pass a notification to a Slack channel when check status changes\.
-+ Push data about checks to an Kinesis stream to support comprehensive, real\-time status monitoring\.
++ Push data about checks to a Kinesis stream to support comprehensive, real\-time status monitoring\.
 
-For examples of using CloudWatch Events and Lambda functions to automate the response to Trusted Advisor check results, see [Trusted Advisor Tools](https://github.com/aws/Trusted-Advisor-Tools)\. 
+For examples of using CloudWatch Events and Lambda functions to automate the response to Trusted Advisor check results, see [Trusted Advisor Tools](https://github.com/aws/Trusted-Advisor-Tools)\.
 
 The remainder of this topic describes the basic procedure for creating a CloudWatch Events rule for Trusted Advisor\. Before you create event rules for Trusted Advisor, however, you should do the following:
-+ Familiarize yourself with events, rules, and targets in CloudWatch Events\. For more information, see [What Is Amazon CloudWatch Events?](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html) and [New CloudWatch Events – Track and Respond to Changes to Your AWS Resources](https://aws.amazon.com/blogs/aws/new-cloudwatch-events-track-and-respond-to-changes-to-your-aws-resources/)\.
-+ Create the target or targets you will use in your event rules\. 
++ Familiarize yourself with events, rules, and targets in CloudWatch Events\. For more information, see [What Is Amazon CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html) and [New CloudWatch Events – Track and Respond to Changes to Your AWS Resources](https://aws.amazon.com/blogs/aws/new-cloudwatch-events-track-and-respond-to-changes-to-your-aws-resources/)\.
++ Create the target or targets you will use in your event rules\.
 
 **To create a CloudWatch Events rule for Trusted Advisor:**
 
@@ -33,20 +33,20 @@ The remainder of this topic describes the basic procedure for creating a CloudWa
 
 1. Specify Trusted Advisor checks:
    + To make a rule that applies to all Trusted Advisor checks, choose **Any check**\.
-   + To make a rule that applies to some checks only, choose **Specific check\(s\)**, and then choose one or more check names from the list\. 
+   + To make a rule that applies to some checks only, choose **Specific check\(s\)**, and then choose one or more check names from the list\.
 
 1. Specify AWS resources:
    + To make a rule that applies to all resources, choose **Any resource ID**\.
-   + To make a rule that applies to one or more resources only, choose **Specific resource ID\(s\) by ARN**, and then type the ARNs of the resources\.
+   + To make a rule that applies to one or more resources only, choose **Specific resource ID\(s\) by ARN**\. Then, enter the ARNs of the resources\.
 
 1. Review your rule setup to make sure it meets your event\-monitoring requirements\.
 
 1. In the **Targets** area, choose **Add target\***\.
 
-1. In the **Select target type** list, choose the type of target you have prepared to use with this rule, and then configure any additional options required by that type\. 
+1. In the **Select target type** list, choose the type of target you prepared to use with this rule\. Then, configure any additional options required by that type\.
 
 1. Choose **Configure details**\.
 
-1. On the **Configure rule details** page, type a name and description for the rule\. To enable the rule as soon as it is created, choose the **State** box\.
+1. On the **Configure rule details** page, enter a name and description for the rule\. To enable the rule as soon as it's created, choose the **State** box\.
 
 1. If you're satisfied with the rule, choose **Create rule**\.

@@ -1,7 +1,7 @@
 # AWS Support User Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -16,7 +16,7 @@ Amazon's trademarks and trade dress may not be used in
 ## Contents
 + [Getting Started with AWS Support](getting-started.md)
 + [About the AWS Support API](Welcome.md)
-+ [Programming the Life of an AWS Support Case](Case_Life_Cycle.md)
++ [Programming an AWS Support Case](Case_Life_Cycle.md)
 + [Using Service-Linked Roles](using-service-linked-roles-intro.md)
    + [Using Service-Linked Roles for AWS Support](using-service-linked-roles-sup.md)
    + [Using Service-Linked Roles for Trusted Advisor](using-service-linked-roles-ta.md)
@@ -25,5 +25,13 @@ Amazon's trademarks and trade dress may not be used in
 + [Monitoring Trusted Advisor with Amazon CloudWatch Events and Amazon CloudWatch](cloudwatch-ta.md)
    + [Monitoring Trusted Advisor Check Results with Amazon CloudWatch Events](cloudwatch-events-ta.md)
    + [Creating Trusted Advisor Alarms Using CloudWatch](cloudwatch-metrics-ta.md)
++ [Security in AWS Support](security.md)
+   + [Identity and Access Management for AWS Support](security-iam.md)
+      + [How AWS Support Works with IAM](security_iam_service-with-iam.md)
+      + [AWS Support Identity-Based Policy Examples](security_iam_id-based-policy-examples.md)
+      + [Troubleshooting AWS Support Identity and Access](security_iam_troubleshoot.md)
+   + [Compliance Validation for AWS Support](support-compliance.md)
+   + [Resilience in AWS Support](disaster-recovery-resiliency.md)
+   + [Infrastructure Security in AWS Support](infrastructure-security.md)
 + [Document History](History.md)
 + [AWS Glossary](glossary.md)
