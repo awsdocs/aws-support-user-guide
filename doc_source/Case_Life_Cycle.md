@@ -55,7 +55,7 @@ public static void getServiceCodes(AWSSupportClient client)
     for (Service service : result.getServices()) 
     {
         System.out.println("Service code (name): " + 
-            service.getCode() + service.getName() + ")");
+            service.getCode() + "(" + service.getName() + ")");
         for (Category category : service.getCategories())
         {
             System.out.println("    Category code (name): " + 
