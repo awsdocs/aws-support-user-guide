@@ -1,4 +1,4 @@
-# Monitoring Trusted Advisor Check Results with Amazon CloudWatch Events<a name="cloudwatch-events-ta"></a>
+# Monitoring Trusted Advisor check results with Amazon CloudWatch Events<a name="cloudwatch-events-ta"></a>
 
 You can use Amazon CloudWatch Events to detect and react to changes in the status of Trusted Advisor checks\. Then, based on the rules that you create, CloudWatch Events invokes one or more target actions when a check status changes to the value you specify in a rule\. Depending on the type of status change, you might want to send notifications, capture status information, take corrective action, initiate events, or take other actions\. You can select the following types of targets when using CloudWatch Events as a part of your Trusted Advisor workflow:
 + AWS Lambda functions
@@ -11,10 +11,10 @@ The following are some use cases:
 + Use a Lambda function to pass a notification to a Slack channel when check status changes\.
 + Push data about checks to a Kinesis stream to support comprehensive, real\-time status monitoring\.
 
-For examples of using CloudWatch Events and Lambda functions to automate the response to Trusted Advisor check results, see [Trusted Advisor Tools](https://github.com/aws/Trusted-Advisor-Tools)\.
+For examples of using CloudWatch Events and Lambda functions to automate the response to Trusted Advisor check results, see [Trusted Advisor tools](https://github.com/aws/Trusted-Advisor-Tools)\.
 
 The remainder of this topic describes the basic procedure for creating a CloudWatch Events rule for Trusted Advisor\. Before you create event rules for Trusted Advisor, however, you should do the following:
-+ Familiarize yourself with events, rules, and targets in CloudWatch Events\. For more information, see [What Is Amazon CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html) and [New CloudWatch Events – Track and Respond to Changes to Your AWS Resources](https://aws.amazon.com/blogs/aws/new-cloudwatch-events-track-and-respond-to-changes-to-your-aws-resources/)\.
++ Familiarize yourself with events, rules, and targets in CloudWatch Events\. For more information, see [What is Amazon CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html) and [New CloudWatch Events – track and respond to changes to your AWS resources](https://aws.amazon.com/blogs/aws/new-cloudwatch-events-track-and-respond-to-changes-to-your-aws-resources/)\.
 + Create the target or targets you will use in your event rules\.
 
 **To create a CloudWatch Events rule for Trusted Advisor:**

@@ -1,15 +1,15 @@
-# Using Trusted Advisor as a Web Service<a name="trustedadvisor"></a>
+# Using Trusted Advisor as a web service<a name="trustedadvisor"></a>
 
 The AWS Support service enables you to write applications that interact with [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/)\. This topic shows you how to get a list of Trusted Advisor checks, refresh one of them, and then get the detailed results from the check\. These tasks are demonstrated in Java\. For information about support for other languages, see [Tools for Amazon Web Services](http://aws.amazon.com/tools/)\.
 
 **Topics**
-+ [Get the List of Available Trusted Advisor Checks](#Get_TA_Checks)
-+ [Refresh the List of Available Trusted Advisor Checks](#Request_TA_Data)
-+ [Poll a Trusted Advisor Check for Status Changes](#getcheckstatus)
-+ [Request a Trusted Advisor Check Result](#requestcheck)
-+ [Print Details of a Trusted Advisor Check](#printdetails)
++ [Get the list of available Trusted Advisor checks](#Get_TA_Checks)
++ [Refresh the list of available Trusted Advisor checks](#Request_TA_Data)
++ [Poll a Trusted Advisor check for status changes](#getcheckstatus)
++ [Request a Trusted Advisor check result](#requestcheck)
++ [Print details of a Trusted Advisor check](#printdetails)
 
-## Get the List of Available Trusted Advisor Checks<a name="Get_TA_Checks"></a>
+## Get the list of available Trusted Advisor checks<a name="Get_TA_Checks"></a>
 
 The following Java code snippet creates an instance of an AWS Support client that you can use to call all Trusted Advisor actions\. Next, the code gets the list of Trusted Advisor checks and their corresponding `CheckId` values by calling the `[DescribeTrustedAdvisorChecks](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorChecks.html)` action\. You can use this information to build user interfaces that enable users to select the check they want to run or refresh\.
 
@@ -31,7 +31,7 @@ public static void getTAChecks() {
 }
 ```
 
-## Refresh the List of Available Trusted Advisor Checks<a name="Request_TA_Data"></a>
+## Refresh the list of available Trusted Advisor checks<a name="Request_TA_Data"></a>
 
 The following Java code snippet creates an instance of an AWS Support client that you can use to refresh Trusted Advisor data\.
 
@@ -48,7 +48,7 @@ public static void refreshTACheck(final String checkId) {
 }
 ```
 
-## Poll a Trusted Advisor Check for Status Changes<a name="getcheckstatus"></a>
+## Poll a Trusted Advisor check for status changes<a name="getcheckstatus"></a>
 
 After you submit the request to run a Trusted Advisor check to generate the latest status data, you use the `[DescribeTrustedAdvisorCheckRefreshStatuses](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorCheckRefreshStatuses.html)` action to request the progress of the check's run, and when new data is ready for the check\. 
 
@@ -114,7 +114,7 @@ public static void pollForTACheckResultChanges(final String checkId) throws Inte
 }
 ```
 
-## Request a Trusted Advisor Check Result<a name="requestcheck"></a>
+## Request a Trusted Advisor check result<a name="requestcheck"></a>
 
 After you select the check for the detailed results that you want, you submit a request by using the `[DescribeTrustedAdvisorCheckResult](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorCheckResult.html)` action\.
 
@@ -134,7 +134,7 @@ public static TrustedAdvisorCheckResult getTACheckResult(final String checkId) {
 
 **Note:** Requesting a Trusted Advisor Check Result doesn't generate updated results data\.
 
-## Print Details of a Trusted Advisor Check<a name="printdetails"></a>
+## Print details of a Trusted Advisor check<a name="printdetails"></a>
 
 The following Java code snippet iterates over the `DescribeTrustedAdvisorCheckResultResult` instance returned in the previous section to get a list of resources flagged by the Trusted Advisor check\.
 

@@ -1,20 +1,20 @@
 # About the AWS Support API<a name="Welcome"></a>
 
-The AWS Support API provides access to some of the features of the [AWS Support Center](https://console.aws.amazon.com/support/home#/)\. AWS provides this access for [AWS Support](https://aws.amazon.com/premiumsupport/) customers who have a Business or Enterprise support plan\.
+The AWS Support API provides access to some of the features of the [AWS AWS Service Catalog](https://console.aws.amazon.com/support/home#/)\. AWS provides this access for [AWS Support](https://aws.amazon.com/premiumsupport/) customers who have a Business or Enterprise support plan\.
 
 The service currently provides two different groups of operations:
-+ [Support Case Management](#casemanagement) operations to manage the entire life cycle of your AWS support cases, from creating a case to resolving it\.
++ [Support case management](#casemanagement) operations to manage the entire life cycle of your AWS support cases, from creating a case to resolving it\.
 + [Trusted Advisor](#trustedadvisorsection) operations to access the checks provided by [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/)\.
 
 For information about the operations and data types provided by AWS Support, see the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/)\.
 
 **Topics**
-+ [Support Case Management](#casemanagement)
++ [Support case management](#casemanagement)
 + [Trusted Advisor](#trustedadvisorsection)
 + [Endpoint](#endpoint)
 + [Support in AWS SDKs](#sdksupport)
 
-## Support Case Management<a name="casemanagement"></a>
+## Support case management<a name="casemanagement"></a>
 
 Using the operations for support case management, you can perform these tasks:
 + Open a support case\.
@@ -23,9 +23,9 @@ Using the operations for support case management, you can perform these tasks:
 + Add communications and file attachments to your cases, and add the email recipients for case correspondence\.
 + Resolve your cases\.
 
-The AWS Support API supports CloudTrail logging for support case management operations\. For more information, see [Logging AWS Support API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
+The AWS Support API supports CloudTrail logging for support case management operations\. For more information, see [Logging AWS Support API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
 
-For example Java code that demonstrates how to manage the entire life cycle of an AWS Support case, see [Programming an AWS Support Case](Case_Life_Cycle.md)\. 
+For example Java code that demonstrates how to manage the entire life cycle of an AWS Support case, see [Programming an AWS Support case](Case_Life_Cycle.md)\. 
 
 ## Trusted Advisor<a name="trustedadvisorsection"></a>
 
@@ -36,9 +36,9 @@ Using the Trusted Advisor operations, you can perform these tasks:
 + Request that Trusted Advisor checks be refreshed\.
 + Obtain the status of each Trusted Advisor check you have requested\.
 
-The AWS Support API supports CloudWatch Events for Trusted Advisor operations\. For more information, see [Monitoring Trusted Advisor Check Results with Amazon CloudWatch Events](cloudwatch-events-ta.md)\.
+The AWS Support API supports CloudWatch Events for Trusted Advisor operations\. For more information, see [Monitoring Trusted Advisor check results with Amazon CloudWatch Events](cloudwatch-events-ta.md)\.
 
-For an example that uses the Trusted Advisor operations, see [Using Trusted Advisor as a Web Service](trustedadvisor.md)\.
+For an example that uses the Trusted Advisor operations, see [Using Trusted Advisor as a web service](trustedadvisor.md)\.
 
 ## Endpoint<a name="endpoint"></a>
 
@@ -48,7 +48,7 @@ Use this endpoint to access AWS Support:
 **Warning**  
 The AWS Support endpoint creates cases in the production database\. Be sure that you include a subject line, such as **TEST CASE\-\-Please ignore**, when you call `[CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html)` for testing, and close the test cases you create by calling `[ResolveCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html)`\.
 
-For additional information about using AWS endpoints, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *Amazon Web Services General Reference*\.
+For additional information about using AWS endpoints, see [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *Amazon Web Services General Reference*\.
 
 ## Support in AWS SDKs<a name="sdksupport"></a>
 
