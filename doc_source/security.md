@@ -9,7 +9,11 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using AWS Support\. The following topics show you how to configure AWS Support to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your AWS Support resources\. 
 
 **Topics**
++ [Data protection in AWS Support](data-protection.md)
 + [Identity and access management for AWS Support](security-iam.md)
++ [Incident response](incident-response.md)
++ [Logging and Monitoring in AWS Support](monitoring-overview.md)
 + [Compliance validation for AWS Support](support-compliance.md)
 + [Resilience in AWS Support](disaster-recovery-resiliency.md)
 + [Infrastructure security in AWS Support](infrastructure-security.md)
++ [Configuration and vulnerability analysis in AWS Support](vulnerability-analysis-and-management.md)

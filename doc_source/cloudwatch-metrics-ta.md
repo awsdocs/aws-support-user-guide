@@ -2,7 +2,7 @@
 
 You can use Amazon CloudWatch to create alarms on Trusted Advisor metrics for check status changes, resource status changes, and service limit utilization\. Depending on your requirements, you might create multiple alarms\.
 
-Follow the basic procedure described here to create a CloudWatch alarm for Trusted Advisor\. Before you create alarms for Trusted Advisor metrics, however, you should do the following:
+Follow the procedure described here to create a CloudWatch alarm for Trusted Advisor\. Before you create alarms for Trusted Advisor metrics, do the following:
 + Familiarize yourself with metrics and alarms in CloudWatch\. For more information, see [What is Amazon CloudWatch?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html)
 + Refresh your checks through the Trusted Advisor console or through the AWS Support API\.
 

@@ -17,7 +17,7 @@ The remainder of this topic describes the basic procedure for creating a CloudWa
 + Familiarize yourself with events, rules, and targets in CloudWatch Events\. For more information, see [What is Amazon CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html) and [New CloudWatch Events – track and respond to changes to your AWS resources](https://aws.amazon.com/blogs/aws/new-cloudwatch-events-track-and-respond-to-changes-to-your-aws-resources/)\.
 + Create the target or targets you will use in your event rules\.
 
-**To create a CloudWatch Events rule for Trusted Advisor:**
+**To create a CloudWatch Events rule for Trusted Advisor**
 
 1. Open the CloudWatch console at [https://console\.aws\.amazon\.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/)\.
 

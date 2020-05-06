@@ -1,6 +1,6 @@
 # About the AWS Support API<a name="Welcome"></a>
 
-The AWS Support API provides access to some of the features of the [AWS AWS Service Catalog](https://console.aws.amazon.com/support/home#/)\. AWS provides this access for [AWS Support](https://aws.amazon.com/premiumsupport/) customers who have a Business or Enterprise support plan\.
+The AWS Support API provides access to some of the features of the [AWS Service Catalog](https://console.aws.amazon.com/support/home#/)\. AWS provides this access for [AWS Support](https://aws.amazon.com/premiumsupport/) customers who have a Business or Enterprise support plan\.
 
 The service currently provides two different groups of operations:
 + [Support case management](#casemanagement) operations to manage the entire life cycle of your AWS support cases, from creating a case to resolving it\.

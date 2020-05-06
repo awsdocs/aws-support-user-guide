@@ -18,26 +18,22 @@ For an ongoing record of events in your AWS account, including events for AWS Su
 + [Configuring Amazon SNS notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
 + [Receiving CloudTrail log files from multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail log files from multiple accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
-AWS Support supports logging the following actions as events in CloudTrail log files:
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html)
-
 ## AWS Support information in CloudTrail logging<a name="aws-support-info-in-cloudtrail-logging"></a>
 
-When CloudTrail logging is enabled in your AWS account, API calls made to specific AWS Support actions are tracked in CloudTrail log files\. AWS Support actions are written with other AWS service records\. CloudTrail determines when to create and write to a new file based on a time period and file size\.
+When CloudTrail logging is enabled in your AWS account, API calls made to specific AWS Support operations are tracked in CloudTrail log files\. AWS Support operations are written with other AWS service records\. CloudTrail determines when to create and write to a new file based on a time period and file size\.
 
-The following actions are supported:
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeAttachment.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeAttachment.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCases.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCases.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCommunications.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCommunications.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeServices.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeServices.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeSeverityLevels.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeSeverityLevels.html)
-+ [https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html)
+The following operations are supported:
++ [AddAttachmentsToSet](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html)
++ [AddCommunicationToCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html)
++ [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html)
++ [DescribeAttachment](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeAttachment.html)
++ [DescribeCases](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCases.html)
++ [DescribeCommunications](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCommunications.html)
++ [DescribeServices](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeServices.html)
++ [DescribeSeverityLevels](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeSeverityLevels.html)
++ [ResolveCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html)
+
+CloudTrail doesn't support logging for the AWS Support API operations for AWS Trusted Advisor, such as `DescribeTrustedAdvisorChecks`\. For more information about the AWS Support API operations, see the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/)\.
 
 Every event or log entry contains information about who generated the request\. The identity information helps you determine the following:
 + Whether the request was made with root or AWS Identity and Access Management \(IAM\) user credentials\.
@@ -54,11 +50,19 @@ You can also aggregate AWS Support log files from multiple AWS Regions and multi
 
 For more information, see [Receiving CloudTrail log files from multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html) and [Receiving CloudTrail log files from multiple accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)\.
 
-## Understanding AWS Support log file entries<a name="understanding-aws-support-entries"></a>
+### Trusted Advisor information in CloudTrail logging<a name="cloudtrail-logging-for-trusted-advisor"></a>
 
-A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source\. It includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files aren't an ordered stack trace of the public API calls, so they don't appear in any specific order\.
+AWS Trusted Advisor is a feature in AWS Support that lets you check your AWS account for ways to save costs, improve security, and optimize your AWS account\.
 
-The following example shows a CloudTrail log entry that demonstrates [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html) action\.
+CloudTrail doesn't log Trusted Advisor operations\.
+
+For a list of supported Trusted Advisor operations, see [Trusted Advisor actions](security-trusted-advisor.md#trusted-advisor-operations)\. 
+
+### Understanding AWS Support log file entries<a name="understanding-aws-support-entries"></a>
+
+A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source\. It includes information about the requested operation, the date and time of the operation, request parameters, and so on\. CloudTrail log files aren't an ordered stack trace of the public API calls, so they don't appear in any specific order\.
+
+The following example shows a CloudTrail log entry that demonstrates [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html) operation\.
 
 ```
 {
