@@ -1,6 +1,6 @@
 # Access AWS Support<a name="accessing-support"></a>
 
-You can access the Support Center by using the follow options:
+You can access the Support Center by using the following options:
 + Use the email address and password associated with your AWS account\.
 + \(Recommended\) Use AWS Identity and Access Management \(IAM\)\. 
 
