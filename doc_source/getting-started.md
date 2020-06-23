@@ -7,7 +7,10 @@ To create a case in the AWS Management Console, see [Creating a support case](ca
 **Topics**
 + [Features of AWS Support plans](#features)
 + [Case management](case-management.md)
++ [Monitoring and maintaining your case](#monitoring-your-case)
++ [Case history](#case-history)
 + [Access AWS Support](accessing-support.md)
++ [Changing your AWS support plan](changing-support-plans.md)
 + [AWS Trusted Advisor](trusted-advisor.md)
 
 ## Features of AWS Support plans<a name="features"></a>
@@ -23,7 +26,7 @@ All AWS customers automatically have 24/7 access to these features of the Basic 
 + Documentation, whitepapers, and best practice guides
 
 Customers with a **Developer** support plan have access to these additional features:
-+ Best\-practice guidance
++ Best practice guidance
 + Building\-block architecture support: guidance on how to use AWS products, features, and services together
 + [AWS Identity and Access Management](accessing-support.md#iam) \(IAM\) to control user access to AWS Support
 
@@ -41,3 +44,20 @@ In addition, customers with an Enterprise support plan have access to these feat
 + Management business reviews\.
 
 For more information about features and pricing for each support plan, see [AWS Support](https://aws.amazon.com/premiumsupport/) and [AWS Support features](https://aws.amazon.com/premiumsupport/features/)\. Some features, such as 24/7 phone and chat support, aren't available in all languages\.
+
+## Monitoring and maintaining your case<a name="monitoring-your-case"></a>
+
+You can monitor the status of your case in Support Center\. A new case begins in the `Unassigned` state\. When an engineer begins work on a case, the status changes to `Work in Progress.` The engineer responds to your case, either to ask for more information \(`Pending Customer Action`\) or to let you know that the case is being investigated \(`Pending Amazon Action`\)\.
+
+When your case is updated, you receive email with the correspondence and a link to the case in Support Center\. However, you can't respond to case correspondence by email\. Use the link in the email to navigate to the support case\.
+
+**Note**  
+You must sign in to the AWS account that submitted the support case\. If you sign in as an IAM user, you must have the required permissions to view support cases\. For more information, see [Access AWS Support](accessing-support.md)\.
+
+When you're satisfied with the response or your problem is solved, you can choose **Close Case** in Support Center\. If you don't respond within ten days, the case is closed automatically\. You can always reopen a resolved or closed case\.
+
+Be sure to create a new case for a new issue or question\. If case correspondence strays from the original question or issue, a support engineer might ask you to open a new case\. If you open a case related to old inquiries, include \(where possible\) the related case number so that we can refer to previous correspondence\.
+
+## Case history<a name="case-history"></a>
+
+Case history information is available for 12 months after creation\.

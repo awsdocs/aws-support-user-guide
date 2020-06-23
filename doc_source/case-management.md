@@ -67,39 +67,33 @@ If you have the Basic support plan, the **Additional contacts** box isn't availa
 
 1. **Submit**\. Choose **Submit** when your information is complete and you're ready to create the case\.
 
-### Choosing a severity<a name="choosing-severity"></a>
+## Choosing a severity<a name="choosing-severity"></a>
 
-You might want to always open cases at the highest severity allowed by your support plan\. However, we strongly encourage that you limit the use of the highest severities to cases that can't be worked around or that directly affect production applications\. Plan ahead to avoid high\-severity cases for general guidance questions\. For information about building your services so that losing single resources doesn't affect your application, see [Building fault\-tolerant applications on AWS](http://media.amazonwebservices.com/AWS_Building_Fault_Tolerant_Applications.pdf)\.
+You might be inclined to always create a support case at the highest severity that your support plan allows\. However, we recommend that you choose the highest severities for cases that can't be worked around or that directly affect production applications\. For information about building your services so that losing single resources doesn't affect your applications, see the [Building Fault\-Tolerant Applications on AWS](http://media.amazonwebservices.com/AWS_Building_Fault_Tolerant_Applications.pdf) whitepaper\.
 
-Here is a summary of severity levels, response times, and example problems\. For more information about the scope of support for each AWS Support plan, see [AWS Support features](https://aws.amazon.com/premiumsupport/features/)\. **Note**: We make every reasonable effort to respond to your initial request within the indicated timeframe\.
+The following table lists the severity levels, response times, and example problems\. 
+
+**Note**  
+You can't change the severity code for a support case after you create one\. If your situation changes, work with the AWS Support associate for your support case\. 
 
 
 ****  
 
-| Severity | First\-response time | Description / support plan | 
+| Severity | First\-response time | Description and support plan | 
 | --- | --- | --- | 
-| General guidance | 24 hours | You have a general development question, or you want to request a feature\. \(Developer\*, Business, and Enterprise support plans\) | 
-| System impaired | 12 hours | Non\-critical functions of your application are behaving abnormally, or you have a time\-sensitive development question\. \(Developer\*, Business, and Enterprise support plans\) | 
-| Production system impaired | 4 hours | Important functions of your application are impaired or degraded\. \(Business and Enterprise support plans\) | 
-| Production system down | 1 hour | Your business is significantly impacted\. Important functions of your application aren't available\. \(Business and Enterprise support plans\) | 
-| Business\-critical system down | 15 minutes | Your business is at risk\. Critical functions of your application aren't available\. \(Enterprise support plan\) | 
+|  **General guidance**  |  24 hours  |  You have a general development question, or you want to request a feature\. \(Developer\*, Business, and Enterprise support plans\)  | 
+|  **System impaired**  |  12 hours  |  Non\-critical functions of your application are behaving abnormally, or you have a time\-sensitive development question\. \(Developer\*, Business, and Enterprise support plans\)  | 
+|  **Production system impaired**  |  4 hours  |  Important functions of your application are impaired or degraded\. \(Business and Enterprise support plans\)  | 
+|  **Production system down**  |  1 hour  |  Your business is significantly impacted\. Important functions of your application aren't available\. \(Business and Enterprise support plans\)  | 
+| Business\-critical system down | 15 minutes |  Your business is at risk\. Critical functions of your application aren't available\. \(Enterprise support plan\)  | 
 
-\* For the Developer plan, response targets are calculated in business hours\. Business hours are defined as 8:00 AM to 6:00 PM in the customer country, as set in the contact information of [My Account](https://console.aws.amazon.com/billing/home#/account), excluding holidays and weekends\. These times can vary in countries with multiple time zones\. Note that Japanese support is available from 9:00 AM to 6:00 PM\.
+\* For the Developer plan, response targets are calculated in business hours\. Business hours are defined as 8:00 AM to 6:00 PM in the customer country, excluding holidays and weekends\. This information appears in the **Contact Information** section of the [My Account](https://console.aws.amazon.com/billing/home#/account) page in the AWS Management Console\. These times can vary in countries with multiple time zones\. Japanese support is available from 9:00 AM to 6:00 PM\.
 
-### Describing your problem<a name="describing-your-problem"></a>
+**Note**  
+We make every reasonable effort to respond to your initial request within the indicated timeframe\. For more information about the scope of support for each AWS Support plan, see [AWS Support features](https://aws.amazon.com/premiumsupport/features/)\.
 
-Make your description as detailed as possible\. Include relevant resource information, along with anything else that might help us understand your issue\. For example, to troubleshoot performance, include time stamps and logs\. For feature requests or general guidance questions, include a description of your environment and purpose\. In all cases, follow the **Description Guidance** that appears on your case submission form\.
+## Describing your problem<a name="describing-your-problem"></a>
+
+Make your description as detailed as possible\. Include relevant resource information, along with anything else that might help us understand your issue\. For example, to troubleshoot performance, include timestamps and logs\. For feature requests or general guidance questions, include a description of your environment and purpose\. In all cases, follow the **Description Guidance** that appears on your case submission form\.
 
 When you provide as much detail as possible, you increase the chances that your case can be resolved quickly\.
-
-## Monitoring and maintaining your case<a name="monitoring-your-case"></a>
-
-You can monitor the status of your case in Support Center\. A new case begins in the `Unassigned` state\. When an engineer begins work on a case, the status changes to `Work in Progress.` The engineer responds to your case, either to ask for more information \(`Pending Customer Action`\) or to let you know that the case is being investigated \(`Pending Amazon Action`\)\.
-
-When your case is updated, you receive email with the correspondence and a link to the case in Support Center—you can't respond to case correspondence by email\. When you're satisfied with the response or your problem is solved, you can select **Close Case** in Support Center\. If you don't respond within ten days, the case is closed automatically\. You can always reopen a resolved or closed case\.
-
-Be sure to create a new case for a new issue or question\. If case correspondence strays from the original question or issue, a support engineer might ask you to open a new case\. If you open a case related to old inquiries, include \(where possible\) the related case number so that we can refer to previous correspondence\.
-
-## Case history<a name="case-history"></a>
-
-Case history information is available for 12 months after creation\.

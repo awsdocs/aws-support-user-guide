@@ -17,6 +17,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Getting started with AWS Support](getting-started.md)
    + [Case management](case-management.md)
    + [Access AWS Support](accessing-support.md)
+   + [Changing your AWS support plan](changing-support-plans.md)
    + [AWS Trusted Advisor](trusted-advisor.md)
 + [About the AWS Support API](Welcome.md)
 + [Programming an AWS Support case](Case_Life_Cycle.md)
