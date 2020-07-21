@@ -32,18 +32,30 @@ You can perform the following Trusted Advisor actions in the console\. You can a
 
 | Action | Description | 
 | --- | --- | 
-|  `DescribeAccount`  |  View support plan and preferences for Trusted Advisor\.  | 
-|  `DescribeAccountAccess`  |  View whether the account has enabled or disabled Trusted Advisor\.  | 
-|  `DescribeCheckItems`  |  View details for Trusted Advisor checks in the console\.  | 
-|  `DescribeCheckRefreshStatuses`  |  View the refresh statuses of Trusted Advisor checks\.  | 
-|  `DescribeCheckSummaries`  |  View the summary of Trusted Advisor checks\.  | 
-|  `DescribeChecks`  |  View details about Trusted Advisor checks\.  | 
-|   `DescribeNotificationPreferences`   |  View notification preferences for Trusted Advisor in the account\.  | 
-|   `ExcludeCheckItems`   |  Exclude recommendations from Trusted Advisor checks\.  | 
-|   `IncludeCheckItems`   |  Include recommendations from Trusted Advisor checks\.  | 
-|  `RefreshCheck`  |  Refresh the status for a specified check\.  | 
-|  `SetAccountAccess`  |  Enable or disable Trusted Advisor for the account\.  | 
-|   `UpdateNotificationPreferences`   |  Update notification preferences for Trusted Advisor\.  | 
+|  `DescribeAccount`  |  Grants permission to view the AWS Support plan and various Trusted Advisor preferences\.  | 
+|  `DescribeAccountAccess`  |  Grants permission to view if the AWS account has enabled or disabled Trusted Advisor\.  | 
+|  `DescribeCheckItems`  |  Grants permission to view details for the check items\.  | 
+|  `DescribeCheckRefreshStatuses`  |  Grants permission to view the refresh statuses for Trusted Advisor checks\.  | 
+|  `DescribeCheckSummaries`  |  Grants permission to view Trusted Advisor check summaries\.  | 
+|  `DescribeChecks`  |  Grants permission to view details for Trusted Advisor checks\.  | 
+|   `DescribeNotificationPreferences`   |  Grants permission to view the notification preferences for the AWS account\.  | 
+|   `ExcludeCheckItems`   |  Grants permission to exclude recommendations for Trusted Advisor checks\.  | 
+|   `IncludeCheckItems`   |  Grants permission to include recommendations for Trusted Advisor checks\.  | 
+|  `RefreshCheck`  |  Grants permission to refresh a Trusted Advisor check\.  | 
+|  `SetAccountAccess`  |  Grants permission to enable or disable Trusted Advisor for the account\.  | 
+|   `UpdateNotificationPreferences`   |  Grants permission to update notification preferences for Trusted Advisor\.  | 
+
+The following Trusted Advisor actions are for the organizational view feature\. For more information, see [Organizational view for AWS Trusted Advisor](organizational-view.md)\.
+
+
+| Action | Description | 
+| --- | --- | 
+|  `DescribeOrganization`  |  Grants permission to view if the AWS account meets the requirements to enable the organizational view feature\.  | 
+|  `DescribeOrganizationAccounts`  |  Grants permission to view the linked AWS accounts that are in the organization\.  | 
+|  `DescribeReports`  |  Grants permission to view details for organizational view reports, such as the report name, runtime, date created, status, and format\.  | 
+|  `DescribeServiceMetadata`  |  Grants permission to view information about organizational view reports, such as the AWS Regions, check categories, check names, and resource statuses\.  | 
+|  `GenerateReport`  |  Grants permission to create a report for Trusted Advisor checks in your organization\.  | 
+|  `SetOrganizationAccess`  |  Grants permission to enable the organizational view feature for Trusted Advisor\.  | 
 
 ## IAM policy examples<a name="iam-policy-examples-trusted-advisor"></a>
 

@@ -4,4 +4,9 @@
 
 For information about using Amazon CloudWatch Events to monitor the status of Trusted Advisor checks, see [Monitoring Trusted Advisor check results with Amazon CloudWatch Events](cloudwatch-events-ta.md)\. 
 
-Customers can access Trusted Advisor in the AWS Management Console\. Programmatic access to Trusted Advisor is available with the [AWS Support API](Welcome.md)\.
+You can access Trusted Advisor in the AWS Management Console\. For more information about controlling access to the Trusted Advisor console, see [Manage access for AWS Trusted Advisor](security-trusted-advisor.md)\.
+
+Programmatic access to Trusted Advisor is available with the [AWS Support API](Welcome.md)\.
+
+**Topics**
++ [Organizational view for AWS Trusted Advisor](organizational-view.md)

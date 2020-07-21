@@ -8,13 +8,13 @@ If you have a Business or Enterprise support plan, you can also use the [AWS Sup
 
 ## AWS account<a name="root-account"></a>
 
- You can sign into the AWS Management Console and access the Support Center by using your AWS account email address and password\. This identity is called the AWS account *root user*\. However, we strongly recommend that you don't use the root user for your everyday tasks, even the administrative ones\. Instead, we recommend that you use IAM, which lets you control who can perform certain tasks in your account\. 
+ You can sign in to the AWS Management Console and access the Support Center by using your AWS account email address and password\. This identity is called the AWS account *root user*\. However, we strongly recommend that you don't use the root user for your everyday tasks, even the administrative ones\. Instead, we recommend that you use IAM, which lets you control who can perform certain tasks in your account\. 
 
 ## IAM<a name="iam"></a>
 
 By default, IAM users can't access the Support Center\. You can use IAM to create individual users or groups\. Then, you attach IAM policies to these entities, so that they have permission to perform actions and access resources, such as to open Support Center cases and use the AWS Support API\.
 
-After you create IAM users, you can give those users individual passwords and an account\-specific sign\-in page\. They can then sign into your AWS account and work in the Support Center\. IAM users who have AWS Support access can see all cases that are created for the account\.
+After you create IAM users, you can give those users individual passwords and an account\-specific sign\-in page\. They can then sign in to your AWS account and work in the Support Center\. IAM users who have AWS Support access can see all cases that are created for the account\.
 
 For more information, see [How IAM users sign in to your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/WhatUsersNeedToKnow.html)\.
 
@@ -42,7 +42,7 @@ This policy statement allows an IAM user to perform all actions in AWS Support e
    "Statement": [
    {
       "Effect": "Allow",
-      "Action": "support:",
+      "Action": "support:*",
       "Resource": "*"
    },
    {
