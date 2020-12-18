@@ -2,7 +2,7 @@
 
 AWS Support is integrated with AWS CloudTrail, a service that provides a record of actions taken by a user, role, or an AWS service in AWS Support\. CloudTrail captures API calls for AWS Support as events\. The calls captured include calls from the AWS Support console and code calls to the AWS Support API operations\.
 
-If you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket, including events for AWS Support\. If you don't configure a trail, you can still view the most recent events in the CloudTrail console in **Event history**\.
+If you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon Simple Storage Service \(Amazon S3\) bucket, including events for AWS Support\. If you don't configure a trail, you can still view the most recent events in the CloudTrail console in **Event history**\.
 
 Using the information collected by CloudTrail, you can determine the request that was made to AWS Support, the IP address from which the request was made, who made the request, when it was made, and additional details\.
 
@@ -18,22 +18,9 @@ For an ongoing record of events in your AWS account, including events for AWS Su
 + [Configuring Amazon SNS notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
 + [Receiving CloudTrail log files from multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail log files from multiple accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
-## AWS Support information in CloudTrail logging<a name="aws-support-info-in-cloudtrail-logging"></a>
+All AWS Support API operations are logged by CloudTrail and are documented in the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/)\.
 
-When CloudTrail logging is enabled in your AWS account, API calls made to specific AWS Support operations are tracked in CloudTrail log files\. AWS Support operations are written with other AWS service records\. CloudTrail determines when to create and write to a new file based on a time period and file size\.
-
-The following operations are supported:
-+ [AddAttachmentsToSet](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html)
-+ [AddCommunicationToCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html)
-+ [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html)
-+ [DescribeAttachment](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeAttachment.html)
-+ [DescribeCases](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCases.html)
-+ [DescribeCommunications](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCommunications.html)
-+ [DescribeServices](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeServices.html)
-+ [DescribeSeverityLevels](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeSeverityLevels.html)
-+ [ResolveCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html)
-
-CloudTrail doesn't support logging for the AWS Support API operations for AWS Trusted Advisor, such as `DescribeTrustedAdvisorChecks`\. For more information about the AWS Support API operations, see the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/)\.
+For example, calls to the `CreateCase`, `DescribeCases` and `ResolveCase` operations generate entries in the CloudTrail log files\.
 
 Every event or log entry contains information about who generated the request\. The identity information helps you determine the following:
 + Whether the request was made with root or AWS Identity and Access Management \(IAM\) user credentials\.
@@ -42,27 +29,25 @@ Every event or log entry contains information about who generated the request\. 
 
 For more information, see the [CloudTrail userIdentity element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
 
-You can store your log files in your Amazon S3 bucket for as long as you want\. You can also define Amazon S3 lifecycle rules to archive or delete log files automatically\. By default, your log files are encrypted with Amazon S3 server\-side encryption \(SSE\)\.
-
-If you want to be notified upon log file delivery, you can configure CloudTrail to publish Amazon Simple Notification Service notifications when new log files are delivered\. For more information, see [Configuring Amazon SNS notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)\.
-
 You can also aggregate AWS Support log files from multiple AWS Regions and multiple AWS accounts into a single Amazon S3 bucket\.
 
-For more information, see [Receiving CloudTrail log files from multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html) and [Receiving CloudTrail log files from multiple accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)\.
+## AWS Trusted Advisor information in CloudTrail logging<a name="cloudtrail-logging-for-trusted-advisor"></a>
 
-### Trusted Advisor information in CloudTrail logging<a name="cloudtrail-logging-for-trusted-advisor"></a>
+Trusted Advisor is an AWS Support service that you can use to check your AWS account for ways to save costs, improve security, and optimize your account\.
 
-AWS Trusted Advisor is a feature in AWS Support that lets you check your AWS account for ways to save costs, improve security, and optimize your AWS account\.
+All Trusted Advisor API operations are logged by CloudTrail and are documented in the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/)\. 
 
-CloudTrail doesn't log Trusted Advisor operations\.
+For example, calls to the `DescribeTrustedAdvisorCheckRefreshStatuses`, `DescribeTrustedAdvisorCheckResult` and `RefreshTrustedAdvisorCheck` operations generate entries in the CloudTrail log files\.
 
-For a list of supported Trusted Advisor operations, see [Trusted Advisor actions](security-trusted-advisor.md#trusted-advisor-operations)\. 
+**Note**  
+CloudTrail also logs Trusted Advisor console actions\. See [Logging AWS Trusted Advisor console actions with AWS CloudTrail](logging-using-cloudtrail-for-aws-trusted-advisor.md)\.
 
-### Understanding AWS Support log file entries<a name="understanding-aws-support-entries"></a>
+## Understanding AWS Support log file entries<a name="understanding-aws-support-entries"></a>
 
 A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source\. It includes information about the requested operation, the date and time of the operation, request parameters, and so on\. CloudTrail log files aren't an ordered stack trace of the public API calls, so they don't appear in any specific order\.
 
-The following example shows a CloudTrail log entry that demonstrates [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html) operation\.
+**Example : Log entry for CreateCase**  
+The following example shows a CloudTrail log entry for the [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html) operation\.  
 
 ```
 {
@@ -107,5 +92,36 @@ The following example shows a CloudTrail log entry that demonstrates [CreateCase
       }
    ],
    ...
+}
+```
+
+**Example : Log entry for RefreshTrustedAdvisorCheck**  
+The following example shows a CloudTrail log entry for the [RefreshTrustedAdvisorCheck](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_RefreshTrustedAdvisorCheck.html) operation\.  
+
+```
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::111122223333:user/Admin",
+        "accountId": "111122223333",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+        "userName": "Admin"
+    },
+    "eventTime": "2020-10-21T16:34:13Z",
+    "eventSource": "support.amazonaws.com",
+    "eventName": "RefreshTrustedAdvisorCheck",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "72.21.198.67",
+    "userAgent": "aws-cli/1.18.140 Python/3.6.12 Linux/4.9.217-0.3.ac.206.84.332.metal1.x86_64 botocore/1.17.63",
+    "requestParameters": {
+        "checkId": "Pfx0RwqBli"
+    },
+    "responseElements": null,
+    "requestID": "4c4d5fc8-c403-4f82-9544-41f820e0fa01",
+    "eventID": "2f4630ac-5c27-4f0d-b93f-63742d6fc85e",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "111122223333"
 }
 ```

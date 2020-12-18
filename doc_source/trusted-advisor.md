@@ -10,3 +10,4 @@ Programmatic access to Trusted Advisor is available with the [AWS Support API](W
 
 **Topics**
 + [Organizational view for AWS Trusted Advisor](organizational-view.md)
++ [Change log for AWS Trusted Advisor checks](aws-trusted-advisor-change-log.md)

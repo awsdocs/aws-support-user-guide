@@ -69,7 +69,7 @@ If you have the Basic support plan, the **Additional contacts** box isn't availa
 
 ## Choosing a severity<a name="choosing-severity"></a>
 
-You might be inclined to always create a support case at the highest severity that your support plan allows\. However, we recommend that you choose the highest severities for cases that can't be worked around or that directly affect production applications\. For information about building your services so that losing single resources doesn't affect your applications, see the [Building Fault\-Tolerant Applications on AWS](http://media.amazonwebservices.com/AWS_Building_Fault_Tolerant_Applications.pdf) whitepaper\.
+You might be inclined to always create a support case at the highest severity that your support plan allows\. However, we recommend that you choose the highest severities for cases that can't be worked around or that directly affect production applications\. For information about building your services so that losing single resources doesn't affect your applications, see the [Building Fault\-Tolerant Applications on AWS](http://media.amazonwebservices.com/AWS_Building_Fault_Tolerant_Applications.pdf) technical paper\.
 
 The following table lists the severity levels, response times, and example problems\. 
 

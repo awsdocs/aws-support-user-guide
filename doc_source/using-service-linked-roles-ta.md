@@ -100,7 +100,7 @@ You can't change the name of a service\-linked role because various entities mig
 
 ## Deleting a service\-linked role for Trusted Advisor<a name="delete-service-linked-role-ta"></a>
 
-If you don't need to use the features or services of Trusted Advisor, you can delete the `AWSServiceRoleForTrustedAdvisor` role\. You must disable Trusted Advisor before you can delete this service\-linked role\. This prevents you from removing permissions required by Trusted Advisor operations\. When you disable Trusted Advisor, you disable all service features, including offline processing and notifications\. Also, if you disable Trusted Advisor for a linked account, then the separate payer account is also affected, which means you won't receive Trusted Advisor checks that identify ways to save costs\. You can't access the Trusted Advisor console\. API calls to Trusted Advisor return an access denied error\.
+If you don't need to use the features or services of Trusted Advisor, you can delete the `AWSServiceRoleForTrustedAdvisor` role\. You must disable Trusted Advisor before you can delete this service\-linked role\. This prevents you from removing permissions required by Trusted Advisor operations\. When you disable Trusted Advisor, you disable all service features, including offline processing and notifications\. Also, if you disable Trusted Advisor for a member account, then the separate payer account is also affected, which means you won't receive Trusted Advisor checks that identify ways to save costs\. You can't access the Trusted Advisor console\. API calls to Trusted Advisor return an access denied error\.
 
 You must recreate the `AWSServiceRoleForTrustedAdvisor` service\-linked role in the account before you can reenable Trusted Advisor\.
 

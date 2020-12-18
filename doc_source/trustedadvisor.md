@@ -11,7 +11,7 @@ The AWS Support service enables you to write applications that interact with [AW
 
 ## Get the list of available Trusted Advisor checks<a name="Get_TA_Checks"></a>
 
-The following Java code snippet creates an instance of an AWS Support client that you can use to call all Trusted Advisor actions\. Next, the code gets the list of Trusted Advisor checks and their corresponding `CheckId` values by calling the `[DescribeTrustedAdvisorChecks](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorChecks.html)` action\. You can use this information to build user interfaces that enable users to select the check they want to run or refresh\.
+The following Java code snippet creates an instance of an AWS Support client that you can use to call all Trusted Advisor API operations\. Next, the code gets the list of Trusted Advisor checks and their corresponding `CheckId` values by calling the [DescribeTrustedAdvisorChecks](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorChecks.html) API operation\. You can use this information to build user interfaces that enable users to select the check they want to run or refresh\.
 
 ```
 private static AWSSupport createClient()
@@ -50,7 +50,7 @@ public static void refreshTACheck(final String checkId) {
 
 ## Poll a Trusted Advisor check for status changes<a name="getcheckstatus"></a>
 
-After you submit the request to run a Trusted Advisor check to generate the latest status data, you use the `[DescribeTrustedAdvisorCheckRefreshStatuses](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorCheckRefreshStatuses.html)` action to request the progress of the check's run, and when new data is ready for the check\. 
+After you submit the request to run a Trusted Advisor check to generate the latest status data, you use the [DescribeTrustedAdvisorCheckRefreshStatuses](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorCheckRefreshStatuses.html) API operation to request the progress of the check's run, and when new data is ready for the check\. 
 
 The following Java code snippet gets the status of the check requested in the following section, using the value corresponding in the `CheckId` variable\. In addition, the code demonstrates several other uses of the Trusted Advisor service:
 
@@ -116,7 +116,10 @@ public static void pollForTACheckResultChanges(final String checkId) throws Inte
 
 ## Request a Trusted Advisor check result<a name="requestcheck"></a>
 
-After you select the check for the detailed results that you want, you submit a request by using the `[DescribeTrustedAdvisorCheckResult](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorCheckResult.html)` action\.
+After you select the check for the detailed results that you want, you submit a request by using the [DescribeTrustedAdvisorCheckResult](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorCheckResult.html) API operation\.
+
+**Tip**  
+The names and descriptions for Trusted Advisor checks are subject to change\. We recommend that you specify the check ID in your code to uniquely identify a check\. You can use the [DescribeTrustedAdvisorChecks](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorChecks.html) API operation to get the check ID\.
 
 The following Java code snippet uses the `DescribeTrustedAdvisorChecksResult` instance referenced by the variable `result`, which was obtained in the preceding code snippet\. Rather than defining a check interactively through a user interface, After you submit the request to run the snippet submits a request for the first check in the list to be run by specifying an index value of 0 in each `result.getChecks().get(0)` call\. Next, the code defines an instance of `DescribeTrustedAdvisorCheckResultRequest`, which it passes to an instance of `DescribeTrustedAdvisorCheckResultResult` called `checkResult`\. You can use the member structures of this data type to view the results of the check\.
 
