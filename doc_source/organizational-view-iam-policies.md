@@ -17,6 +17,7 @@ The following policy allows full access to the organizational view feature\. A u
             "Action": [
                 "organizations:ListAccountsForParent",
                 "organizations:ListAccounts",
+                "organizations:ListRoots",
                 "organizations:DescribeOrganization",
                 "organizations:ListOrganizationalUnitsForParent",
                 "organizations:ListAWSServiceAccessForOrganization",
@@ -26,7 +27,10 @@ The following policy allows full access to the organizational view feature\. A u
                 "trustedadvisor:DescribeOrganization",
                 "trustedadvisor:DescribeReports",
                 "trustedadvisor:DescribeServiceMetadata",
-                "trustedadvisor:DescribeOrganizationAccounts"
+                "trustedadvisor:DescribeOrganizationAccounts",
+                "trustedadvisor:ListAccountsForParent",
+                "trustedadvisor:ListRoots",
+                "trustedadvisor:ListOrganizationalUnitsForParent"
             ],
             "Resource": "*"
         },
@@ -70,6 +74,7 @@ The following policy allows read\-only access to organizational view for Trusted
             "Action": [
                 "organizations:ListAccountsForParent",
                 "organizations:ListAccounts",
+                "organizations:ListRoots",
                 "organizations:DescribeOrganization",
                 "organizations:ListOrganizationalUnitsForParent",
                 "organizations:ListAWSServiceAccessForOrganization",
@@ -77,7 +82,10 @@ The following policy allows read\-only access to organizational view for Trusted
                 "trustedadvisor:DescribeChecks",
                 "trustedadvisor:DescribeAccountAccess",
                 "trustedadvisor:DescribeOrganization",
-                "trustedadvisor:DescribeReports"
+                "trustedadvisor:DescribeReports",
+                "trustedadvisor:ListAccountsForParent",
+                "trustedadvisor:ListRoots",
+                "trustedadvisor:ListOrganizationalUnitsForParent"
             ],
             "Resource": "*"
         }
@@ -88,6 +96,6 @@ You can also create your own IAM policy\. For more information, see [Creating IA
 
 **Note**  
 If you enabled AWS CloudTrail in your account, the following roles can appear in your log entries:  
-`AWSServiceRoleForTrustedAdvisorReporting` – The service\-linked role \(SLR\) that Trusted Advisor uses to access accounts in your organization\.
+`AWSServiceRoleForTrustedAdvisorReporting` – The service\-linked role that Trusted Advisor uses to access accounts in your organization\.
 `AWSServiceRoleForTrustedAdvisor` – The service\-linked role that Trusted Advisor uses to access services in your organization\.
-For more information about SLRs, see [Using service\-linked roles for Trusted Advisor](using-service-linked-roles-ta.md)\.
+For more information about service\-linked roles, see [Using service\-linked roles for Trusted Advisor](using-service-linked-roles-ta.md)\.

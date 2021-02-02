@@ -7,4 +7,5 @@ Monitoring is an important part of maintaining the reliability, availability, an
 
 **Topics**
 + [Logging AWS Support API calls with AWS CloudTrail](logging-using-cloudtrail.md)
++ [Logging AWS Trusted Advisor console actions with AWS CloudTrail](logging-using-cloudtrail-for-aws-trusted-advisor.md)
 + [Monitoring Trusted Advisor checks](cloudwatch-ta.md)

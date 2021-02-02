@@ -13,4 +13,4 @@ You can change your support plan in the AWS Management Console\.
 For an example video of how to change your support plan, see [How do I change my AWS Support plan?](http://aws.amazon.com/premiumsupport/knowledge-center/change-support-plan/)
 
 **Note**  
-If you have an Enterprise support plan, use the link on the **Change support plan** page to contact AWS Support\.
+If you have Enterprise Support, use the link on the **Change support plan** page to contact AWS Support\.

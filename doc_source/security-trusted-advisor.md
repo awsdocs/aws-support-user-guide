@@ -55,11 +55,16 @@ The following Trusted Advisor actions are for the organizational view feature\. 
 |  `DescribeReports`  |  Grants permission to view details for organizational view reports, such as the report name, runtime, date created, status, and format\.  | 
 |  `DescribeServiceMetadata`  |  Grants permission to view information about organizational view reports, such as the AWS Regions, check categories, check names, and resource statuses\.  | 
 |  `GenerateReport`  |  Grants permission to create a report for Trusted Advisor checks in your organization\.  | 
+|  `ListAccountsForParent`  |  Grants permission to view, in the Trusted Advisor console, all of the accounts in an AWS organization that are contained by a root or organizational unit \(OU\)\.  | 
+|  `ListOrganizationalUnitsForParent`  |  Grants permission to view, in the Trusted Advisor console, all of the organizational units \(OUs\) in a parent organizational unit or root\.  | 
+|  `ListRoots`  |  Grants permission to view, in the Trusted Advisor console, all of the roots that are defined in an AWS organization\.  | 
 |  `SetOrganizationAccess`  |  Grants permission to enable the organizational view feature for Trusted Advisor\.  | 
 
 ## IAM policy examples<a name="iam-policy-examples-trusted-advisor"></a>
 
-The following policies show you how to allow and deny access to Trusted Advisor\.
+The following policies show you how to allow and deny access to Trusted Advisor\. You can use one of the following policies to create a *customer managed policy* in the IAM console\. For example, you can copy an example policy, and then paste it into the [JSON tab](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html#access_policies_create-json-editor) of the IAM console\. Then, you attach the policy to your IAM user, group, or role\.
+
+For more information about how to create an IAM policy, see [Creating IAM policies \(console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html) in the *IAM User Guide*\.
 
 **Topics**
 + [Full access to Trusted Advisor](#full-access-trusted-advisor)
@@ -70,7 +75,7 @@ The following policies show you how to allow and deny access to Trusted Advisor\
 
 ### Full access to Trusted Advisor<a name="full-access-trusted-advisor"></a>
 
-The following policy allows users to view and take all actions on all Trusted Advisor checks\.
+The following policy allows users to view and take all actions on all Trusted Advisor checks in the Trusted Advisor console\.
 
 ```
 {
@@ -87,7 +92,7 @@ The following policy allows users to view and take all actions on all Trusted Ad
 
 ### Read\-only access to Trusted Advisor<a name="read-only-access-trusted-advisor"></a>
 
-The following policy allows users read\-only access to Trusted Advisor\. Users can't make changes, such as refresh checks or change notification preferences\.
+The following policy allows users read\-only access to the Trusted Advisor console\. Users can't make changes, such as refresh checks or change notification preferences\.
 
 ```
 {
@@ -104,7 +109,7 @@ The following policy allows users read\-only access to Trusted Advisor\. Users c
 
 ### Deny access to Trusted Advisor<a name="no-access-trusted-advisor"></a>
 
-The following policy doesn't allow users to view or take actions for Trusted Advisor checks\.
+The following policy doesn't allow users to view or take actions for Trusted Advisor checks in the Trusted Advisor console\.
 
 ```
 {
@@ -121,7 +126,7 @@ The following policy doesn't allow users to view or take actions for Trusted Adv
 
 ### Allow and deny specific actions<a name="allow-specific-actions-trusted-advisor"></a>
 
-The following policy allows users to view all Trusted Advisor checks, but doesn't allow them to refresh any checks\.
+The following policy allows users to view all Trusted Advisor checks in the Trusted Advisor console, but doesn't allow them to refresh any checks\.
 
 ```
 {
@@ -147,7 +152,9 @@ In the AWS Management Console, a separate `trustedadvisor` IAM namespace control
 
  For example, if you want to call the [RefreshTrustedAdvisorCheck](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_RefreshTrustedAdvisorCheck.html) operation, you must have permissions to this action in the policy\.
 
-The following policy allows users only access to the AWS Support API operations for Trusted Advisor, but not the rest of the AWS Support API operations\.
+**Example : Allow Trusted Advisor API operations only**  
+The following policy allows users access to the AWS Support API operations for Trusted Advisor, but not the rest of the AWS Support API operations\. For example, users can use the API to view and refresh checks\. They can't create, view, update, or resolve AWS Support cases\.   
+You can use this policy to call the Trusted Advisor API operations programmatically, but you can't use this policy to view or refresh checks in the Trusted Advisor console\.  
 
 ```
 {
@@ -160,7 +167,8 @@ The following policy allows users only access to the AWS Support API operations 
                 "support:DescribeTrustedAdvisorCheckResult",
                 "support:DescribeTrustedAdvisorChecks",
                 "support:DescribeTrustedAdvisorCheckSummaries",
-                "support:RefreshTrustedAdvisorCheck"
+                "support:RefreshTrustedAdvisorCheck",
+                "trustedadvisor:Describe*"
             ],
             "Resource": "*"
         },

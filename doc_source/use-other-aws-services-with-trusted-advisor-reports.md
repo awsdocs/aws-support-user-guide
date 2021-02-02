@@ -2,6 +2,8 @@
 
 Follow this tutorial to upload and view your data by using other AWS services\. In this topic, you create an Amazon Simple Storage Service \(Amazon S3\) bucket to store your report and an AWS CloudFormation template to create resources in your account\. Then, you can use Amazon Athena to analyze or run queries for your report or Amazon QuickSight to visualize that data in a dashboard\.
 
+For information and examples for visualizing your report data, see the [View AWS Trusted Advisor recommendations at scale with AWS Organizations](http://aws.amazon.com/blogs/mt/organizational-view-for-trusted-advisor/) in the *AWS Management & Governance Blog*\.
+
 ## Prerequisites<a name="set-up-trusted-advisor-with-amazon-athena-prerequisites"></a>
 
 Before you start this tutorial, you must meet the following requirements:
@@ -43,7 +45,11 @@ After you upload your report to Amazon S3, upload the following YAML template to
 
 1. Unzip the file\.
 
-1. Open the template file in a text editor, replace the *<BucketName>* tag with the bucket name in your account, and then save the file\.
+1. Open the template file in a text editor\.
+
+1. For the `BucketName` and `FolderName` parameters, replace the values for `your-bucket-name-here` and `folder1` with the bucket name and folder name in your account\.
+
+1. Save the file\.
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
@@ -73,6 +79,9 @@ After you upload your report to Amazon S3, upload the following YAML template to
 ## Query the data in Amazon Athena<a name="setting-up-athena"></a>
 
 After you have your resources, you can view the data in Athena\. Use Athena to create queries and analyze the results of the report, such as looking up specific check results for accounts in the organization\.
+
+**Note**  
+Use the US East \(N\. Virginia\) Region\.
 
 **To query the data in Athena**
 
@@ -135,3 +144,62 @@ The following example dashboard shows information about the Trusted Advisor chec
 
 **Note**  
 If you have permission errors while creating your dashboard, make sure that Amazon QuickSight can use Athena\. For more information, see [I Can't Connect to Amazon Athena](https://docs.aws.amazon.com/quicksight/latest/user/troubleshoot-connect-athena.html) in the *Amazon QuickSight User Guide*\.
+
+For more information and examples for visualizing your report data, see the [View AWS Trusted Advisor recommendations at scale with AWS Organizations](http://aws.amazon.com/blogs/mt/organizational-view-for-trusted-advisor/) in the *AWS Management & Governance Blog*\.
+
+## Troubleshooting<a name="troubleshooting-trusted-advisor-reports"></a>
+
+If you have issues with this tutorial, see the following troubleshooting tips\.
+
+### I'm not seeing the latest data in my report<a name="not-seeing-latest-data"></a>
+
+When you create a report, the organizational view feature doesn't automatically refresh the Trusted Advisor checks in your organization\. To get the latest check results, refresh the checks for the management account and each member account in the organization\. For more information, see [Refresh Trusted Advisor checks](organizational-view.md#refresh-trusted-advisor-checks)\.
+
+### I have duplicate columns in the report<a name="duplicate-columns-in-report"></a>
+
+The Athena console might show the following error in your table if your report has duplicate columns\. 
+
+`HIVE_INVALID_METADATA: Hive metadata for table folder1 is invalid: Table descriptor contains duplicate columns`
+
+For example, if you added a column in your report that already exists, this can cause issues when you try to view the report data in the Athena console\. You can follow these steps to fix this issue\.
+
+#### Find duplicate columns<a name="finding-duplicate-columns"></a>
+
+You can use the AWS Glue console to view the schema and quickly identify if you have duplicate columns in your report\.
+
+**To find duplicate columns**
+
+1. Open the AWS Glue console at [https://console\.aws\.amazon\.com/glue/](https://console.aws.amazon.com/glue/)\.
+
+1. If you haven't already, in the **Region selector**, choose the US East \(N\. Virginia\) Region\.
+
+1. In the navigation pane, choose **Tables**\.
+
+1. Choose your folder name, such as ***folder1***, and then under **Schema**, view the values for **Column name**\. 
+
+   If you have a duplicate column, you must upload a new report to your Amazon S3 bucket\. See the following [Upload a new report](#upload-a-new-report) section\. 
+
+#### Upload a new report<a name="upload-a-new-report"></a>
+
+After you identify the duplicate column, we recommend that you replace the existing report with a new one\. This ensures that the resources created from this tutorial use the latest report data from your organization\.
+
+**To upload a new report**
+
+1. If you haven't already, refresh your Trusted Advisor checks for the accounts in your organization\. See [Refresh Trusted Advisor checks](organizational-view.md#refresh-trusted-advisor-checks)\.
+
+1. Create and download another JSON report in the Trusted Advisor console\. See [Create organizational view reports](organizational-view.md#create-organizational-view-reports)\. You must use a JSON file for this tutorial\.
+
+1. Sign in to the AWS Management Console and open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
+
+1. Choose your Amazon S3 bucket and choose the `folder1` folder\.
+
+1. Select the previous `resources.json` reports and choose **Delete**\.
+
+1. In the **Delete objects** page, under **Permanently delete objects?**, enter **permanently delete**, and then choose **Delete objects**\.
+
+1. In your S3 bucket, choose **Upload** and then specify the new report\. This action automatically updates your Athena table and AWS Glue crawler resources with the latest report data\. It can take a few minutes to refresh your resources\.
+
+1. Enter a new query in the Athena console\. See [Query the data in Amazon Athena](#setting-up-athena)\.
+
+**Note**  
+If you still have issues with this tutorial, you can create a technical support case in the [AWS Support Center](https://console.aws.amazon.com/support/home)\.
