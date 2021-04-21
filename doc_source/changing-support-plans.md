@@ -1,4 +1,4 @@
-# Changing your AWS support plan<a name="changing-support-plans"></a>
+# Changing your AWS Support plan<a name="changing-support-plans"></a>
 
 You can change your support plan in the AWS Management Console\.
 

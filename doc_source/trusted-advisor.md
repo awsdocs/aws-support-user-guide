@@ -8,7 +8,7 @@ If you have a Business or Enterprise Support plan, you can use the Trusted Advis
 
 You can access Trusted Advisor in the AWS Management Console\. For more information about controlling access to the Trusted Advisor console, see [Manage access for AWS Trusted Advisor](security-trusted-advisor.md)\.
 
-For more information, see [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/)\.
+For more information, see [Trusted Advisor](https://aws.amazon.com/premiumsupport/trustedadvisor/)\.
 
 **Topics**
 + [Get started with AWS Trusted Advisor](get-started-with-aws-trusted-advisor.md)

@@ -1,7 +1,7 @@
 # AWS Support User Guide
 
 -----
-*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -17,7 +17,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Getting started with AWS Support](getting-started.md)
    + [Case management](case-management.md)
    + [Access AWS Support](accessing-support.md)
-   + [Changing your AWS support plan](changing-support-plans.md)
+   + [Changing your AWS Support plan](changing-support-plans.md)
 + [About the AWS Support API](Welcome.md)
 + [Programming an AWS Support case](Case_Life_Cycle.md)
 + [AWS Trusted Advisor](trusted-advisor.md)
@@ -35,6 +35,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Using service-linked roles](using-service-linked-roles-intro.md)
          + [Using service-linked roles for AWS Support](using-service-linked-roles-sup.md)
          + [Using service-linked roles for Trusted Advisor](using-service-linked-roles-ta.md)
+      + [AWS managed policies for AWS Support](security-iam-awsmanpol.md)
       + [Manage access for AWS Trusted Advisor](security-trusted-advisor.md)
       + [Troubleshooting AWS Support identity and access](security_iam_troubleshoot.md)
    + [Incident response](incident-response.md)

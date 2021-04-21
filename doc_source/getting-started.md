@@ -10,7 +10,7 @@ To create a case in the AWS Management Console, see [Creating a support case](ca
 + [Monitoring and maintaining your case](#monitoring-your-case)
 + [Case history](#case-history)
 + [Access AWS Support](accessing-support.md)
-+ [Changing your AWS support plan](changing-support-plans.md)
++ [Changing your AWS Support plan](changing-support-plans.md)
 
 ## Features of AWS Support plans<a name="features"></a>
 
@@ -27,7 +27,7 @@ All AWS customers automatically have 24/7 access to these features of Basic Supp
 Customers with a Developer Support plan have access to these additional features:
 + Best practice guidance
 + Building\-block architecture support: guidance on how to use AWS products, features, and services together
-+ Supports an unlimited number of support cases that can be opened by one primary contact, which is the [AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)\.
++ Supports an unlimited number of support cases that can be opened by one primary contact, which is the [AWS account *root user*](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)\.
 
 In addition, customers with a Business Support or Enterprise Support plan have access to these features:
 + Use\-case guidance – What AWS products, features, and services to use to best support your specific needs\.

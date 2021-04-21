@@ -2,7 +2,7 @@
 
 In the AWS Management Console, you can create three types of customer cases in AWS Support:
 + **Account and billing support** cases are available to all AWS customers so you can get help with billing and account\-related questions\.
-+ **Service limit increase** requests are also available to all AWS customers\. For information about the default service quotas, formerly referred to as limits, see [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\.
++ **Service limit increase** requests are also available to all AWS customers\. For information about the default service quotas, formerly referred to as limits, see [AWS service quotas](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\.
 + **Technical support** cases connect you to technical support for help with service\-related technical issues and, in some cases, third\-party applications\. If you have a Developer Support plan, you can communicate using the web\. If you have a Business or Enterprise Support plan, you can also communicate by phone or live chat\.
 **Note**  
 If you have Basic Support, you can't create a technical support case\.
@@ -10,9 +10,15 @@ To close your account, see [Closing an Account](https://docs.aws.amazon.com/awsa
 
 ## Creating a support case<a name="creating-a-support-case"></a>
 
+You can create a support case in the Support Center of the AWS Management Console\.
+
+**Notes**  
+You can sign in to Support Center as the *root user* of your AWS account or as an AWS Identity and Access Management \(IAM\) user\. For more information, see [Access AWS Support](accessing-support.md)\.
+If you can't sign in to Support Center, you can use the [Contact Us](http://aws.amazon.com/contact-us/) page instead\. You can use this page to get help with billing and account issues\.
+
 **To create a support case**
 
-1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/) by using the email address and password linked to your AWS account\. To sign in with other credentials, see [Access AWS Support](accessing-support.md)\.
+1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/)\.
 
 1. In the upper\-right corner, choose **Support** and then choose **Support Center**\.
 

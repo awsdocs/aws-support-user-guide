@@ -2,12 +2,17 @@
 
 The following table describes the important changes to the documentation since the last release of the AWS Support service\.
 + **API version:** 2013\-04\-15
-+ **Latest documentation update:** January 28, 2021
++ **Latest documentation update:** March 16, 2021
 
 
 | Change | Description | Date changed | 
 | --- | --- | --- | 
-| Updated documentation for Trusted Advisor | Updated the [Get started with AWS Trusted Advisor](get-started-with-aws-trusted-advisor.md) topic\. | January 28, 2021 | 
+| Updated documentation for Trusted Advisor | Added documentation to filter, refresh, and download check results\. For more information, see the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/awssupport/latest/user/History.html) | March 16, 2021 | 
+| Updated documentation about AWS managed policies | Added information about the AWSSupportServiceRolePolicy AWS managed policy\. For more information, see [Using service\-linked roles for AWS Support](using-service-linked-roles-sup.md)\. | March 16, 2021 | 
+| Added checks for AWS Lambda | Added four AWS Trusted Advisor checks for Lambda in the [Change log for AWS Trusted Advisor checks](aws-trusted-advisor-change-log.md)\. | March 8, 2021 | 
+| Updated service limit checks for Amazon Elastic Block Store | Updated five AWS Trusted Advisor checks for Amazon EBS in the [Change log for AWS Trusted Advisor checks](aws-trusted-advisor-change-log.md)\. | March 5, 2021 | 
+| Updated documentation for CloudTrail logging  | CloudTrail supports logging for console actions when you change your AWS Support plan\. For more information, see [Logging changes to your AWS Support plan](logging-using-cloudtrail.md#support-plan-cloudtrail-logging)\. | February 9, 2021 | 
+| Updated documentation for Trusted Advisor | Updated the [Get started with AWS Trusted Advisor](get-started-with-aws-trusted-advisor.md) topic\. | January 29, 2021 | 
 | Updated documentation for Trusted Advisor reports | Added a [Troubleshooting](use-other-aws-services-with-trusted-advisor-reports.md#troubleshooting-trusted-advisor-reports) section for using Trusted Advisor reports with other AWS services\. | December 4, 2020 | 
 | Added AWS Trusted Advisor support for AWS CloudTrail logging | CloudTrail supports logging for a subset of Trusted Advisor console actions\. For more information, see [Logging AWS Trusted Advisor console actions with AWS CloudTrail](logging-using-cloudtrail-for-aws-trusted-advisor.md)\. | November 23, 2020 | 
 | Added a change log topic | View changes to AWS Trusted Advisor checks and categories in the [Change log for AWS Trusted Advisor checks](aws-trusted-advisor-change-log.md)\. | November 18, 2020 | 
@@ -23,7 +28,7 @@ The following table describes the important changes to the documentation since t
 | Case Management Example: Creating a Case | Added a note about the CC box for users who have the Basic support plan\. | August 1, 2017 | 
 | Monitoring Trusted Advisor Check Results with CloudWatch Events | Added new section\. | November 18, 2016 | 
 | Case Management | Updated the names of case severity levels\. | October 27, 2016 | 
-| Logging AWS Support API Calls with AWS CloudTrail | Added new section\. | April 21, 2016 | 
+| Logging AWS Support Calls with AWS CloudTrail | Added new section\. | April 21, 2016 | 
 | Getting Started: Troubleshooting | Added more troubleshooting links\. | May 19, 2015 | 
 | Getting Started: Troubleshooting | Added more troubleshooting links\. | November 18, 2014 | 
 | Getting Started: Case Management | Updated to reflect AWS Service Catalog in the AWS Management Console\. | October 30, 2014 | 

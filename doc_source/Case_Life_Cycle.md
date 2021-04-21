@@ -7,7 +7,7 @@ For a list of actions and parameters that you can use for AWS Support, see the [
 **Topics**
 + [Overview](#Overview)
 + [Create an AWS Support client](#getclient)
-+ [Discover AWS services and issue severity levels](#discoverservices)
++ [Discover Amazon Web Services and issue severity levels](#discoverservices)
 + [Create an attachment set](#attachmentset)
 + [Create a support case](#createcase)
 + [Retrieve and update support case communications](#casecommunications)
@@ -40,7 +40,7 @@ private static AWSSupportClient createClient()
 }
 ```
 
-## Discover AWS services and issue severity levels<a name="discoverservices"></a>
+## Discover Amazon Web Services and issue severity levels<a name="discoverservices"></a>
 
 The AWS Support Java client provides a `CreateCaseRequest` type to submit a case programmatically to AWS Support\. The `CreateCaseRequest` structure is populated with the request parameters and then passed to the `createClient` method on the `AWSSupportClient` instance\. These parameters include codes that specify the AWS service and case severity\.
 
@@ -167,7 +167,7 @@ public static void createCase(AWSSupportClient client) throws IOException
     BufferedReader reader = 
         new BufferedReader(new InputStreamReader(System.in));
         
-    System.out.println("Enter an AWS Service code: ");
+    System.out.println("Enter an AWS service code: ");
     String servicecode = null;
     try 
     {
@@ -333,7 +333,7 @@ public static void getCommunications(AWSSupportClient client)
         new BufferedReader(new InputStreamReader(System.in));
     String caseNumber = null;
 
-    System.out.println("Enter an AWS CaseID");
+    System.out.println("Enter a CaseID");
     caseNumber = reader.readLine().trim();
 
     {

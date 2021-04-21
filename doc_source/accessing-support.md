@@ -1,10 +1,17 @@
 # Access AWS Support<a name="accessing-support"></a>
 
-You can access the Support Center by using the following options:
-+ Use the email address and password associated with your AWS account\.
-+ \(Recommended\) Use AWS Identity and Access Management \(IAM\)\. 
+You must have permissions to access Support Center and to [create a support case](case-management.md#creating-a-support-case)\.
+
+You can use one of the following options to access Support Center:
++ Use the email address and password associated with your AWS account\. This identity is called the AWS account *root user*\.
++ Use AWS Identity and Access Management \(IAM\)\. 
 
 If you have a Business or Enterprise Support plan, you can also use the [AWS Support API](Welcome.md) to access AWS Support and Trusted Advisor operations programmatically\. For more information, see the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/Welcome.html)\.
+
+
+
+**Note**  
+If you can't sign in to Support Center, you can use the [Contact Us](http://aws.amazon.com/contact-us/) page instead\. You can use this page to get help with billing and account issues\.
 
 ## AWS account<a name="root-account"></a>
 

@@ -9,6 +9,7 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 + [How AWS Support works with IAM](security_iam_service-with-iam.md)
 + [AWS Support identity\-based policy examples](security_iam_id-based-policy-examples.md)
 + [Using service\-linked roles](using-service-linked-roles-intro.md)
++ [AWS managed policies for AWS Support](security-iam-awsmanpol.md)
 + [Manage access for AWS Trusted Advisor](security-trusted-advisor.md)
 + [Troubleshooting AWS Support identity and access](security_iam_troubleshoot.md)
 
