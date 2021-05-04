@@ -32,7 +32,7 @@ You must have AWS Identity and Access Management \(IAM\) permissions to access t
 
 1. You can do the following on the **Trusted Advisor Dashboard** page:
    + To refresh all checks in your account, choose the refresh icon in the upper\-right corner\.
-   + To create an \.xsl file that includes all check results, choose the download icon in the upper\-right corner\.
+   + To create a \.xls file that includes all check results, choose the download icon in the upper\-right corner\.
    + To learn more about Trusted Advisor, choose the help pane icon in the upper\-right corner\.
    + Under **Recent Changes**, choose a check name to view the latest results for that check\.
    + Under **What's New**, choose a link for AWS blogs and resources to learn more about Trusted Advisor updates\.
@@ -60,7 +60,7 @@ You can view the check descriptions and results for the following check categori
 
 1. For each check, such as **Low Utilization Amazon EC2 Instances**, choose the refresh icon to refresh this check\.
 
-1. Choose the download icon to create an \.xsl file that includes the results for this check\.
+1. Choose the download icon to create a \.xls file that includes the results for this check\.
 
 **Example : Cost Optimization category**  
 The following example shows one \(yellow\) check that needs investigation and two \(green\) checks that don't\.  
@@ -165,7 +165,7 @@ You can download check results to get an overview of Trusted Advisor in your acc
    + To download all check results, in the **Trusted Advisor Dashboard** or a check category page, choose the download icon in the upper\-right corner\.
    + To download a check result for a specific check, choose the check name, and then choose the download icon\.
 
-1. Save or open the \.xsl file\. The file contains the same summary information from the Trusted Advisor console, such as the check name, description, status, affected resources, and so on\.
+1. Save or open the \.xls file\. The file contains the same summary information from the Trusted Advisor console, such as the check name, description, status, affected resources, and so on\.
 
 ## Organizational view<a name="set-up-organizational-view"></a>
 
