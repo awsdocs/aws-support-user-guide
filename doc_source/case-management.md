@@ -13,7 +13,7 @@ To close your account, see [Closing an Account](https://docs.aws.amazon.com/awsa
 You can create a support case in the Support Center of the AWS Management Console\.
 
 **Notes**  
-You can sign in to Support Center as the *root user* of your AWS account or as an AWS Identity and Access Management \(IAM\) user\. For more information, see [Access AWS Support](accessing-support.md)\.
+You can sign in to Support Center as the *root user* of your AWS account or as an AWS Identity and Access Management \(IAM\) user\. For more information, see [Access permissions for AWS Support](accessing-support.md)\.
 If you can't sign in to Support Center, you can use the [Contact Us](http://aws.amazon.com/contact-us/) page instead\. You can use this page to get help with billing and account issues\.
 
 **To create a support case**

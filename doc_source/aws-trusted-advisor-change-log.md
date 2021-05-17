@@ -35,7 +35,7 @@ Trusted Advisor removed the following check for the AWS GovCloud \(US\) Region o
 Trusted Advisor updated the unit of Amazon EBS volume from gibibyte \(GiB\) to tebibyte \(TiB\) for the following checks on March 5, 2021\. 
 
 **Note**  
-If you use Trusted Advisor for Amazon CloudWatch metrics, the metric names for these five checks are also updated\. For more information, see [Creating Trusted Advisor alarms using CloudWatch](cloudwatch-metrics-ta.md)\.
+If you use Trusted Advisor for Amazon CloudWatch metrics, the metric names for these five checks are also updated\. For more information, see [Creating Amazon CloudWatch alarms to monitor AWS Trusted Advisor metrics](cloudwatch-metrics-ta.md)\.
 
 
 | Check name | Check category | Check ID | Updated CloudWatch metric for ServiceLimit | 

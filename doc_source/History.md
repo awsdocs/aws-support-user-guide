@@ -2,10 +2,18 @@
 
 The following table describes the important changes to the documentation since the last release of the AWS Support service\.
 + **API version:** 2013\-04\-15
-+ **Latest documentation update:** March 16, 2021
++ **Latest documentation update:** May 12, 2021
+
+The following table describes important updates to the AWS Support and AWS Trusted Advisor documentation, beginning in May 10, 2021\. You can subscribe to the RSS feed to receive notifications about the updates\.
+
+| Change | Description | Date | 
+| --- |--- |--- |
+| [Updated documentation](#History) | The following topics are updated:  Updated procedures and added content to the [Creating Amazon CloudWatch alarms to monitor AWS Trusted Advisor metrics](https://docs.aws.amazon.com/awssupport/latest/user/cloudwatch-metrics-ta.html) topic   Added the [Service quotas for the AWS Support API](https://docs.aws.amazon.com/awssupport/latest/user/Case_Life_Cycle.html#aws-support-trusted-advisor-api-quotas) section   | May 12, 2021 | 
+
+## Earlier updates<a name="earlier-updates"></a>
 
 
-| Change | Description | Date changed | 
+| Change | Description | Date | 
 | --- | --- | --- | 
 | Updated documentation for Trusted Advisor | Added documentation to filter, refresh, and download check results\. For more information, see the following sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/awssupport/latest/user/History.html) | March 16, 2021 | 
 | Updated documentation about AWS managed policies | Added information about the AWSSupportServiceRolePolicy AWS managed policy\. For more information, see [Using service\-linked roles for AWS Support](using-service-linked-roles-sup.md)\. | March 16, 2021 | 

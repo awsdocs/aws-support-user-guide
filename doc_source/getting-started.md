@@ -9,7 +9,7 @@ To create a case in the AWS Management Console, see [Creating a support case](ca
 + [Case management](case-management.md)
 + [Monitoring and maintaining your case](#monitoring-your-case)
 + [Case history](#case-history)
-+ [Access AWS Support](accessing-support.md)
++ [Access permissions for AWS Support](accessing-support.md)
 + [Changing your AWS Support plan](changing-support-plans.md)
 
 ## Features of AWS Support plans<a name="features"></a>
@@ -52,7 +52,7 @@ You can monitor the status of your case in Support Center\. A new case begins in
 When your case is updated, you receive email with the correspondence and a link to the case in Support Center\. However, you can't respond to case correspondence by email\. Use the link in the email to navigate to the support case\.
 
 **Note**  
-You must sign in to the AWS account that submitted the support case\. If you sign in as an IAM user, you must have the required permissions to view support cases\. For more information, see [Access AWS Support](accessing-support.md)\.
+You must sign in to the AWS account that submitted the support case\. If you sign in as an IAM user, you must have the required permissions to view support cases\. For more information, see [Access permissions for AWS Support](accessing-support.md)\.
 
 When you're satisfied with the response or your problem is solved, you can choose **Close Case** in Support Center\. If you don't respond within ten days, the case is closed automatically\. You can always reopen a resolved or closed case\.
 

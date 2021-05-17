@@ -1,8 +1,10 @@
 # Programming an AWS Support case<a name="Case_Life_Cycle"></a>
 
-The AWS Support API lets you create cases and add correspondence to them throughout investigations of your issues and interactions with AWS Support staff\. This topic demonstrates the use of actions in the AWS Support service, which models much of the behavior of the [AWS Support center](https://console.aws.amazon.com/support/home#/)\.
+You can use the AWS Support API to create support cases programmatically instead of using the AWS Support Center in the AWS Management Console\. You can add correspondences and attach files to your case, so that support agents can investigate and help resolve your issue\. This topic provides examples of how to use the AWS Support API operations\.
 
-For a list of actions and parameters that you can use for AWS Support, see the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/Welcome.html)\.
+**Notes**  
+For a list of API operations, parameters, and data types that you can use for AWS Support, see the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/Welcome.html)\. 
+For a list of languages that support the AWS Support API, choose an operation name, such as [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html), and in the [See Also](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html#API_CreateCase_SeeAlso) section, choose your preferred language\.
 
 **Topics**
 + [Overview](#Overview)
@@ -13,23 +15,27 @@ For a list of actions and parameters that you can use for AWS Support, see the [
 + [Retrieve and update support case communications](#casecommunications)
 + [Retrieve all support case information](#describecases)
 + [Resolve a support case](#resolvecase)
++ [Service quotas for the AWS Support API](#aws-support-trusted-advisor-api-quotas)
 
 ## Overview<a name="Overview"></a>
 
 This topic uses Java code examples to demonstrate the use of AWS Support\. For more information about SDK support, see [Sample code & libraries](http://aws.amazon.com/code/)\.
 
 **Note**  
-If you encounter service limits with your calls to AWS Support, follow the recommendations in [Error retries and exponential backoff in AWS](https://docs.aws.amazon.com/general/latest/gr/api-retries.html)\.
+If you exceed service quotas for your calls to AWS Support, see the following information:  
+[Service quotas for the AWS Support API](#aws-support-trusted-advisor-api-quotas)
+[Error retries and exponential backoff in AWS](https://docs.aws.amazon.com/general/latest/gr/api-retries.html) in the *AWS General Reference*
+[Error retries and exponential backoff in AWS](https://docs.aws.amazon.com/general/latest/gr/api-retries.html)\.
 
 ### Using IAM with the AWS Support API<a name="IAM_support"></a>
 
-AWS Identity and Access Management \(IAM\) is supported by the AWS Support API\. For more information, see [Access AWS Support](accessing-support.md)\.
+AWS Identity and Access Management \(IAM\) is supported by the AWS Support API\. For more information, see [Access permissions for AWS Support](accessing-support.md)\.
 
 ## Create an AWS Support client<a name="getclient"></a>
 
-The following Java code snippet shows how to create an `AWSSupportClient`, which is used to call the `AWSSupportService`\. The `createClient` method gets AWS credentials by calling the `[AWSSupportClient\(\)](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/support/AWSSupportClient.html#AWSSupportClient%28%29)` constructor with no parameters, which retrieves credentials from the credentials provider chain\. For more information on this process, see [Tutorial: Grant access using an IAM role and the AWS SDK for Java](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) in the *AWS SDK for Java*\.
+The following Java code snippet shows how to create an `AWSSupportClient`, which is used to call the `AWSSupportService`\. The `createClient` method gets AWS credentials by calling the [AWSSupportClient\(\)](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/support/AWSSupportClient.html#AWSSupportClient%28%29) constructor with no parameters, which retrieves credentials from the credentials provider chain\. For more information about this process, see [Tutorial: Grant access using an IAM role and the AWS SDK for Java](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) in the *AWS SDK for Java*\.
 
-For more information on AWS credentials, see [AWS security credentials](https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html) in the *AWS General Reference*\.
+For more information about AWS credentials, see [AWS security credentials](https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html) in the *AWS General Reference*\.
 
 ```
 private static AWSSupportClient createClient()
@@ -44,7 +50,7 @@ private static AWSSupportClient createClient()
 
 The AWS Support Java client provides a `CreateCaseRequest` type to submit a case programmatically to AWS Support\. The `CreateCaseRequest` structure is populated with the request parameters and then passed to the `createClient` method on the `AWSSupportClient` instance\. These parameters include codes that specify the AWS service and case severity\.
 
-The following Java code snippet demonstrates calls to the AWS Support [DescribeServices](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeServices.html) and [DescribeSeverityLevel](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeSeverityLevels.html) actions:
+The following Java code snippet demonstrates calls to the AWS Support [DescribeServices](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeServices.html) and [DescribeSeverityLevel](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeSeverityLevels.html) operations\.
 
 ```
 // DescribeServices example
@@ -77,11 +83,11 @@ public static void getSeverityLevels(AWSSupportClient client)
 }
 ```
 
-Each call returns a list of JSON\-formatted objects\. `DescribeServices` returns service codes and their corresponding names, and `DescribeSeverityLevels` returns severity levels and their corresponding names\. In addition, `DescribeServices` also returns a list of AWS Support categories that apply to each AWS service\. These categories are also used to open a support case by using the [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html) action\. Although these values can also be obtained from the AWS Support site itself, the AWS Support service always returns the most recent version of this information\.
+Each call returns a list of JSON\-formatted objects\. `DescribeServices` returns service codes and their corresponding names, and `DescribeSeverityLevels` returns severity levels and their corresponding names\. In addition, `DescribeServices` also returns a list of AWS Support categories that apply to each AWS service\. These categories are also used to open a support case by using the [CreateCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CreateCase.html) operation\. Although these values can also be obtained from the AWS Support site, the AWS Support service always returns the most recent version of this information\.
 
 ## Create an attachment set<a name="attachmentset"></a>
 
-To attach files to the case, you must add the attachments to an attachment set before creating the case\. You can add up to three attachments to an attachment set, and the maximum size of any attachment in the set is 5 MB\. For more information, see [AddAttachmentsToSet](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html)\.
+To attach files to the case, you must add the attachments to an attachment set before creating the case\. You can add up to three attachments to an attachment set, and the maximum size of any attachment in the set is 5 MB\. For more information, see [AddAttachmentsToSet](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html)\.
 
 The following Java code snippet creates a text file attachment, adds it to an attachment set, and then gets the ID of the attachment set for adding to the case\.
 
@@ -143,14 +149,14 @@ public static string createAttachmentSet() throws IOException
 ## Create a support case<a name="createcase"></a>
 
 To create an AWS Support case using the AWS Support service, populate a `CreateCaseRequest` instance with the following information:
-+ `ServiceCode` – The AWS Support service code that you obtained by calling the `DescribeServices` action, as described in the previous section\.
++ `ServiceCode` – The AWS Support service code that you obtained by calling the `DescribeServices` operation, as described in the previous section\.
 + `CategoryCode` – The category code that describes the type of issue the support case concerns\.
 + `Language` – A code for the language that AWS Support provides support in\. Currently, AWS supports English \(`en`\) and Japanese \(`ja`\)\.
 + `CcEmailAddresses` – A list of email addresses to receive copies of subsequent communications\.
 + `CommunicationBody` – Text for the body of the initial case submission\.
 + `Subject` – A title for the support case\.
 + `SeverityCode` – One of the values returned by the call to `DescribeSeverityLevels`\.
-+ `AttachmentSetId` – \(Optional\) The ID of a set of file attachments to include with the case\. The `AddAttachmentsToSet` action returns the ID\.
++ `AttachmentSetId` – \(Optional\) The ID of a set of file attachments to include with the case\. The `AddAttachmentsToSet` operation returns the ID\.
 
 The following Java code snippet collects values for each of the case creation parameters from the command line\. It then populates a `CreateCaseRequest` instance and passes them to AWS Support by calling the `createCase` method on an `AWSSupportClient` instance\. If the call is successful, it returns an AWS Support `CaseId` value in the following format\.
 
@@ -281,9 +287,9 @@ public static void createCase(AWSSupportClient client) throws IOException
 
 ## Retrieve and update support case communications<a name="casecommunications"></a>
 
-AWS Support cases usually result in communication between the customer and AWS Support professionals\. AWS Support provides the [DescribeCommunications](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCommunications.html) and [DescribeAttachment](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeAttachment.html) actions to retrieve this correspondence, and the [AddAttachmentsToSet](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html) and [AddCommunicationToCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html) actions to update the case\. These actions use the [Communication](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_Communication.html) data type to pass updates to the service and return them to your code\.
+AWS Support cases usually result in communication between the customer and AWS Support professionals\. AWS Support provides the [DescribeCommunications](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCommunications.html) and [DescribeAttachment](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeAttachment.html) operations to retrieve this correspondence, and the [AddAttachmentsToSet](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddAttachmentsToSet.html) and [AddCommunicationToCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html) operations to update the case\. These operations use the [Communication](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_Communication.html) data type to pass updates to the service and return them to your code\.
 
-The following Java code snippet adds communication to an AWS Support case\. In the example, a private `PrintCommunications` method is provided for your convenience\.
+The following Java code snippet adds communication to an AWS Support case\. In the example, a private `printCommunications`method is provided for your convenience\.
 
 ```
 public static void addCommunication(AWSSupportClient client) 
@@ -374,9 +380,9 @@ private static void printCommunications(List<Communication> communications)
 
 ## Retrieve all support case information<a name="describecases"></a>
 
-You can retrieve all the information associated with your AWS Support cases by calling the [DescribeCases](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCases.html) action\. You populate a `DescribeCasesRequest` data type with a list of `ClientId` values, which are returned by each case when a successful `createCase` request returns\.
+You can retrieve all the information associated with your AWS Support cases by calling the [DescribeCases](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCases.html) operation\. You populate a `DescribeCasesRequest` data type with a list of `ClientId` values, which are returned by each case when a successful `createCase` request returns\.
 
-The following Java code snippet accepts `CaseId` values from the console and populates a `DescribeCasesRequest` instance for use by the `DescribeCases` action\. A private `printCases` method is provided for your convenience\.
+The following Java code snippet accepts `CaseId` values from the console and populates a `DescribeCasesRequest` instance for use by the `DescribeCases` operation\. A private `printCases` method is provided for your convenience\.
 
 ```
 public static void getCases(AWSSupportClient client) 
@@ -430,11 +436,11 @@ private static void printCases(List<CaseDetails> caseDetailsList)
 ```
 
 **Note**  
-The `DescribeCases` action takes parameters that let you control the number of cases, types of cases, and amount of detail to retrieve\. For more information, see the [DescribeCases](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCases.html) action\.
+The `DescribeCases` operation takes parameters that let you control the number of cases, types of cases, and amount of detail to retrieve\. For more information, see the [DescribeCases](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeCases.html) operation\.
 
 ## Resolve a support case<a name="resolvecase"></a>
 
-AWS Support provides a [ResolveCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html) action to resolve your own support cases\. The following Java code example demonstrates its use\.
+AWS Support provides a [ResolveCase](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_ResolveCase.html) operation to resolve your own support cases\. The following Java code example demonstrates its use\.
 
 ```
 public static void resolveSupportCase(AWSSupportClient client)
@@ -460,3 +466,16 @@ public static void resolveSupportCase(AWSSupportClient client)
     System.out.println("Final case status: " + rcr.getFinalCaseStatus());
 }
 ```
+
+## Service quotas for the AWS Support API<a name="aws-support-trusted-advisor-api-quotas"></a>
+
+The following table describes the current quotas for the AWS Support API\.
+
+
+****  
+
+|  Resource  |  Default value  | 
+| --- | --- | 
+|  The maximum number of AWS Support cases that you can create\.  |  10 per hour  | 
+|  The maximum number of [AWS Support API](https://docs.aws.amazon.com/awssupport/latest/APIReference/Welcome.html) operations that you can perform per second\.  |  5  | 
+|  The maximum number of [AWS Trusted Advisor API](https://docs.aws.amazon.com/awssupport/latest/APIReference/Welcome.html) operations that you can perform per second\.  |  100  | 

@@ -32,7 +32,7 @@ You must have AWS Identity and Access Management \(IAM\) permissions to access t
 
 1. You can do the following on the **Trusted Advisor Dashboard** page:
    + To refresh all checks in your account, choose the refresh icon in the upper\-right corner\.
-   + To create a \.xls file that includes all check results, choose the download icon in the upper\-right corner\.
+   + To create an \.xls file that includes all check results, choose the download icon in the upper\-right corner\.
    + To learn more about Trusted Advisor, choose the help pane icon in the upper\-right corner\.
    + Under **Recent Changes**, choose a check name to view the latest results for that check\.
    + Under **What's New**, choose a link for AWS blogs and resources to learn more about Trusted Advisor updates\.
@@ -60,7 +60,7 @@ You can view the check descriptions and results for the following check categori
 
 1. For each check, such as **Low Utilization Amazon EC2 Instances**, choose the refresh icon to refresh this check\.
 
-1. Choose the download icon to create a \.xls file that includes the results for this check\.
+1. Choose the download icon to create an \.xls file that includes the results for this check\.
 
 **Example : Cost Optimization category**  
 The following example shows one \(yellow\) check that needs investigation and two \(green\) checks that don't\.  

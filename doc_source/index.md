@@ -1,7 +1,7 @@
 # AWS Support User Guide
 
 -----
-*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -16,7 +16,7 @@ Amazon's trademarks and trade dress may not be used in
 ## Contents
 + [Getting started with AWS Support](getting-started.md)
    + [Case management](case-management.md)
-   + [Access AWS Support](accessing-support.md)
+   + [Access permissions for AWS Support](accessing-support.md)
    + [Changing your AWS Support plan](changing-support-plans.md)
 + [About the AWS Support API](Welcome.md)
 + [Programming an AWS Support case](Case_Life_Cycle.md)
@@ -44,7 +44,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Logging AWS Trusted Advisor console actions with AWS CloudTrail](logging-using-cloudtrail-for-aws-trusted-advisor.md)
       + [Monitoring Trusted Advisor checks](cloudwatch-ta.md)
          + [Monitoring Trusted Advisor check results with Amazon CloudWatch Events](cloudwatch-events-ta.md)
-         + [Creating Trusted Advisor alarms using CloudWatch](cloudwatch-metrics-ta.md)
+         + [Creating Amazon CloudWatch alarms to monitor AWS Trusted Advisor metrics](cloudwatch-metrics-ta.md)
    + [Compliance validation for AWS Support](support-compliance.md)
    + [Resilience in AWS Support](disaster-recovery-resiliency.md)
    + [Infrastructure security in AWS Support](infrastructure-security.md)

@@ -6,4 +6,4 @@ For example, Trusted Advisor provides the **Amazon S3 Bucket Permissions** check
 
 **Topics**
 + [Monitoring Trusted Advisor check results with Amazon CloudWatch Events](cloudwatch-events-ta.md)
-+ [Creating Trusted Advisor alarms using CloudWatch](cloudwatch-metrics-ta.md)
++ [Creating Amazon CloudWatch alarms to monitor AWS Trusted Advisor metrics](cloudwatch-metrics-ta.md)
