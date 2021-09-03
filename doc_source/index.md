@@ -15,7 +15,8 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [Getting started with AWS Support](getting-started.md)
-   + [Case management](case-management.md)
+   + [Creating support cases and case management](case-management.md)
+   + [Monitoring, resolving, and reopening your case](monitoring-your-case.md)
    + [Access permissions for AWS Support](accessing-support.md)
    + [Changing your AWS Support plan](changing-support-plans.md)
 + [About the AWS Support API](Welcome.md)
@@ -26,7 +27,8 @@ Amazon's trademarks and trade dress may not be used in
       + [Using IAM policies to allow access to organizational view](organizational-view-iam-policies.md)
       + [Using other AWS services to view Trusted Advisor reports](use-other-aws-services-with-trusted-advisor-reports.md)
    + [Change log for AWS Trusted Advisor checks](aws-trusted-advisor-change-log.md)
-+ [Using Trusted Advisor as a web service](trustedadvisor.md)
+   + [Using Trusted Advisor as a web service](trustedadvisor.md)
++ [AWS Trusted Advisor check reference](trusted-advisor-check-reference.md)
 + [Security in AWS Support](security.md)
    + [Data protection in AWS Support](data-protection.md)
    + [Identity and access management for AWS Support](security-iam.md)
@@ -35,7 +37,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Using service-linked roles](using-service-linked-roles-intro.md)
          + [Using service-linked roles for AWS Support](using-service-linked-roles-sup.md)
          + [Using service-linked roles for Trusted Advisor](using-service-linked-roles-ta.md)
-      + [AWS managed policies for AWS Support](security-iam-awsmanpol.md)
+      + [AWS managed policies for AWS Support and AWS Trusted Advisor](security-iam-awsmanpol.md)
       + [Manage access for AWS Trusted Advisor](security-trusted-advisor.md)
       + [Troubleshooting AWS Support identity and access](security_iam_troubleshoot.md)
    + [Incident response](incident-response.md)

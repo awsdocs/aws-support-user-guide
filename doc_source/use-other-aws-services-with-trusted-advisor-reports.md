@@ -23,9 +23,9 @@ After you download your `resources.json` report, upload the file to Amazon S3\. 
 
 1. Open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
-1. Choose an S3 bucket and copy the name\. You use the name in the next procedure\.
+1. From the list of buckets, choose an S3 bucket, and then copy the name\. You use the name in the next procedure\.
 
-1. Choose **Create folder**, enter the name **folder1**, and choose **Save**\. 
+1. On the *bucket\-name* page, choose **Create folder**, enter the name **folder1**, and then choose **Save**\. 
 
 1. Choose the **folder1**\.
 
@@ -80,8 +80,9 @@ After you upload your report to Amazon S3, upload the following YAML template to
 
 After you have your resources, you can view the data in Athena\. Use Athena to create queries and analyze the results of the report, such as looking up specific check results for accounts in the organization\.
 
-**Note**  
+**Notes**  
 Use the US East \(N\. Virginia\) Region\.
+If you're new to Athena, you must specify a query result location before you can run a query for your report\. We recommend that you specify a different S3 bucket for this location\. For more information, see [Specifying a query result location](https://docs.aws.amazon.com/athena/latest/ug/querying.html#query-results-specify-location) in the *Amazon Athena User Guide*\.
 
 **To query the data in Athena**
 
@@ -117,7 +118,7 @@ You must use the US East \(N\. Virginia\) Region\.
 
 **To create a dashboard in Amazon QuickSight**
 
-1. Navigate to the Amazon QuickSight console and sign in to your account at [https://us\-east\-1\.quicksight\.aws\.amazon\.com](https://us-east-1.quicksight.aws.amazon.com)\.
+1. Navigate to the Amazon QuickSight console and sign in to your [account](https://us-east-1.quicksight.aws.amazon.com)\.
 
 1. Choose **New analysis**, **New dataset**, and then choose **Athena**\.
 

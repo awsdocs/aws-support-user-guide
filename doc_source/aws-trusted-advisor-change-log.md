@@ -5,7 +5,17 @@ See the following topic for recent changes to Trusted Advisor checks\.
 **Note**  
 If you use the Trusted Advisor console or the AWS Support API, checks that were removed won't appear in check results\. If you use any of the removed checks such as specifying the check ID in an AWS Support API operation or your code, you must remove these checks to avoid API call errors\.
 
-For more information about the available checks, see the [AWS Trusted Advisor best practice checklist](http://aws.amazon.com/premiumsupport/technology/trusted-advisor/best-practice-checklist/)\.
+For more information about the available checks, see the [AWS Trusted Advisor check reference](trusted-advisor-check-reference.md)\.
+
+## Added checks for Amazon Elastic Block Store volume storage<a name="ebs-volume-storage-quota-checks"></a>
+
+Trusted Advisor added the following checks on June 8, 2021\.
+
+
+| Check name | Check category | Check ID | 
+| --- | --- | --- | 
+|  EBS General Purpose SSD \(gp3\) Volume Storage  |  Service Limits  |  dH7RR0l6J3  | 
+|  EBS Provisioned IOPS SSD \(io2\) Volume Storage  |  Service Limits  |  gI7MM0l7J2  | 
 
 ## Added checks for AWS Lambda<a name="added-lambda-checks"></a>
 

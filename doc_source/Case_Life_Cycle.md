@@ -25,7 +25,6 @@ This topic uses Java code examples to demonstrate the use of AWS Support\. For m
 If you exceed service quotas for your calls to AWS Support, see the following information:  
 [Service quotas for the AWS Support API](#aws-support-trusted-advisor-api-quotas)
 [Error retries and exponential backoff in AWS](https://docs.aws.amazon.com/general/latest/gr/api-retries.html) in the *AWS General Reference*
-[Error retries and exponential backoff in AWS](https://docs.aws.amazon.com/general/latest/gr/api-retries.html)\.
 
 ### Using IAM with the AWS Support API<a name="IAM_support"></a>
 
@@ -33,7 +32,7 @@ AWS Identity and Access Management \(IAM\) is supported by the AWS Support API\.
 
 ## Create an AWS Support client<a name="getclient"></a>
 
-The following Java code snippet shows how to create an `AWSSupportClient`, which is used to call the `AWSSupportService`\. The `createClient` method gets AWS credentials by calling the [AWSSupportClient\(\)](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/support/AWSSupportClient.html#AWSSupportClient%28%29) constructor with no parameters, which retrieves credentials from the credentials provider chain\. For more information about this process, see [Tutorial: Grant access using an IAM role and the AWS SDK for Java](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) in the *AWS SDK for Java*\.
+The following Java code snippet shows how to create an `AWSSupportClient`, which is used to call the `AWSSupportService`\. The `createClient` method gets AWS credentials by calling the [https://docs.aws.amazon.com/sdk-for-java/latest/reference/com/amazonaws/services/support/AWSSupportClient.html#AWSSupportClient%28%29](https://docs.aws.amazon.com/sdk-for-java/latest/reference/com/amazonaws/services/support/AWSSupportClient.html#AWSSupportClient%28%29) constructor with no parameters, which retrieves credentials from the credentials provider chain\. For more information about this process, see [Tutorial: Grant access using an IAM role and the AWS SDK for Java](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/java-dg-roles.html) in the *AWS SDK for Java*\.
 
 For more information about AWS credentials, see [AWS security credentials](https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html) in the *AWS General Reference*\.
 

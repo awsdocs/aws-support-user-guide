@@ -24,12 +24,12 @@ These actions might include the following:
 +  **Processing of service attributes and usage data for your AWS account** – AWS Support might use the permissions granted by the managed policy to access service attributes and usage data for your AWS account\. This policy allows AWS Support to provide billing, administrative, and technical support for your account\. Service attributes include your account’s resource identifiers, metadata tags, roles, and permissions\. Usage data includes usage policies, usage statistics, and analytics\.
 +  **Maintaining the operational health of your account and its resources** – AWS Support uses automated tools to perform actions related to operational and technical support\.
 
-For more information about the allowed services and actions, see the [AWSSupportServiceRolePolicy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy$jsonEditor) policy in the IAM console\.
+For more information about the allowed services and actions, see the [https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy$jsonEditor](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy$jsonEditor) policy in the IAM console\.
 
 **Note**  
 AWS Support automatically updates the `AWSSupportServiceRolePolicy` policy once per month to add permissions for new AWS services and actions\.
 
-For more information, see [AWS managed policies for AWS Support](security-iam-awsmanpol.md)\.
+For more information, see [AWS managed policies for AWS Support and AWS Trusted Advisor](security-iam-awsmanpol.md)\.
 
 ## Creating a service\-linked role for AWS Support<a name="create-service-linked-role"></a>
 

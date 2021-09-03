@@ -34,7 +34,7 @@ For a list of metric and dimension names, see [Trusted Advisor metrics and dimen
 
 1. In the results table, select the check box for the metric\. 
 
-   In the following example, the check name is **IAM Access Key Rotation** and the metric name is **RedResources**\.  
+   In the following example, the check name is **IAM Access Key Rotation** and the metric name is **YellowResources**\.  
 ![\[Screenshot of the IAM Password Policy check name for Trusted Advisor in the CloudWatch console.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/trusted_advisor_metrics_cloudwatch_iam_access_key_rotation.png)
 
 1. Choose **Select metric**\.
@@ -394,7 +394,7 @@ You can use the following dimension for Trusted Advisor checks\.
 
 | Dimension | Description | 
 | --- | --- | 
-| CheckName |  The name of the Trusted Advisor check\. You can find all check names in the [Trusted Advisor console](https://console.aws.amazon.com/trustedadvisor/home) or the [AWS Trusted Advisor best practice checklist](http://aws.amazon.com/premiumsupport/technology/trusted-advisor/best-practice-checklist/)\.  | 
+| CheckName |  The name of the Trusted Advisor check\. You can find all check names in the [Trusted Advisor console](https://console.aws.amazon.com/trustedadvisor/home) or the [AWS Trusted Advisor check reference](trusted-advisor-check-reference.md)\.  | 
 
 ### Dimensions for category\-level metrics<a name="trusted-advisor-categorylevel-dimensions"></a>
 

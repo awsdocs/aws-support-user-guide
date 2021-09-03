@@ -25,18 +25,17 @@ You must have AWS Identity and Access Management \(IAM\) permissions to access t
 
 1. Sign in to the Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor/home](https://console.aws.amazon.com/trustedadvisor/home)\.
 
-1. On the **Trusted Advisor Dashboard** page, view the summary for each check category\. Trusted Advisor uses the following color code for check results:
-   + **Green** – Trusted Advisor doesn't detect an issue for the check\.
-   + **Yellow** – Trusted Advisor detects a possible issue for the check\.
-   + **Red** – Trusted Advisor recommends an action for the check\.
+1. On the ** Dashboard** page, view the summary for each check category:
+   + **Action recommended \(red\)** – Trusted Advisor recommends an action for the check\. For example, a check that detects a security issue for your IAM resources might recommend urgent steps\.
+   + **Investigation recommended \(yellow\)** – Trusted Advisor detects a possible issue for the check\. For example, a check that reaches a quota for a resource might recommend ways to delete unused resources\.
+   + **Excluded items \(gray\)** – The number of checks that have excluded items, such as resources that you want a check to ignore\. For example, this might be Amazon EC2 instances that you don't want the check to evaluate\.
 
-1. You can do the following on the **Trusted Advisor Dashboard** page:
-   + To refresh all checks in your account, choose the refresh icon in the upper\-right corner\.
-   + To create an \.xls file that includes all check results, choose the download icon in the upper\-right corner\.
-   + To learn more about Trusted Advisor, choose the help pane icon in the upper\-right corner\.
-   + Under **Recent Changes**, choose a check name to view the latest results for that check\.
-   + Under **What's New**, choose a link for AWS blogs and resources to learn more about Trusted Advisor updates\.
-   + Choose a check category to view the results, such as **Cost Performance**\.
+1. You can do the following on the ** Dashboard** page:
+   + To refresh all checks in your account, choose **Refresh all checks**\.
+   + To create an \.xls file that includes all check results, choose **Download all checks**\.
+   + Under **Checks Summary**, choose a check category, such as **Security**, to view the results\.
+   + Under **Potential Monthly Savings**, you can view how much you can save for your account and the cost optimization checks for recommendations\.
+   + Under **Recent changes**, you can view changes to check statuses within the last 30 days\. Choose a check name to view the latest results for that check or choose the arrow icon to view the next page\.
 
 **Example : Trusted Advisor Dashboard**  
 The following example shows a summary of the check results\.  
@@ -56,49 +55,55 @@ You can view the check descriptions and results for the following check categori
 
 1. Sign in to the Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor/home](https://console.aws.amazon.com/trustedadvisor/home)\.
 
-1. In the navigation pane or the **Trusted Advisor Dashboard** page, choose the check category\.
+1. In the navigation pane, choose the check category\.
 
-1. For each check, such as **Low Utilization Amazon EC2 Instances**, choose the refresh icon to refresh this check\.
+1. On the category page, view the summary for each check category:
+   + **Action recommended \(red\)** – Trusted Advisor recommends an action for the check\.
+   + **Investigation recommended \(yellow\)** – Trusted Advisor detects a possible issue for the check\.
+   + **No problems detected \(green\)** – Trusted Advisor doesn't detect an issue for the check\.
+   + **Excluded items \(gray\)** – The number of checks that have excluded items, such as resources that you want a check to ignore\.
 
-1. Choose the download icon to create an \.xls file that includes the results for this check\.
+1. For each check, choose the refresh icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/refresh.png)\) to refresh this check\.
+
+1. Choose the download icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/download.png)\) to create an \.xls file that includes the results for this check\.
 
 **Example : Cost Optimization category**  
-The following example shows one \(yellow\) check that needs investigation and two \(green\) checks that don't\.  
+The following example shows 13 \(yellow\) checks that need investigation and three \(green\) checks that don't have any issues\.  
 
 ![\[Screenshot of the Cost Optimization category page in the Trusted Advisor console.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/trusted-advisor-check-category-page.png)
 
 ## View specific checks<a name="view-specific-checks"></a>
 
-Expand a check to view the full check description, your affected resources, any recommended steps, and links for more resources\.
+Expand a check to view the full check description, your affected resources, any recommended steps, and links to more information\.
 
 **To view a specific check**
 
 1. Sign in to the Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor/home](https://console.aws.amazon.com/trustedadvisor/home)\.
 
-1. In the navigation pane or the **Trusted Advisor Dashboard** page, choose the check category\.
+1. In the navigation pane, choose a check category\.
 
 1. Choose the check name to view the description and the following details:
    + **Alert Criteria** – Describes the threshold when a check will change status\.
    + **Recommended Action** – Describes the recommended actions for this check\.
    + **Additional Resources** – Lists related AWS documentation\.
-   + A table that lists the affected resources in your account\. You can include or exclude these resources from check results\.
+   + A table that lists the affected items in your account\. You can include or exclude these items from check results\.
 
-1. \(Optional\) To exclude resources so that they don't appear in check results:
+1. \(Optional\) To exclude items so that they don't appear in check results:
 
-   1. Select a resource and choose **Exclude & Refresh**\.
+   1. Select an item and choose **Exclude & Refresh**\.
 
-   1. To view all excluded resources, for **Item View**, choose **Excluded Items**\.
+   1. To view all excluded items, choose **Excluded items**\.
 
-1. \(Optional\) To include resources so that the check evaluates them again:
+1. \(Optional\) To include items so that the check evaluates them again:
 
-   1. For **Item View**, choose **Excluded Items**, select a resource, and then choose **Include & Refresh**\.
+   1. Choose **Excluded items**, select an item, and then choose **Include & Refresh**\.
 
-   1. To view all included resources, for **Item View**, choose **Included Items**\.
+   1. To view all included items, choose **Included items**\.
 
-1. Choose **Columns Display** and then select or clear the fields to appear for the resources\. 
+1. Choose the settings icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/settings.png)\) and in the **Preferences** dialog box, you can specify the number of items or the properties to display, and then choose **Confirm**\.
 
 **Example : Cost Optimization check**  
-The following **Low Utilization Amazon EC2 Instances ** check lists the affected instances in the account\. This check identifies one Amazon EC2 instance that isn't used and recommends that you stop or terminate the resource\.  
+The following **Low Utilization Amazon EC2 Instances ** check lists the affected instances in the account\. This check identifies 41 Amazon EC2 instances that have low usage and recommends that you stop or terminate the resources\.  
 
 ![\[Screenshot of the Low Utilization Amazon EC2 Instances check in the Trusted Advisor console.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/include-exclude-checks.png)
 
@@ -112,26 +117,21 @@ If you have checks that evaluate items in your account, such as AWS resources, y
 
 1. Sign in to the Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor/home](https://console.aws.amazon.com/trustedadvisor/home)\.
 
-1. In the navigation pane or the **Trusted Advisor Dashboard** page, choose the check category\.
+1. In the navigation pane or the ** Dashboard** page, choose the check category\.
 
 1. For the **View** list, specify which checks to view:
    + **All checks** – List all checks for this category
-   + **No problems detected** – List checks that are green and don't have any issues
-   + **Investigation recommended** – List checks that are yellow and recommend possible action
-   + **Action recommended** – List checks that are red and recommend that you take action
-   + **Checks with excluded items** – List checks that you specified to exclude items from the check results
+   + **Action recommended** – List checks that recommend that you take action\. These checks are highlighted in red\.
+   + **Investigation recommended** – List checks that recommend that you take possible action\. These checks are highlighted in yellow\.
+   + **No problems detected** – List checks that don't have any issues\. These checks are highlighted in green\.
+   + **Checks with excluded items** – List checks that you specified to exclude items from the check results\.
 
 1. If you added tags to your AWS resources, such as Amazon EC2 instances or AWS CloudTrail trails, you can filter your results so that the checks only show items that have the specified tag\.
 
-   For **Filter by tag**, enter a tag key and value and then choose **Apply filter**\.
-
-   For example, this filter uses the *trailtype* key and *allregions* value\.  
+   For **Filter by tag**, enter a tag key and value, and then choose **Apply filter**\.  
 ![\[Screenshot of the filter tags feature in the Trusted Advisor console.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/filter-by-tags.png)
 
-1. In the table for the check, the check results only show items that have the specified tag and value\.
-
-   The following AWS CloudTrail Logging check shows three trails that have the specified *trailtype* key and the *allregions* value\.  
-![\[Screenshot of tag results in the Trusted Advisor console for the AWS CloudTrail Logging check.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/filter-by-tags-cloudtrail-trails.png)
+1. In the table for the check, the check results only show items that have the specified key and value\.
 
 1. To clear the filter by tags, choose **Reset**\.
 
@@ -149,10 +149,10 @@ You can refresh checks to get the latest results for your account\.
 
 1. Navigate to the AWS Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor](https://console.aws.amazon.com/trustedadvisor/)\.
 
-1. On the **Trusted Advisor Dashboard** or a check category page, choose the refresh icon in the upper\-right corner to refresh all checks\.
+1. On the ** Dashboard** or a check category page, choose **Refresh all checks**\.
 
 You can also refresh specific checks in the following ways:
-+ Choose the refresh icon for an individual check\.
++ Choose the refresh icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/refresh.png)\) for an individual check\.
 + Use the [RefreshTrustedAdvisorCheck](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_RefreshTrustedAdvisorCheck.html) API operation\.
 
 ## Download check results<a name="download-check-results"></a>
@@ -162,8 +162,8 @@ You can download check results to get an overview of Trusted Advisor in your acc
 **To download Trusted Advisor checks results**
 
 1. Navigate to the AWS Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor](https://console.aws.amazon.com/trustedadvisor/)\.
-   + To download all check results, in the **Trusted Advisor Dashboard** or a check category page, choose the download icon in the upper\-right corner\.
-   + To download a check result for a specific check, choose the check name, and then choose the download icon\.
+   + To download all check results, in the ** Dashboard** or a check category page, choose **Download all checks**\.
+   + To download a check result for a specific check, choose the check name, and then choose the download icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/download.png)\)
 
 1. Save or open the \.xls file\. The file contains the same summary information from the Trusted Advisor console, such as the check name, description, status, affected resources, and so on\.
 
@@ -185,9 +185,9 @@ Specify who can receive the weekly Trusted Advisor email messages for check resu
 
 1. In the navigation pane, choose **Preferences**\.
 
-1. For **Weekly Email Notification Preferences**, select whom to notify for your check results\. You can add and remove contacts from the [Account Settings](https://console.aws.amazon.com/billing/home#/account) page in the AWS Billing and Cost Management console\.
+1. For **Weekly Email Notification**, select whom to notify for your check results\. You can add and remove contacts from the [Account Settings](https://console.aws.amazon.com/billing/home#/account) page in the AWS Billing and Cost Management console\.
 
-1. For **Notification Language**, choose the language for the email message\.
+1. For **Language**, choose the language for the email message\.
 
 1. Choose **Save Email Preferences**\.
 
@@ -201,12 +201,12 @@ When you disable this service, Trusted Advisor won't perform any checks on your 
 
 **To disable Trusted Advisor**
 
-1. Under **TA Service Linked Role Permissions**, choose **Disable Trusted Advisor**\. This action disables Trusted Advisor for all checks in your account\. 
+1. Under **Trusted Advisor**, choose **Disable Trusted Advisor**\. This action disables Trusted Advisor for all checks in your account\. 
 
-1. You can then manually delete the [AWSServiceRoleForTrustedAdvisor](https://console.aws.amazon.com/iam/home?#/roles/AWSServiceRoleForTrustedAdvisor) role from your account\. For more information, see [Deleting a service\-linked role for Trusted Advisor](using-service-linked-roles-ta.md#delete-service-linked-role-ta)\.
+1. You can then manually delete the [AWSServiceRoleForTrustedAdvisor](https://console.aws.amazon.com/iam/home?#/roles/AWSServiceRoleForTrustedAdvisor)  from your account\. For more information, see [Deleting a service\-linked role for Trusted Advisor](using-service-linked-roles-ta.md#delete-service-linked-role-ta)\.
 
 ### Related information<a name="related-information-getting-started"></a>
 
 For more information about Trusted Advisor, see the following topics:
 + [How do I start using Trusted Advisor?](http://aws.amazon.com/premiumsupport/knowledge-center/trusted-advisor-intro/) 
-+ [AWS Trusted Advisor best practice checklist](http://aws.amazon.com/premiumsupport/technology/trusted-advisor/best-practice-checklist/)
++ [AWS Trusted Advisor check reference](trusted-advisor-check-reference.md)

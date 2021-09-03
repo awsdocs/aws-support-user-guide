@@ -14,3 +14,4 @@ For more information, see [Trusted Advisor](https://aws.amazon.com/premiumsuppor
 + [Get started with AWS Trusted Advisor](get-started-with-aws-trusted-advisor.md)
 + [Organizational view for AWS Trusted Advisor](organizational-view.md)
 + [Change log for AWS Trusted Advisor checks](aws-trusted-advisor-change-log.md)
++ [Using Trusted Advisor as a web service](trustedadvisor.md)

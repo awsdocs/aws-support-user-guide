@@ -17,8 +17,8 @@ Organizational view lets you view Trusted Advisor checks for all accounts in you
 
 You must meet the following requirements to enable organizational view:
 + Your accounts must be members of an [AWS Organization](http://aws.amazon.com/organizations/)\.
-+ Your organization must have [all features](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html) enabled\.
-+ The management account in your organization must have a Business or Enterprise support plan\. See [Compare AWS Support plans](http://aws.amazon.com/premiumsupport/plans/)\.
++ Your organization must have all features enabled for Organizations\. For more information, see [Enabling all features in your organization ](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html) in the *AWS Organizations User Guide*\.
++ The management account in your organization must have a Business or Enterprise support plan\. You can find your support plan from the AWS Support Center or from the [Support plans](https://console.aws.amazon.com/support/plans) page\. See [Compare AWS Support plans](http://aws.amazon.com/premiumsupport/plans/)\.
 + You must sign in as a user in the [management account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts.html) \(or [assumed equivalent role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-console.html)\)\. Whether you sign in as an IAM user or an IAM role, you must have a policy with the required permissions\. See [Using IAM policies to allow access to organizational view](organizational-view-iam-policies.md)\.
 
 ## Enable organizational view<a name="enable-organizational-view"></a>
@@ -35,8 +35,7 @@ You enable organizational view from the Trusted Advisor console\.
 
 1. In the navigation pane, choose **Organizational View**\.
 
-1. Under **Get Started**, choose **Enable organizational view**\.  
-![\[Screenshot of how to enable organizational view in the Trusted Advisor console.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/enable-organizational-view.png)
+1. Choose **Enable organizational view**\.
 
 ## Refresh Trusted Advisor checks<a name="refresh-trusted-advisor-checks"></a>
 
@@ -51,11 +50,11 @@ If you have accounts in your organization that have a Developer or Basic support
 
 1. Navigate to the AWS Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor](https://console.aws.amazon.com/trustedadvisor/)\.
 
-1. On the **Dashboard** page, choose the refresh icon\. This refreshes all checks in your account\.
+1. On the **Dashboard** page, choose the **Refresh all checks**\. This refreshes all checks in your account\.
 
 You can also refresh specific checks in the following ways:
 + Use the [RefreshTrustedAdvisorCheck](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_RefreshTrustedAdvisorCheck.html) API operation\.
-+ Choose the refresh icon for individual check categories or checks\.
++ Choose the refresh icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/refresh.png)\) for an individual check\.
 
 ## Create organizational view reports<a name="create-organizational-view-reports"></a>
 
@@ -79,15 +78,17 @@ You can create up to 50 reports\. If you create reports beyond this quota, Trust
 
    1. For **Region**, specify the AWS Regions or choose **All**\.
 
-   1. For **Check category**, specify the check category or choose **All**\.
+   1. For **Check category**, choose the check category or choose **All**\.
 
    1. For **Checks**, choose the specific checks for that category or choose **All**\.
+**Note**  
+The **Check category** filter overrides the **Checks** filter\. For example, if you choose the **Security** category and then choose a specific check name, your report includes all check results for that category\. To create a report for only specific checks, keep the default **All** value for **Check category** and then choose your check names\.
 
    1. For **Resource status**, choose the status to filter, such as **Warning**, or choose **All**\.
 
-1. For **AWS organization**, select the organizational units \(OUs\) to include in your report\. For more information about OUs, see[ Managing organizational units](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html) in the *AWS Organizations User Guide*\.
+1. For **AWS Organization**, select the organizational units \(OUs\) to include in your report\. For more information about OUs, see[ Managing organizational units](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html) in the *AWS Organizations User Guide*\.
 
-1. Choose **Create**\.
+1. Choose **Create report**\.
 
 **Example : Create report filter options**  
 The following example creates a JSON report for the following:  
@@ -112,11 +113,11 @@ After the report is ready, you can view the report summary from the Trusted Advi
 
 1. Sign in to the organization's management account and open the AWS Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor](https://console.aws.amazon.com/trustedadvisor/)\.
 
-1. In the left navigation pane, choose **Organizational View**\.
+1. In the navigation pane, choose **Organizational View**\.
 
 1. Choose the report name\.
 
-   On the **Summary** page, view the check statuses for each category\.
+1. On the **Summary** page, view the check statuses for each category\. You can also choose **Download report**\.
 
 **Example : Report summary for an organization**  
 
@@ -137,10 +138,8 @@ After your report is ready, download it from the Trusted Advisor console\. The r
 
    The **Organizational View** page displays the available reports to download\.
 
-1. Select the check box for the report\.  
+1. Select a report, choose **Download report**, and then save the file\. You can only download one report at a time\.  
 ![\[Screenshot of example reports to download for Trusted Advisor.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/organizational-view-summary-reports-2.png)
-
-1. Choose **Download report** and save the file\. You can download one report at a time\.
 
 1. Unzip the file\.
 
@@ -283,7 +282,7 @@ After you disable this feature, the following happens:
 
 1. Sign in to the organization's management account and open the AWS Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor](https://console.aws.amazon.com/trustedadvisor/)\.
 
-1. In the left navigation, choose **Preferences**\.
+1. In the navigation pane, choose **Preferences**\.
 
 1. Under **Organizational View**, choose **Disable organizational view**\.  
 ![\[Screenshot of how to disable Trusted Advisor organizational view.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/disable-organizational-view.png)
