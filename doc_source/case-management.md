@@ -21,16 +21,16 @@ If you can't sign in to Support Center and create a support case, you can use th
 
 1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/)\.
 
-1. In the upper\-right corner, choose **Support**, and then choose **Support Center**\.
+2. In the top\-bar, choose **?** icon, and then choose **Support Center**\.
 
-1. Choose **Create case**\.
+3. Choose **Create case**\.
 
-1. Choose one of the following options:
+4. Choose one of the following options:
    + **Account and billing support**
    + **Service limit increase**
    + **Technical support**
 
-1. Follow the prompts to describe your case, such as the following:
+5. Follow the prompts to describe your case, such as the following:
    + Error messages that you received
    + Troubleshooting steps that you followed
    + How you're accessing the service:
@@ -38,7 +38,7 @@ If you can't sign in to Support Center and create a support case, you can use th
      + AWS Command Line Interface \(AWS CLI\)
      + API operations
 
-1. Choose **Submit**\. Your case ID number and summary appear\.
+6. Choose **Submit**\. Your case ID number and summary appear\.
 
 ## Example: Create a case for an Amazon EC2 instance<a name="case-example"></a>
 
