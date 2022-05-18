@@ -12,7 +12,7 @@ This documentation helps you understand how to apply the shared responsibility m
 + [Data protection in AWS Support](data-protection.md)
 + [Identity and access management for AWS Support](security-iam.md)
 + [Incident response](incident-response.md)
-+ [Logging and Monitoring in AWS Support](monitoring-overview.md)
++ [Logging and monitoring in AWS Support and AWS Trusted Advisor](monitoring-security.md)
 + [Compliance validation for AWS Support](support-compliance.md)
 + [Resilience in AWS Support](disaster-recovery-resiliency.md)
 + [Infrastructure security in AWS Support](infrastructure-security.md)

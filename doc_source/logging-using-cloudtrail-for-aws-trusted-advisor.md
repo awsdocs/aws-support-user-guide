@@ -25,7 +25,11 @@ Trusted Advisor supports logging a subset of the Trusted Advisor console actions
 + `DescribeOrganization`
 + `DescribeOrganizationAccounts`
 + `DescribeReports`
++ `DescribeRisk` 
++ `DescribeRisks`
++ `DescribeRiskResources`
 + `DescribeServiceMetadata`
++ `DownloadRisk`
 + `ExcludeCheckItems`
 + `GenerateReport`
 + `IncludeCheckItems`
@@ -36,6 +40,7 @@ Trusted Advisor supports logging a subset of the Trusted Advisor console actions
 + `SetAccountAccess`
 + `SetOrganizationAccess`
 + `UpdateNotificationPreferences`
++ `UpdateRiskStatus`
 
 For a complete list of Trusted Advisor console actions, see [Trusted Advisor actions](security-trusted-advisor.md#trusted-advisor-operations)\.
 
@@ -78,7 +83,7 @@ The following example shows a CloudTrail log entry that demonstrates the `Refres
    "eventName":"RefreshCheck",
    "awsRegion":"us-east-1",
    "sourceIPAddress":"100.127.34.136",
-   "userAgent":"AWS-TrustedAdvisor, aws-internal/3 aws-sdk-java/1.11.841 Linux/4.9.217-0.3.ac.206.84.332.metal1.x86_64 OpenJDK_64-Bit_Server_VM/25.262-b10 java/1.8.0_262 vendor/Oracle_Corporation",
+   "userAgent":"signin.amazonaws.com",
    "requestParameters":{
       "checkId":"R365s2Qddf"
    },
@@ -121,7 +126,7 @@ The following example shows a CloudTrail log entry that demonstrates the `Update
    "eventName":"UpdateNotificationPreferences",
    "awsRegion":"us-east-1",
    "sourceIPAddress":"100.127.34.167",
-   "userAgent":"AWS-TrustedAdvisor, aws-internal/3 aws-sdk-java/1.11.841 Linux/4.9.217-0.3.ac.206.84.332.metal1.x86_64 OpenJDK_64-Bit_Server_VM/25.262-b10 java/1.8.0_262 vendor/Oracle_Corporation",
+   "userAgent":"signin.amazonaws.com",
    "requestParameters":{
       "contacts":[
          {
@@ -175,7 +180,7 @@ The following example shows a CloudTrail log entry that demonstrates the `Genera
    "eventName":"GenerateReport",
    "awsRegion":"us-east-1",
    "sourceIPAddress":"100.127.36.171",
-   "userAgent":"AWS-TrustedAdvisor, aws-internal/3 aws-sdk-java/1.11.864 Linux/4.9.217-0.3.ac.206.84.332.metal1.x86_64 OpenJDK_64-Bit_Server_VM/25.262-b10 java/1.8.0_262 vendor/Oracle_Corporation",
+   "userAgent":"signin.amazonaws.com",
    "requestParameters":{
       "refresh":false,
       "includeSuppressedResources":false,

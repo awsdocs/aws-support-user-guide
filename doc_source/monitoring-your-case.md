@@ -21,9 +21,9 @@ When you're satisfied with the response or your problem is solved, you can resol
 
 **To resolve a support case**
 
-1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/)\.
-
-1. In the upper\-right corner, choose **Support**, and then choose **Support Center**\.
+1. Sign in to the [AWS Support Center Console](https://console.aws.amazon.com/support)\.
+**Tip**  
+In the AWS Management Console, you can also choose the question mark icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/questionmark.png)\) and then choose **Support Center**\.
 
 1. Under **Open support cases**, choose the **Subject** of the support case that you want to resolve\.
 
@@ -51,9 +51,9 @@ If you reopen an existing case that has different information than your current 
 
 **To reopen a resolved case**
 
-1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/)\.
-
-1. In the upper\-right corner, choose **Support**, and then choose **Support Center**\.
+1. Sign in to the [AWS Support Center Console](https://console.aws.amazon.com/support)\.
+**Tip**  
+In the AWS Management Console, you can also choose the question mark icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/questionmark.png)\) and then choose **Support Center**\.
 
 1. Choose **View all cases** and then choose the **Subject** or the **Case ID** of the support case that you want to reopen\.
 
@@ -78,9 +78,9 @@ After 14 days of inactivity, you can't reopen a resolved case\. If you have a si
 
 **To create a related case**
 
-1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/)\.
-
-1. In the upper\-right corner, choose **Support** and then choose **Support Center**\.
+1. Sign in to the [AWS Support Center Console](https://console.aws.amazon.com/support)\.
+**Tip**  
+In the AWS Management Console, you can also choose the question mark icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/questionmark.png)\) and then choose **Support Center**\.
 
 1. Choose **View all cases** and then choose the **Subject** or the **Case ID** of the support case that you want to reopen\.
 

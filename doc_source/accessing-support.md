@@ -6,7 +6,7 @@ You can use one of the following options to access Support Center:
 + Use the email address and password associated with your AWS account\. This identity is called the AWS account *root user*\.
 + Use AWS Identity and Access Management \(IAM\)\. 
 
-If you have a Business or Enterprise Support plan, you can also use the [AWS Support API](Welcome.md) to access AWS Support and Trusted Advisor operations programmatically\. For more information, see the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/Welcome.html)\.
+If you have a Business, Enterprise On\-Ramp, or Enterprise Support plan, you can also use the [AWS Support API](Welcome.md) to access AWS Support and Trusted Advisor operations programmatically\. For more information, see the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/Welcome.html)\.
 
 
 

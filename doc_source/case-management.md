@@ -1,13 +1,13 @@
 # Creating support cases and case management<a name="case-management"></a>
 
 In the AWS Management Console, you can create three types of customer cases in AWS Support:
-+ **Account and billing support** cases are available to all AWS customers\. You can get help with billing and account questions\.
++ **Account and billing** support cases are available to all AWS customers\. You can get help with billing and account questions\.
 + **Service limit increase** requests are available to all AWS customers\. For more information about the default service quotas, formerly referred to as limits, see [AWS service quotas](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
-+ **Technical support** cases connect you to technical support for help with service\-related technical issues and, in some cases, third\-party applications\. If you have a Developer Support plan, you can communicate by using email and the Support Center\. If you have a Business or Enterprise Support plan, you can also communicate by phone or live chat\.
++ **Technical** support cases connect you to technical support for help with service\-related technical issues and, in some cases, third\-party applications\.
 **Note**  
 If you have Basic Support, you can't create a technical support case\.
 To change your support plan, see [Changing your AWS Support plan](changing-support-plans.md)\.
-To close your account, see [Closing an Account](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/close-account.html) in the *AWS Billing and Cost Management User Guide*\.
+To close your account, see [Closing an Account](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/close-account.html) in the *AWS Billing User Guide*\.
 
 ## Creating a support case<a name="creating-a-support-case"></a>
 
@@ -19,18 +19,26 @@ If you can't sign in to Support Center and create a support case, you can use th
 
 **To create a support case**
 
-1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/)\.
-
-1. In the upper\-right corner, choose **Support**, and then choose **Support Center**\.
+1. Sign in to the [AWS Support Center Console](https://console.aws.amazon.com/support)\.
+**Tip**  
+In the AWS Management Console, you can also choose the question mark icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/questionmark.png)\) and then choose **Support Center**\.
 
 1. Choose **Create case**\.
 
 1. Choose one of the following options:
-   + **Account and billing support**
-   + **Service limit increase**
-   + **Technical support**
+   + **Account and billing**
+   + **Technical**
+   + For service quota increases, choose **Looking for service limit increases?** and then follow the instructions for [Creating a service quota increase](create-service-quota-increase.md)\.
 
-1. Follow the prompts to describe your case, such as the following:
+1. Choose the **Service**, **Category**, and **Severity**\.
+**Tip**  
+You can use the recommended solutions that appear for commonly asked questions\.
+
+1. Choose **Next step: Additional information**
+
+1. On the **Additional information** page, for **Subject**, enter a title about your issue\.
+
+1. For **Description**, follow the prompts to describe your case, such as the following:
    + Error messages that you received
    + Troubleshooting steps that you followed
    + How you're accessing the service:
@@ -38,47 +46,30 @@ If you can't sign in to Support Center and create a support case, you can use th
      + AWS Command Line Interface \(AWS CLI\)
      + API operations
 
-1. Choose **Submit**\. Your case ID number and summary appear\.
+1. \(Optional\) Choose **Attach files** to add any relevant files to your case, such as error logs or screenshots\. You can attach up to three files\. Each file can be up to 5 MB\. 
 
-## Example: Create a case for an Amazon EC2 instance<a name="case-example"></a>
+1. Choose **Next step: Solve now or contact us**\.
 
-As shown in the following screenshot, this example is a technical support case for an Amazon Elastic Compute Cloud \(Amazon EC2\) instance\. 
+1. On the **Contact us** page, choose your preferred language and how you want to be contacted\. You can choose one of the following options:
 
-![\[Screenshot of how to create a support case in the Support Center.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/support-create-case-console-1.png)
+   1. **Web** – Receive a reply in Support Center\.
 
-1. **Create case** – Choose the type of case to create from the three boxes at the top of the page\. In this example, the case type is **Technical support**\.
+   1. **Chat** – Start a live chat with a support agent\.
+
+   1. **Phone** – Receive a phone call from a support agent\. If you choose this option, enter the following information:
+      + **Country or region**
+      + **Phone number**
+      + **\(Optional\) Extension**
+**Notes**  
+The contact options that appear depend on the type of case and your support plan\.
+You can choose **Discard draft** to clear your support case draft\.
+If you close the chat window and you want to start another live chat, you can add a **Reply** to your support case, choose **Chat**, and then choose **Submit**\.
+
+1. \(Optional\) If you have a Business, Enterprise On\-Ramp, or Enterprise Support plan, the **Additional contacts** option appears\. You can enter the email addresses of people to notify when the status of the case changes\. If you're signed in as an IAM user, include your email address\. If you're signed in with your root account email address and password, you don't need to include your email address
 **Note**  
-If you have the Basic Support plan, you can't create a technical support case\.
+If you have the Basic Support plan, the **Additional contacts** option isn't available\. However, the **Operations** contact specified in the **Alternate Contacts** section of the [My Account](https://console.aws.amazon.com/billing/home?#/account) page receives copies of the case correspondence, but only for the specific case types of account and billing, and technical\.
 
-1. **Service** – If your question affects multiple services, choose the service that's most applicable\. In this example, the service is **Elastic Compute Cloud \(EC2 \- Linux\)**\.
-
-1. **Category** – Choose the category that best fits your use case\. In this example, there's trouble connecting to an instance, so **Instance Issue** is chosen\. When you choose a category, links to information that might resolve your problem appear below the **Case classification** section\.
-
-1. **Severity** – Customers with a paid support plan can choose the **General guidance** \(1\-day response time\) or **System impaired** \(12\-hour response time\) severity level\. Customers with a Business Support plan can also choose **Production system impaired** \(4\-hour response\) or **Production system down** \(1\-hour response\)\. Customers with Enterprise Support can choose **Business\-critical system down** \(15\-minute response\)\.
-
-   Response times are for first response from AWS Support\. These response times don't apply to subsequent responses\. For third\-party issues, response times can be longer, depending on the availability of skilled personnel\. For more information, see [Choosing a severity](#choosing-severity)\.
-**Note**  
-Based on your category choice, you might be prompted for more information\. In this example, you're prompted to enter the **Instance ID**\. As a best practice, enter resource IDs, even when not prompted\.
-
-After you specify the case type and classification, you can specify the description and how you want to be contacted\.
-
-![\[Screenshot of how to create an Amazon EC2 support case in the Support Center.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/support-create-case-console-2.png)
-
-1. **Subject** – Enter a title that briefly describes your issue\. In this example, the subject is **Failed status checks**\.
-
-1. **Description** – This is the most important information that you provide to AWS Support\. For most service and category combinations, a prompt suggests information that's most helpful for the fastest resolution\. For more information, see [Describing your problem](#describing-your-problem)\.
-
-1. **Attachments** – Screenshots and other attachments \(less than 5 MB each\) can be helpful\. In this example, the attached image is a failed status check\.
-
-1. **Preferred contact language** – Currently, you can choose English or Japanese\.
-
-1. **Contact methods** – Choose a contact method\. The options depend on the type of case and your support plan\. If you choose **Web**, you can read and respond to the case progress in Support Center\. If you have a Business or Enterprise Support plan, you can also choose **Chat** or **Phone**\. If you choose **Phone**, you're prompted for a callback number\.
-
-1. **Additional contacts** – Enter the email addresses of people to be notified when the status of the case changes\. If you're signed in as an IAM user, include your email address\. If you're signed in with your email address and password, you don't need to include your email address\.
-**Note**  
-If you have the Basic Support plan, the **Additional contacts** box isn't available\. However, the **Operations** contact specified in the **Alternate Contacts** section of the [My Account](https://console.aws.amazon.com/billing/home?#/account) page receives copies of the case correspondence, but only for the specific case types of account and billing, and technical\.
-
-1. Choose **Submit** when your information is complete and you're ready to create the case\.
+1. Review your case details and then choose **Submit**\. Your case ID number and summary appear\.
 
 ## Describing your problem<a name="describing-your-problem"></a>
 
@@ -92,19 +83,20 @@ You might be inclined to always create a support case at the highest severity th
 
 The following table lists the severity levels, response times, and example problems\. 
 
-**Note**  
-You can't change the severity code for a support case after you create one\. If your situation changes, work with the AWS Support associate for your support case\. 
+**Notes**  
+You can't change the severity code for a support case after you create one\. If your situation changes, work with the AWS Support for your support case\. 
+For more information about the severity level, see the [AWS Support API Reference](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_SeverityLevel.html)\.
 
 
 ****  
 
-| Severity | First\-response time | Description and support plan | 
-| --- | --- | --- | 
-|  **General guidance**  |  24 hours  |  You have a general development question, or you want to request a feature\. \(Developer\*, Business, and Enterprise Support plans\)  | 
-|  **System impaired**  |  12 hours  |  Non\-critical functions of your application are behaving abnormally, or you have a time\-sensitive development question\. \(Developer\*, Business, and Enterprise Support plans\)  | 
-|  **Production system impaired**  |  4 hours  |  Important functions of your application are impaired or degraded\. \(Business and Enterprise Support plans\)  | 
-|  **Production system down**  |  1 hour  |  Your business is significantly impacted\. Important functions of your application aren't available\. \(Business and Enterprise Support plans\)  | 
-| Business\-critical system down | 15 minutes |  Your business is at risk\. Critical functions of your application aren't available\. \(Enterprise Support plan\)  | 
+| Severity | Severity level code | First\-response time | Description and support plan | 
+| --- | --- | --- | --- | 
+|  **General guidance**  | low |  24 hours  |  You have a general development question, or you want to request a feature\. \(Developer\*, Business, Enterprise On\-Ramp, or Enterprise Support plan\)  | 
+|  **System impaired**  | normal |  12 hours  |  Non\-critical functions of your application are behaving abnormally, or you have a time\-sensitive development question\. \(Developer\*, Business, Enterprise On\-Ramp, or Enterprise Support plan\)  | 
+|  **Production system impaired**  | high |  4 hours  |  Important functions of your application are impaired or degraded\. \(Business, Enterprise On\-Ramp, or Enterprise Support plan\)  | 
+|  **Production system down**  | urgent |  1 hour  |  Your business is significantly impacted\. Important functions of your application aren't available\. \(Business, Enterprise On\-Ramp, or Enterprise Support plan\)  | 
+| Business\-critical system down | critical | 15 minutes |  Your business is at risk\. Critical functions of your application aren't available \(Enterprise Support plan\)\. Note that this is 30 minutes for the Enterprise On\-Ramp Support plan\.  | 
 
 \* For Developer Support, response targets are calculated in business hours\. Business hours are defined as 08:00 AM to 6:00 PM in the customer country, excluding holidays and weekends\. This information appears in the **Contact Information** section of the [My Account](https://console.aws.amazon.com/billing/home#/account) page in the AWS Management Console\. These times can vary in countries with multiple time zones\. Japanese support is available from 9:00 AM to 6:00 PM\.
 

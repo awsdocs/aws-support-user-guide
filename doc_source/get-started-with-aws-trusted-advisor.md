@@ -33,8 +33,8 @@ You must have AWS Identity and Access Management \(IAM\) permissions to access t
 1. You can do the following on the ** Dashboard** page:
    + To refresh all checks in your account, choose **Refresh all checks**\.
    + To create an \.xls file that includes all check results, choose **Download all checks**\.
-   + Under **Checks Summary**, choose a check category, such as **Security**, to view the results\.
-   + Under **Potential Monthly Savings**, you can view how much you can save for your account and the cost optimization checks for recommendations\.
+   + Under **Checks summary**, choose a check category, such as **Security**, to view the results\.
+   + Under **Potential monthly savings**, you can view how much you can save for your account and the cost optimization checks for recommendations\.
    + Under **Recent changes**, you can view changes to check statuses within the last 30 days\. Choose a check name to view the latest results for that check or choose the arrow icon to view the next page\.
 
 **Example : Trusted Advisor Dashboard**  
@@ -45,11 +45,11 @@ The following example shows a summary of the check results\.
 ## View check categories<a name="view-check-categories"></a>
 
 You can view the check descriptions and results for the following check categories:
-+ **Cost Optimization** – Recommendations that can potentially save you money\. These checks highlight unused resources and opportunities to reduce your bill\.
++ **Cost optimization** – Recommendations that can potentially save you money\. These checks highlight unused resources and opportunities to reduce your bill\.
 + **Performance** – Recommendations that can improve the speed and responsiveness of your applications\.
 + **Security** – Recommendations for security settings that can make your AWS solution more secure\.
-+ **Fault Tolerance** – Recommendations that help increase the resiliency of your AWS solution\. These checks highlight redundancy shortfalls, current service limits \(also known as quotas\), and overused resources\.
-+ **Service Limits** – Checks the usage for your account and whether your account approaches or exceeds the limit \(also known as quotas\) for AWS services and resources\. 
++ **Fault tolerance** – Recommendations that help increase the resiliency of your AWS solution\. These checks highlight redundancy shortfalls, current service limits \(also known as quotas\), and overused resources\.
++ **Service limits** – Checks the usage for your account and whether your account approaches or exceeds the limit \(also known as quotas\) for AWS services and resources\. 
 
 **To view check categories**
 
@@ -67,10 +67,10 @@ You can view the check descriptions and results for the following check categori
 
 1. Choose the download icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/download.png)\) to create an \.xls file that includes the results for this check\.
 
-**Example : Cost Optimization category**  
-The following example shows 13 \(yellow\) checks that need investigation and three \(green\) checks that don't have any issues\.  
+**Example : Cost optimization category**  
+The following example shows two \(yellow\) checks that need investigation and nine \(green\) checks that don't have any issues\.  
 
-![\[Screenshot of the Cost Optimization category page in the Trusted Advisor console.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/trusted-advisor-check-category-page.png)
+![\[Screenshot of the cost optimization category page in the Trusted Advisor console.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/trusted-advisor-check-category-page.png)
 
 ## View specific checks<a name="view-specific-checks"></a>
 
@@ -102,7 +102,7 @@ Expand a check to view the full check description, your affected resources, any 
 
 1. Choose the settings icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/settings.png)\) and in the **Preferences** dialog box, you can specify the number of items or the properties to display, and then choose **Confirm**\.
 
-**Example : Cost Optimization check**  
+**Example : Cost optimization check**  
 The following **Low Utilization Amazon EC2 Instances ** check lists the affected instances in the account\. This check identifies 41 Amazon EC2 instances that have low usage and recommends that you stop or terminate the resources\.  
 
 ![\[Screenshot of the Low Utilization Amazon EC2 Instances check in the Trusted Advisor console.\]](http://docs.aws.amazon.com/awssupport/latest/user/images/include-exclude-checks.png)
@@ -117,7 +117,9 @@ If you have checks that evaluate items in your account, such as AWS resources, y
 
 1. Sign in to the Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor/home](https://console.aws.amazon.com/trustedadvisor/home)\.
 
-1. In the navigation pane or the ** Dashboard** page, choose the check category\.
+1. In the navigation pane or the **Dashboard** page, choose the check category\.
+
+1. For **Search by keyword**, enter a keyword from the check name or description to filter your results\.
 
 1. For the **View** list, specify which checks to view:
    + **All checks** – List all checks for this category
@@ -143,7 +145,7 @@ For more information about tagging for Trusted Advisor, see the following topics
 
 ## Refresh check results<a name="refresh-check-results"></a>
 
-You can refresh checks to get the latest results for your account\. 
+You can refresh checks to get the latest results for your account\. If you have a Developer or Basic support plan, you can sign in to the Trusted Advisor console to refresh the checks\. If you have a Business, Enterprise On\-Ramp, or Enterprise Support plan, Trusted Advisor automatically refreshes the checks in your account on a weekly basis\.
 
 **To refresh Trusted Advisor checks**
 
@@ -154,6 +156,10 @@ You can refresh checks to get the latest results for your account\.
 You can also refresh specific checks in the following ways:
 + Choose the refresh icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/refresh.png)\) for an individual check\.
 + Use the [RefreshTrustedAdvisorCheck](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_RefreshTrustedAdvisorCheck.html) API operation\.
+
+**Notes**  
+Trusted Advisor automatically refreshes some checks several times a day, such as the **AWS Well\-Architected high risk issues for reliability** check\. It might take a few hours for changes to appear in your account\. For these automatically refreshed checks, you can't choose the refresh icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/refresh.png)\) to manually refresh your results\.
+If you enabled AWS Security Hub for your account, you can't use the Trusted Advisor console to refresh Security Hub controls\. For more information, see [Refresh your Security Hub findings](security-hub-controls-with-trusted-advisor.md#refreshing-security-hub-findings)\.
 
 ## Download check results<a name="download-check-results"></a>
 

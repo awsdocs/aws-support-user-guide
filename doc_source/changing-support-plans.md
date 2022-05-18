@@ -13,5 +13,5 @@ You can change your support plan in the AWS Management Console\.
 For an example video of how to change your support plan, see [How do I change my AWS Support plan?](http://aws.amazon.com/premiumsupport/knowledge-center/change-support-plan/)
 
 **Notes**  
-If you have Enterprise Support, use the link on the **Change support plan** page to contact AWS Support\.  
-To close your account, see [Closing an Account](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/close-account.html) in the *AWS Billing and Cost Management User Guide*\.
+If you have an Enterprise On\-Ramp or Enterprise Support plan, use the link on the **Change support plan** page to contact AWS Support\.  
+To close your account, see [Closing an Account](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/close-account.html) in the *AWS Billing User Guide*\.

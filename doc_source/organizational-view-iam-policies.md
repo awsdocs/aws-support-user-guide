@@ -4,8 +4,8 @@ You can use the following AWS Identity and Access Management \(IAM\) policies to
 
 **Example : **Full access to organizational view****  
 The following policy allows full access to the organizational view feature\. A user with these permissions can do the following:  
-+ Enable organizational view\.
-+ Create, view, and download reports\.
++ Enable and disable organizational view
++ Create, view, and download reports
 
 ```
 {
@@ -23,6 +23,7 @@ The following policy allows full access to the organizational view feature\. A u
                 "organizations:ListAWSServiceAccessForOrganization",
                 "trustedadvisor:DescribeAccount",
                 "trustedadvisor:DescribeChecks",
+                "trustedadvisor:DescribeCheckSummaries",
                 "trustedadvisor:DescribeAccountAccess",
                 "trustedadvisor:DescribeOrganization",
                 "trustedadvisor:DescribeReports",
@@ -35,7 +36,7 @@ The following policy allows full access to the organizational view feature\. A u
             "Resource": "*"
         },
         {
-            "Sid": "MutatingStatement",
+            "Sid": "CreateReportStatement",
             "Effect": "Allow",
             "Action": [
                 "trustedadvisor:GenerateReport"
@@ -43,16 +44,17 @@ The following policy allows full access to the organizational view feature\. A u
             "Resource": "*"
         },
         {
-            "Sid": "OnboardingStatement1",
+            "Sid": "ManageOrganizationalViewStatement",
             "Effect": "Allow",
             "Action": [
                 "organizations:EnableAWSServiceAccess",
+                "organizations:DisableAWSServiceAccess",
                 "trustedadvisor:SetOrganizationAccess"
             ],
             "Resource": "*"
         },
         {
-            "Sid": "OnboardingStatement2",
+            "Sid": "CreateServiceLinkedRoleStatement",
             "Effect": "Allow",
             "Action": "iam:CreateServiceLinkedRole",
             "Resource": "arn:aws:iam::*:role/aws-service-role/reporting.trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisorReporting"
@@ -80,6 +82,7 @@ The following policy allows read\-only access to organizational view for Trusted
                 "organizations:ListAWSServiceAccessForOrganization",
                 "trustedadvisor:DescribeAccount",
                 "trustedadvisor:DescribeChecks",
+                "trustedadvisor:DescribeCheckSummaries",
                 "trustedadvisor:DescribeAccountAccess",
                 "trustedadvisor:DescribeOrganization",
                 "trustedadvisor:DescribeReports",

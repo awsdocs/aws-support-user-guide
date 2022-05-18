@@ -18,7 +18,7 @@ Organizational view lets you view Trusted Advisor checks for all accounts in you
 You must meet the following requirements to enable organizational view:
 + Your accounts must be members of an [AWS Organization](http://aws.amazon.com/organizations/)\.
 + Your organization must have all features enabled for Organizations\. For more information, see [Enabling all features in your organization ](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html) in the *AWS Organizations User Guide*\.
-+ The management account in your organization must have a Business or Enterprise support plan\. You can find your support plan from the AWS Support Center or from the [Support plans](https://console.aws.amazon.com/support/plans) page\. See [Compare AWS Support plans](http://aws.amazon.com/premiumsupport/plans/)\.
++ The management account in your organization must have a Business, Enterprise On\-Ramp, or Enterprise Support plan\. You can find your support plan from the AWS Support Center or from the [Support plans](https://console.aws.amazon.com/support/plans) page\. See [Compare AWS Support plans](http://aws.amazon.com/premiumsupport/plans/)\.
 + You must sign in as a user in the [management account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts.html) \(or [assumed equivalent role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-console.html)\)\. Whether you sign in as an IAM user or an IAM role, you must have a policy with the required permissions\. See [Using IAM policies to allow access to organizational view](organizational-view-iam-policies.md)\.
 
 ## Enable organizational view<a name="enable-organizational-view"></a>
@@ -33,15 +33,18 @@ You enable organizational view from the Trusted Advisor console\.
 
 1. Sign in as an administrator in the organization's management account and open the AWS Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor](https://console.aws.amazon.com/trustedadvisor/)\.
 
-1. In the navigation pane, choose **Organizational View**\.
+1. In the navigation pane, choose **Organizational view**\.
 
 1. Choose **Enable organizational view**\.
+
+**Note**  
+Enabling organizational view for the management account doesn’t provide the same checks for all member accounts\. For example, if your member accounts all have Basic Support, those accounts won’t have the same checks available as your management account\. The AWS Support plan determines which Trusted Advisor checks are available for an account\. 
 
 ## Refresh Trusted Advisor checks<a name="refresh-trusted-advisor-checks"></a>
 
 Before you create a report for your organization, we recommend that you refresh the statuses of your Trusted Advisor checks\. You can download a report without refreshing your Trusted Advisor checks, but your report might not have the latest information\.
 
-If you have a Business or Enterprise account, Trusted Advisor automatically refreshes the checks in your account on a weekly basis\.
+If you have a Business, Enterprise On\-Ramp, or Enterprise Support plan, Trusted Advisor automatically refreshes the checks in your account on a weekly basis\.
 
 **Note**  
 If you have accounts in your organization that have a Developer or Basic support plan, a user for those accounts must sign in to the Trusted Advisor console to refresh the checks\. You can't refresh checks for all accounts from the organization's management account\.
@@ -262,7 +265,7 @@ The resources file only contains entries if a check result exists at the resourc
 + Some checks, such as **MFA on Root Account**, don't have resources and won't appear in the report\. Checks without resources appear in the `summary.json` file instead\.
 + Some checks only show resources if they are `Red` or `Yellow`\. If all resources are `Green`, they might not appear in your report\.
 + If an account isn't enabled for a service that requires the check, the check might not appear in the report\. For example, if you're not using Amazon Elastic Compute Cloud Reserved Instances in your organization, the Amazon EC2 Reserved Instance Lease Expiration check won't appear in your report\.
-+ The account hasn't refreshed check results\. This might happen when users with a Basic or Developer support plan sign in to the Trusted Advisor console for the first time\. If you have a Business or Enterprise support plan, it can take up to one week from account sign up for users to see check results\. For more information, see [Refresh Trusted Advisor checks](#refresh-trusted-advisor-checks)\.
++ The account hasn't refreshed check results\. This might happen when users with a Basic or Developer support plan sign in to the Trusted Advisor console for the first time\. If you have a Business, Enterprise On\-Ramp, or Enterprise Support plan, it can take up to one week from account sign up for users to see check results\. For more information, see [Refresh Trusted Advisor checks](#refresh-trusted-advisor-checks)\.
 + If only the organization's management account enabled recommendations for checks, the report won't include resources for other accounts in the organization\.
 
 For the resources file, you can use common software such as Microsoft Excel to open the \.csv file format\. You can use the \.csv file for one\-time analysis of all checks across all accounts in your organization\. If you want to use your report with an application, you can download the report as a \.json file instead\. 

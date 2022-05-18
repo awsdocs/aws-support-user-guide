@@ -2,7 +2,7 @@
 
 For answers to common troubleshooting questions, see the [AWS Support Knowledge Center](https://aws.amazon.com/premiumsupport/knowledge-center)\.
 
-For Windows, Amazon EC2 offers EC2Rescue, which allows customers to examine their Windows instances to help identify common problems, collect log files, and help AWS Support to troubleshoot your issues\. You can also use EC2Rescue to analyze boot volumes from non\-functional instances\. For more information, see [How can I use EC2Rescue to troubleshoot and fix common issues on my EC2 Windows instance?](https://aws.amazon.com/premiumsupport/knowledge-center/ec2rescue-windows-troubleshoot/)
+For Windows, Amazon EC2 offers EC2Rescue, which customers can use to examine their Windows instances to help identify common problems, collect log files, and help AWS Support to troubleshoot your issues\. You can also use EC2Rescue to analyze boot volumes from non\-functional instances\. For more information, see [How can I use EC2Rescue to troubleshoot and fix common issues on my EC2 Windows instance?](https://aws.amazon.com/premiumsupport/knowledge-center/ec2rescue-windows-troubleshoot/)
 
 ## Service\-specific troubleshooting<a name="service-troubleshooting"></a>
 
@@ -41,7 +41,7 @@ Most AWS service documentation contains troubleshooting topics that can get you 
 | AWS OpsWorks | [Debugging and troubleshooting guide](https://docs.aws.amazon.com/opsworks/latest/userguide/troubleshoot.html) | 
 | Amazon Redshift | [Troubleshooting queries](https://docs.aws.amazon.com/redshift/latest/dg/queries-troubleshooting.html) \| [Troubleshooting data loads](https://docs.aws.amazon.com/redshift/latest/dg/t_Troubleshooting_load_errors.html) \| [Troubleshooting connection issues in Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/troubleshooting-connections.html) \| [Troubleshooting Amazon Redshift audit logging](https://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-failures) | 
 | Amazon Relational Database Service \(Amazon RDS\) | [Troubleshooting](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Troubleshooting.html) \| [Troubleshooting applications](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/APITroubleshooting.html) | 
-| Amazon Route 53  | [Troubleshooting Amazon Route 53 ](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/troubleshooting-route-53.html) | 
+| Amazon Route 53 | [Troubleshooting Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/troubleshooting-route-53.html) | 
 | Amazon Silk | [Troubleshooting](https://docs.aws.amazon.com/silk/latest/developerguide/troubleshooting.html) | 
 | Amazon Simple Email Service \(Amazon SES\) | [Troubleshooting Amazon SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/troubleshooting.html) | 
 | Amazon Simple Storage Service \(Amazon S3\) | [Troubleshooting CORS issues](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors-troubleshooting.html) \| [Handling REST and SOAP errors](https://docs.aws.amazon.com/AmazonS3/latest/dev/HandlingErrors.html) | 

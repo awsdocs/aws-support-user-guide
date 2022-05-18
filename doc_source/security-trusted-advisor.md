@@ -1,6 +1,6 @@
 # Manage access for AWS Trusted Advisor<a name="security-trusted-advisor"></a>
 
-You can access AWS Trusted Advisor from the AWS Management Console\. All AWS accounts have access to a select core [Trusted Advisor checks](http://aws.amazon.com/premiumsupport/faqs/#TaFree)\. If you have a Business or Enterprise support plan, you can access all checks\. for more information, see [AWS Trusted Advisor check reference](trusted-advisor-check-reference.md)\.
+You can access AWS Trusted Advisor from the AWS Management Console\. All AWS accounts have access to a select core [Trusted Advisor checks](http://aws.amazon.com/premiumsupport/faqs/#TaFree)\. If you have a Business, Enterprise On\-Ramp, or Enterprise Support plan, you can access all checks\. for more information, see [AWS Trusted Advisor check reference](trusted-advisor-check-reference.md)\.
 
 You can use AWS Identity and Access Management \(IAM\) to control access to Trusted Advisor\. 
 
@@ -12,18 +12,18 @@ You can use AWS Identity and Access Management \(IAM\) to control access to Trus
 
 ## Permissions for the Trusted Advisor console<a name="using-the-trusted-advisor-console"></a>
 
-You must have a minimum set of permissions to access the Trusted Advisor console\. These permissions must allow you to list and view details about the Trusted Advisor resources in your AWS account\.
+To access the Trusted Advisor console, a user must have a minimum set of permissions\. These permissions must allow the user to list and view details about the Trusted Advisor resources in your AWS account\.
 
 You can use the following options to control access to Trusted Advisor:
-+ Use the tag filter feature of the Trusted Advisor console\. The user or role must have permissions associated with the tags\. 
++ Use the Trusted Advisor console's tag filter feature\. The user or role must have permissions associated with the tags\. 
 
-  You can use AWS managed policies or custom policies to assign permissions by tags\. For more information, see [Obtaining Permissions for Tagging](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html)\.
-+ Create an IAM policy with the `trustedadvisor` namespace, so that you can specify permissions to actions and resources\. 
+  You can use AWS managed policies or custom policies to assign permissions by tags\. For more information, see [Controlling access to and for IAM users and roles using tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html)\.
++ Create an IAM policy with the `trustedadvisor` namespace\. You can use this policy to specify permissions for actions and resources\.
 
-When you create a policy, you can specify the namespace of the service to allow or deny an action\. The namespace for Trusted Advisor is `trustedadvisor.`
+When you create a policy, you can specify the namespace of the service to allow or deny an action\. The namespace for Trusted Advisor is `trustedadvisor`\. However, you can't use the `trustedadvisor` namespace to allow or deny Trusted Advisor API operations in the AWS Support API\. You must use the `support` namespace for AWS Support instead\.
 
-**Important**  
-You can't use the `trustedadvisor` namespace to allow or deny Trusted Advisor API operations in the AWS Support API\. The namespace for AWS Support is `support`\. 
+**Note**  
+If you have permissions to the [AWS Support](https://docs.aws.amazon.com/awssupport/latest/APIReference/) API, the Trusted Advisor widget in the AWS Management Console will show a summary view of your Trusted Advisor results\. To view your results in the Trusted Advisor console, you must have permission to the `trustedadvisor` namespace\.
 
 ## Trusted Advisor actions<a name="trusted-advisor-operations"></a>
 
@@ -45,6 +45,8 @@ You can perform the following Trusted Advisor actions in the console\. You can a
 |  `SetAccountAccess`  |  Grants permission to enable or disable Trusted Advisor for the account\.  | 
 |   `UpdateNotificationPreferences`   |  Grants permission to update notification preferences for Trusted Advisor\.  | 
 
+### Trusted Advisor actions for organizational view<a name="trusted-advisor-organizational-view-actions"></a>
+
 The following Trusted Advisor actions are for the organizational view feature\. For more information, see [Organizational view for AWS Trusted Advisor](organizational-view.md)\.
 
 
@@ -60,6 +62,24 @@ The following Trusted Advisor actions are for the organizational view feature\. 
 |  `ListRoots`  |  Grants permission to view, in the Trusted Advisor console, all of the roots that are defined in an AWS organization\.  | 
 |  `SetOrganizationAccess`  |  Grants permission to enable the organizational view feature for Trusted Advisor\.  | 
 
+### AWS Trusted Advisor Priority actions<a name="trusted-advisor-priority-actions"></a>
+
+You can perform the following Trusted Advisor actions in the console if you have AWS Trusted Advisor Priority enabled for your account, You can also add these Trusted Advisor actions in an IAM policy to allow or deny specific actions\. For more information, see [Example IAM policies for AWS Trusted Advisor Priority](#trusted-advisor-priority-policies)\.
+
+**Note**  
+The risks that appear in AWS Trusted Advisor Priority are recommendations that your technical account manager \(TAM\) has identified for your account\. Recommendations from a service, such as a Trusted Advisor check, are created for you automatically\. Recommendations from your TAM are created for you manually\. Next, your TAM sends these recommendations so that they appear in AWS Trusted Advisor Priority for your account\.
+
+For more information, see [Get started with AWS Trusted Advisor Priority](trusted-advisor-priority.md)\.
+
+
+| Action | Description | 
+| --- | --- | 
+|  `DescribeRisks`  |  Grants permission to view risks in AWS Trusted Advisor Priority\.  | 
+|  `DescribeRisk`  |  Grants permission to view risk details in AWS Trusted Advisor Priority\.  | 
+|  `DescribeRiskResources`  |  Grants permission to view affected resources for a risk in AWS Trusted Advisor Priority\.  | 
+|  `UpdateRiskStatus`  |  Grants permission to update the risk status in AWS Trusted Advisor Priority\.  | 
+|  `DownloadRisk`  |  Grants permission to download a file that contains details about the risk in AWS Trusted Advisor Priority\.  | 
+
 ## IAM policy examples<a name="iam-policy-examples-trusted-advisor"></a>
 
 The following policies show you how to allow and deny access to Trusted Advisor\. You can use one of the following policies to create a *customer managed policy* in the IAM console\. For example, you can copy an example policy, and then paste it into the [JSON tab](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html#access_policies_create-json-editor) of the IAM console\. Then, you attach the policy to your IAM user, group, or role\.
@@ -72,6 +92,10 @@ For more information about how to create an IAM policy, see [Creating IAM polici
 + [Deny access to Trusted Advisor](#no-access-trusted-advisor)
 + [Allow and deny specific actions](#allow-specific-actions-trusted-advisor)
 + [Control access to the AWS Support API operations for Trusted Advisor](#control-access-to-trusted-advisor-deny-support)
++ [Example IAM policies for AWS Trusted Advisor Priority](#trusted-advisor-priority-policies)
++ [Read\-only access to AWS Trusted Advisor Priority](#readonly-access-trusted-advisor-priority)
++ [Deny access to AWS Trusted Advisor Priority](#deny-access-trusted-advisor-priority)
++ [Allow and deny actions for AWS Trusted Advisor Priority](#allow-deny-access-trusted-advisor-priority)
 
 ### Full access to Trusted Advisor<a name="full-access-trusted-advisor"></a>
 
@@ -192,6 +216,108 @@ You can use this policy to call the Trusted Advisor API operations programmatica
 ```
 
 For more information about how IAM works with AWS Support and Trusted Advisor, see [Actions](security_iam_service-with-iam.md#security_iam_service-with-iam-id-based-policies-actions)\.
+
+### Example IAM policies for AWS Trusted Advisor Priority<a name="trusted-advisor-priority-policies"></a>
+
+You can use the following example policies to manage access to AWS Trusted Advisor Priority\. For more information, see [Get started with AWS Trusted Advisor Priority](trusted-advisor-priority.md)\.
+
+#### Full access to AWS Trusted Advisor Priority<a name="full-access-trusted-advisor-priority"></a>
+
+The following policy allows users full access to AWS Trusted Advisor Priority\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "trustedadvisor:DescribeRisk*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "trustedadvisor:DownloadRisk*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "trustedadvisor:UpdateRiskStatus",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+### Read\-only access to AWS Trusted Advisor Priority<a name="readonly-access-trusted-advisor-priority"></a>
+
+The following policy allows read\-only access to AWS Trusted Advisor Priority\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "trustedadvisor:DescribeRisk*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "trustedadvisor:DownloadRisk*",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+### Deny access to AWS Trusted Advisor Priority<a name="deny-access-trusted-advisor-priority"></a>
+
+The following policy doesn't allow users access to AWS Trusted Advisor Priority\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": "trustedadvisor:DescribeRisk*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": "trustedadvisor:DownloadRisk*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": "trustedadvisor:UpdateRiskStatus",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+### Allow and deny actions for AWS Trusted Advisor Priority<a name="allow-deny-access-trusted-advisor-priority"></a>
+
+The following policy allows users to view a risk in AWS Trusted Advisor Priority but not download a file about the risk\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "trustedadvisor:DescribeRisk*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": "trustedadvisor:DownloadRisk*",
+            "Resource": "*"
+        }
+    ]
+}
+```
 
 ## See also<a name="see-also-security-trusted-advisor"></a>
 
