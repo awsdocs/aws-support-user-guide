@@ -2,6 +2,8 @@
 
 Before you use IAM to manage access to AWS Support, you should understand what IAM features are available to use with AWS Support\. To get a high\-level view of how AWS Support and other AWS services work with IAM, see [AWS services that work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\.
 
+For information about how to manage access for AWS Support using IAM, see [ Manage access for AWS Support](https://docs.aws.amazon.com/awssupport/latest/user/accessing-support.html#iam)\.
+
 **Topics**
 + [AWS Support identity\-based policies](#security_iam_service-with-iam-id-based-policies)
 + [AWS Support IAM roles](#security_iam_service-with-iam-roles)

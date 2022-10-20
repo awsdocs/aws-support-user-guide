@@ -19,10 +19,10 @@ For information about other services that support service\-linked roles, see [AW
 Trusted Advisor uses two service\-linked roles:
 + [AWSServiceRoleForTrustedAdvisor](https://console.aws.amazon.com/iam/home?#/roles/AWSServiceRoleForTrustedAdvisor) – This role trusts the Trusted Advisor  service to assume the role to access AWS services on your behalf\. The role permissions policy allows Trusted Advisor read\-only access for all AWS resources\. This role simplifies getting started with your AWS account, because you don't have to add the necessary permissions for Trusted Advisor\. When you open an AWS account, Trusted Advisor creates this role for you\. The defined permissions include the trust policy and the permissions policy\. You can't attach the permissions policy to any other IAM entity\. 
 
-  For more information about the attached policy, see [AWSTrustedAdvisorServiceRolePolicy](security-iam-awsmanpol.md#security-iam-awsmanpol-AWSTrustedAdvisorServiceRolePolicy)\.
+  For more information about the attached policy, see [AWSTrustedAdvisorServiceRolePolicy](aws-managed-policies-for-trusted-advisor.md#security-iam-awsmanpol-AWSTrustedAdvisorServiceRolePolicy)\.
 + [https://console.aws.amazon.com/iam/home?#/roles/AWSServiceRoleForTrustedAdvisorReporting](https://console.aws.amazon.com/iam/home?#/roles/AWSServiceRoleForTrustedAdvisorReporting) – This role trusts the Trusted Advisor  service to assume the role for the organizational view feature\. This role enables Trusted Advisor as a trusted service in your AWS Organizations organization\. Trusted Advisor creates this role for you when you enable organizational view\. 
 
-  For more information about the attached policy, see [AWSTrustedAdvisorReportingServiceRolePolicy](security-iam-awsmanpol.md#security-iam-awsmanpol-AWSTrustedAdvisorReportingServiceRolePolicy)\.
+  For more information about the attached policy, see [AWSTrustedAdvisorReportingServiceRolePolicy](aws-managed-policies-for-trusted-advisor.md#security-iam-awsmanpol-AWSTrustedAdvisorReportingServiceRolePolicy)\.
 
   You can use the organizational view to create reports for Trusted Advisor check results for all accounts in your organization\. For more information about this feature, see [Organizational view for AWS Trusted Advisor](organizational-view.md)\.
 

@@ -7,3 +7,4 @@ Monitoring is an important part of maintaining the reliability, availability, an
 **Topics**
 + [Monitoring AWS Support cases with Amazon EventBridge](event-bridge-support.md)
 + [Logging AWS Support API calls with AWS CloudTrail](logging-using-cloudtrail.md)
++ [Logging AWS Support App in Slack API calls using AWS CloudTrail](logging-using-cloudtrail-support-app.md)

@@ -155,3 +155,9 @@ The following event is created when a support case is reopened\.
     }
 }
 ```
+
+## See also<a name="see-also-event-bridge-support"></a>
+
+For more information about how to use EventBridge with AWS Support, see the following resources: 
++ [How to automate AWS Support API with Amazon EventBridge](http://aws.amazon.com/blogs/mt/how-to-automate-aws-support-api-with-amazon-eventbridge)
++ [AWS Support case activity notifier](https://github.com/aws-samples/aws-support-case-activity-notifier) on GitHub

@@ -1,4 +1,4 @@
-# Access permissions for AWS Support<a name="accessing-support"></a>
+# Manage access for AWS Support<a name="accessing-support"></a>
 
 You must have permissions to access Support Center and to [create a support case](case-management.md#creating-a-support-case)\.
 

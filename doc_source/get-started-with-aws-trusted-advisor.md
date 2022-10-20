@@ -179,7 +179,11 @@ You can set up the organizational view feature to create a report for all member
 
 ## Preferences<a name="preferences-trusted-advisor-console"></a>
 
-On the **Preferences** page in the Trusted Advisor console, you can configure your weekly email messages for the check summary, enable the organizational view feature, or disable Trusted Advisor\.
+On the **Preferences** page in the Trusted Advisor console, you can disable Trusted Advisor\.
+
+On the **Notifications** page, you can configure your weekly email messages for the check summary\.
+
+On the **Organizations** page, you can enable or disable the organizational view feature\.
 
 ### Set up notification preferences<a name="notification-preferences"></a>
 
@@ -189,13 +193,13 @@ Specify who can receive the weekly Trusted Advisor email messages for check resu
 
 1. Sign in to the Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor/home](https://console.aws.amazon.com/trustedadvisor/home)\.
 
-1. In the navigation pane, choose **Preferences**\.
+1. In the navigation pane, under **Preferences**, choose **Notifications**\.
 
-1. For **Weekly Email Notification**, select whom to notify for your check results\. You can add and remove contacts from the [Account Settings](https://console.aws.amazon.com/billing/home#/account) page in the AWS Billing and Cost Management console\.
+1. For **Weekly email notification**, select whom to notify for your check results\. You receive about an email notification about your Trusted Advisor check summary once a week\. You can add and remove contacts from the [Account Settings](https://console.aws.amazon.com/billing/home#/account) page in the AWS Billing and Cost Management console\.
 
 1. For **Language**, choose the language for the email message\.
 
-1. Choose **Save Email Preferences**\.
+1. Choose **Save your preferences**\.
 
 ### Set up organizational view<a name="set-up-organizational-view"></a>
 
@@ -207,7 +211,15 @@ When you disable this service, Trusted Advisor won't perform any checks on your 
 
 **To disable Trusted Advisor**
 
-1. Under **Trusted Advisor**, choose **Disable Trusted Advisor**\. This action disables Trusted Advisor for all checks in your account\. 
+1. Sign in to the Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor/home](https://console.aws.amazon.com/trustedadvisor/home)\.
+
+1. In the navigation pane, choose **Preferences**\.
+
+1. Sign in to the Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor/home](https://console.aws.amazon.com/trustedadvisor/home)\.
+
+1. In the navigation pane, under **Preferences**, choose **Manage Trusted Advisor**\.
+
+1. Under **Trusted Advisor**, turn off **Enabled**\. This action disables Trusted Advisor for all checks in your account\. 
 
 1. You can then manually delete the [AWSServiceRoleForTrustedAdvisor](https://console.aws.amazon.com/iam/home?#/roles/AWSServiceRoleForTrustedAdvisor)  from your account\. For more information, see [Deleting a service\-linked role for Trusted Advisor](using-service-linked-roles-ta.md#delete-service-linked-role-ta)\.
 

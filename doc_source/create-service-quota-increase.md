@@ -33,7 +33,7 @@ Based on your category choice, the prompts might request more information\.
 
 1. For **Contact options** page, choose your preferred language and how you want to be contacted\. You can choose one of the following options:
    + **Web** – Receive a reply in Support Center\.
-   + **Chat** – Start a live chat with a support agent\.
+   + **Chat** – Start a live chat with a support agent\. If you can't connect to a chat, see [Troubleshooting](troubleshooting-support-cases.md)\.
    + **Phone** – Receive a phone call from a support agent\. If you choose this option, enter the following information:
      + **Country/Region**
      + **Phone number**

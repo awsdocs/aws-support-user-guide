@@ -8,7 +8,7 @@ The `AWSServiceRoleForSupport` service\-linked role trusts the `support.amazonaw
 
 To provide these services, the role's predefined permissions give AWS Support access to resource metadata, not customer data\. Only AWS Support tools can assume this role, which exists within your AWS account\.
 
-We redact fields that could contain customer data\. For example, the `Input` and `Output` fields of the [GetExecutionHistory](https://docs.aws.amazon.com/step-functions/latest/apireference/API_GetExecutionHistory.html) for the AWS Step Functions API call aren't visible to AWS Support\.
+We redact fields that could contain customer data\. For example, the `Input` and `Output` fields of the [GetExecutionHistory](https://docs.aws.amazon.com/step-functions/latest/apireference/API_GetExecutionHistory.html) for the AWS Step Functions API call aren't visible to AWS Support\.  We use AWS KMS keys to encrypt sensitive fields\. These fields are redacted in the API response and aren't visible to AWS Support agents\.
 
 **Note**  
 AWS Trusted Advisor uses a separate IAM service\-linked role to access AWS resources for your account to provide best practice recommendations and checks\. For more information, see [Using service\-linked roles for Trusted Advisor](using-service-linked-roles-ta.md)\.
@@ -29,7 +29,7 @@ For more information about the allowed services and actions, see the [https://co
 **Note**  
 AWS Support automatically updates the `AWSSupportServiceRolePolicy` policy once per month to add permissions for new AWS services and actions\.
 
-For more information, see [AWS managed policies for AWS Support and AWS Trusted Advisor](security-iam-awsmanpol.md)\.
+For more information, see [AWS managed policies for AWS Support](security-iam-awsmanpol.md)\.
 
 ## Creating a service\-linked role for AWS Support<a name="create-service-linked-role"></a>
 

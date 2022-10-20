@@ -2,10 +2,10 @@
 
 After you enable AWS Security Hub for your AWS account, you can view your security controls and their findings in the Trusted Advisor console\. You can use Security Hub controls to identify security vulnerabilities in your account in the same way that you can use Trusted Advisor checks\. You can view the check's status, the list of affected resources, and then follow Security Hub recommendations to address your security issues\. You can use this feature to find security recommendations from Trusted Advisor and Security Hub in one convenient location\.
 
-**Note**  
-From Trusted Advisor, you can view all controls in the AWS Foundational Security Best Practices security standard *except* for controls that have the **Category: Recover > Resilience**\.  
-For a list of supported controls, see [AWS Foundational Security Best Practices controls](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html) in the *AWS Security Hub User Guide*\.
+**Notes**  
+From Trusted Advisor, you can view controls in the AWS Foundational Security Best Practices security standard *except* for controls that have the Category: Recover > Resilience\. For a list of supported controls, see [AWS Foundational Security Best Practices controls](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html) in the *AWS Security Hub User Guide*\.  
 For more information about the Security Hub categories, see [Control categories](https://docs.aws.amazon.com/securityhub/latest/userguide/control-categories.html)\.
+Currently, when Security Hub adds new controls to the AWS Foundational Security Best Practices security standard, there can be a delay of two to four weeks before you can view them in Trusted Advisor\. This time frame is best effort and is not guaranteed\.
 
 **Topics**
 + [Prerequisites](#prerequisites-security-hub)
@@ -74,7 +74,7 @@ Follow this procedure if you don't want your Security Hub information to appear 
 
 1. Contact [AWS Support](https://console.aws.amazon.com/support) and request to disable the Security Hub integration with Trusted Advisor\.
 
-   After AWS Support disables this feature for you, Security Hub will stop sending data to Trusted Advisor\. Your Security Hub data will be removed from Trusted Advisor after 90 days\. 
+   After AWS Support disables this feature, Security Hub no longer sends data to Trusted Advisor\. Your Security Hub data will be removed from Trusted Advisor\. 
 
 1. If you want to enable this integration again, contact [AWS Support](https://console.aws.amazon.com/support)\.
 
@@ -90,11 +90,12 @@ If you're having issues with this integration, see the following troubleshooting
 
 **Contents**
 + [I don't see Security Hub findings in the Trusted Advisor console](#security-hub-findings-not-appearing)
-+ [I configured Security Hub and AWS Config correctly, and my findings are still missing](#findings-still-not-appearing-after-enabling)
-+ [I see findings for some Security Hub controls but not others](#missing-findings-for-some-checks)
++ [I configured Security Hub and AWS Config correctly, but my findings are still missing](#findings-still-not-appearing-after-enabling)
++ [I want to disable specific Security Hub controls](#missing-findings-for-some-checks)
 + [I want to find my excluded Security Hub resources](#finding-excluded-security-hub-findings)
 + [I want to enable or disable this feature for a member account that belongs to an AWS organization](#troubleshooting-organizations)
 + [I see multiple AWS Regions for the same affected resource for a Security Hub check](#multiple-regions-check-results)
++ [I turned off Security Hub or AWS Config in a Region](#disable-security-hub-regions)
 + [I still can't view my Security Hub findings](#security-hub-contact-support)
 
 ### I don't see Security Hub findings in the Trusted Advisor console<a name="security-hub-findings-not-appearing"></a>
@@ -103,10 +104,11 @@ Verify that you completed the following steps:
 + You have a Business, Enterprise On\-Ramp, or Enterprise Support plan\.
 + You enabled resource recording in AWS Config within the same Region as Security Hub\.
 + You enabled Security Hub and selected the **AWS Foundational Security Best Practices v1\.0\.0** security standard\.
++ New controls from Security Hub are added as checks in Trusted Advisor within two to four weeks\. See the [note](#best-effort-basis)\.
 
 For more information, see the [Prerequisites](#prerequisites-security-hub)\.
 
-### I configured Security Hub and AWS Config correctly, and my findings are still missing<a name="findings-still-not-appearing-after-enabling"></a>
+### I configured Security Hub and AWS Config correctly, but my findings are still missing<a name="findings-still-not-appearing-after-enabling"></a>
 
 It can take up to two hours for Security Hub to have findings for your resources\. It can then take up to 24 hours for that data to appear in the Trusted Advisor console\. Check the Trusted Advisor console again later\.
 
@@ -114,14 +116,17 @@ It can take up to two hours for Security Hub to have findings for your resources
 Only your findings for controls in the AWS Foundational Security Best Practices security standard will appear in Trusted Advisor *except* for controls that have the **Category: Recover > Resilience**\.
 If there's a service issue with Security Hub or Security Hub isn't available, it can take up to 24 hours for your findings to appear in Trusted Advisor\. Check the Trusted Advisor console again later\.
 
-### I see findings for some Security Hub controls but not others<a name="missing-findings-for-some-checks"></a>
+### I want to disable specific Security Hub controls<a name="missing-findings-for-some-checks"></a>
 
 Security Hub sends your data to Trusted Advisor automatically\. If you disable a Security Hub control or no longer have resources for that control, your findings won't appear in Trusted Advisor\.
 
-You can sign in to the [Security Hub console](https://console.aws.amazon.com/securityhub) and verify if your control is enabled or disabled\. 
+You can sign in to the [Security Hub console](https://console.aws.amazon.com/securityhub) and verify if your control is enabled or disabled\.
 
-**Note**  
-If you disable a Security Hub control, your findings will be archived within five days\. This time frame to archive is best effort and is not guaranteed\. When your findings have been archived, they will be removed from Trusted Advisor\. For more information, see [Disabling and enabling individual controls](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable-controls.html)\. 
+If you disable a Security Hub control or disable all controls for the AWS Foundational Security Best Practices security standard, your findings are archived within the next five days\. This five\-day period to archive is approximate and best effort only, and isn't guaranteed\. When your findings are archived, they are removed from Trusted Advisor\. 
+
+For more information, see the following topics:
++ [Disabling and enabling individual controls](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable-controls.html)
++ [Disabling or enabling a security standard](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html)
 
 ### I want to find my excluded Security Hub resources<a name="finding-excluded-security-hub-findings"></a>
 
@@ -135,11 +140,17 @@ By default, member accounts inherit the feature from the management account for 
 
 ### I see multiple AWS Regions for the same affected resource for a Security Hub check<a name="multiple-regions-check-results"></a>
 
-Some AWS services are global and are not specific to a Region, such as IAM and Amazon CloudFront\. By default, global resources such as Amazon S3 buckets will appear in the US East \(N\. Virginia\) Region\.
+Some AWS services are global and aren't specific to a Region, such as IAM and Amazon CloudFront\. By default, global resources such as Amazon S3 buckets appear in the US East \(N\. Virginia\) Region\.
 
-For Security Hub checks that evaluate resources for global services, you might see more than one item for affected resources\. For example, if the **Hardware MFA should be enabled for the root user** check identifies that your account hasn't activated this feature, then you will see multiple Regions in the table for the same resource\. 
+For Security Hub checks that evaluate resources for global services, you might see more than one item for affected resources\. For example, if the `Hardware MFA should be enabled for the root user` check identifies that your account hasn't activated this feature, then you will see multiple Regions in the table for the same resource\. 
 
 You can configure Security Hub and AWS Config so that multiple Regions won't appear for the same resource\. For more information, see [AWS Foundational Best Practices controls that you might want to disable](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-to-disable.html)\.
+
+### I turned off Security Hub or AWS Config in a Region<a name="disable-security-hub-regions"></a>
+
+If you stop resource recording with AWS Config or disable Security Hub in an AWS Region, Trusted Advisor no longer receives data for any controls in that Region\. Your Security Hub data is removed from Trusted Advisor after 90 days\. This time frame is approximate and best effort only, and isn't guaranteed\. For more information, see [Disabling Security Hub](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-disable.html)\.
+
+To disable this feature for your account, see [Disable Security Hub from Trusted Advisor](#disable-security-hub)\.
 
 ### I still can't view my Security Hub findings<a name="security-hub-contact-support"></a>
 

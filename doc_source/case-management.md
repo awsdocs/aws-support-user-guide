@@ -3,18 +3,20 @@
 In the AWS Management Console, you can create three types of customer cases in AWS Support:
 + **Account and billing** support cases are available to all AWS customers\. You can get help with billing and account questions\.
 + **Service limit increase** requests are available to all AWS customers\. For more information about the default service quotas, formerly referred to as limits, see [AWS service quotas](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
-+ **Technical** support cases connect you to technical support for help with service\-related technical issues and, in some cases, third\-party applications\.
-**Note**  
-If you have Basic Support, you can't create a technical support case\.
-To change your support plan, see [Changing your AWS Support plan](changing-support-plans.md)\.
++ **Technical** support cases connect you to technical support for help with service\-related technical issues and, in some cases, third\-party applications\. If you have Basic Support, you can't create a technical support case\.
+**Notes**  
+To change your support plan, see [Changing AWS Support Plans](changing-support-plans.md)\.
 To close your account, see [Closing an Account](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/close-account.html) in the *AWS Billing User Guide*\.
+If you're a customer of an AWS Partner that is part of the AWS Partner Network, and you use Resold Support, contact your AWS Partner directly for any billing related issues\. AWS Support can't assist with non\-technical issues for Resold Support, such as billing and account management\. For more information, see the following topics:   
+[How AWS Partners can determine AWS Support plans in an organization](http://aws.amazon.com/blogs/mt/aws-partners-determine-aws-support-plans-in-organization/)
+[AWS Partner\-Led Support](http://aws.amazon.com/premiumsupport/partner-led-support/)
 
 ## Creating a support case<a name="creating-a-support-case"></a>
 
 You can create a support case in the Support Center of the AWS Management Console\.
 
 **Notes**  
-You can sign in to Support Center as the *root user* of your AWS account or as an AWS Identity and Access Management \(IAM\) user\. For more information, see [Access permissions for AWS Support](accessing-support.md)\.
+You can sign in to Support Center as the *root user* of your AWS account or as an AWS Identity and Access Management \(IAM\) user\. For more information, see [Manage access for AWS Support](accessing-support.md)\.
 If you can't sign in to Support Center and create a support case, you can use the [Contact Us](http://aws.amazon.com/contact-us/) page instead\. You can use this page to get help with billing and account issues\.
 
 **To create a support case**
@@ -50,11 +52,13 @@ You can use the recommended solutions that appear for commonly asked questions\.
 
 1. Choose **Next step: Solve now or contact us**\.
 
-1. On the **Contact us** page, choose your preferred language and how you want to be contacted\. You can choose one of the following options:
+1. On the **Contact us** page, choose your preferred language\. Currently, you can choose English or Japanese\. 
+
+1. Choose your preferred contact method\. You can choose one of the following options:
 
    1. **Web** – Receive a reply in Support Center\.
 
-   1. **Chat** – Start a live chat with a support agent\.
+   1. **Chat** – Start a live chat with a support agent\. If you can't connect to a chat, see [Troubleshooting](troubleshooting-support-cases.md)\.
 
    1. **Phone** – Receive a phone call from a support agent\. If you choose this option, enter the following information:
       + **Country or region**
@@ -63,7 +67,6 @@ You can use the recommended solutions that appear for commonly asked questions\.
 **Notes**  
 The contact options that appear depend on the type of case and your support plan\.
 You can choose **Discard draft** to clear your support case draft\.
-If you close the chat window and you want to start another live chat, you can add a **Reply** to your support case, choose **Chat**, and then choose **Submit**\.
 
 1. \(Optional\) If you have a Business, Enterprise On\-Ramp, or Enterprise Support plan, the **Additional contacts** option appears\. You can enter the email addresses of people to notify when the status of the case changes\. If you're signed in as an IAM user, include your email address\. If you're signed in with your root account email address and password, you don't need to include your email address
 **Note**  

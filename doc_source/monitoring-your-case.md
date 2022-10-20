@@ -1,19 +1,43 @@
-# Monitoring, resolving, and reopening your case<a name="monitoring-your-case"></a>
+# Updating, resolving, and reopening your case<a name="monitoring-your-case"></a>
 
 After you create your support case, you can monitor the status of your case in Support Center\. A new case begins in the **Unassigned** state\. When a support agent begins work on a case, the status changes to **Work in Progress**\. The support agent might respond to your case to ask for more information \(**Pending Customer Action**\) or to let you know that the case is being investigated \(**Pending Amazon Action**\)\.
 
 When your case is updated, you receive email with the correspondence and a link to the case in Support Center\. Use the link in the email message to navigate to the support case\. You can't respond to case correspondences by email\. 
 
 **Notes**  
-You must sign in to the AWS account that submitted the support case\. If you sign in as an AWS Identity and Access Management \(IAM\) user, you must have the required permissions to view support cases\. For more information, see [Access permissions for AWS Support](accessing-support.md)\.
+You must sign in to the AWS account that submitted the support case\. If you sign in as an AWS Identity and Access Management \(IAM\) user, you must have the required permissions to view support cases\. For more information, see [Manage access for AWS Support](accessing-support.md)\.
 If you don't respond to the case within a few days, AWS Support resolves the case automatically\.
 Support cases that have been in the resolved state for more than 14 days can't be reopened\. If you have a similar issue that is related to the resolved case, you can create a related case\. For more information, see [Creating a related case](#permanently-closed-cases)\.
 
 **Topics**
++ [Updating an existing support case](#update-support-cases)
 + [Resolving a support case](#resolve-a-support-case)
 + [Reopening a resolved case](#reopen-close-cases)
 + [Creating a related case](#permanently-closed-cases)
 + [Case history](#case-history)
+
+## Updating an existing support case<a name="update-support-cases"></a>
+
+You can update your case to provide more information for the support agent\. For example, you can reply to correspondences, start another live chat, add additional email recipients, and so on\. However, you can't update the severity of a case after you've created it\. For more information, see [Choosing a severity](case-management.md#choosing-severity)\.
+
+**To update an existing support case**
+
+1. Sign in to the [AWS Support Center Console](https://console.aws.amazon.com/support)\.
+**Tip**  
+In the AWS Management Console, you can also choose the question mark icon \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/awssupport/latest/user/images/questionmark.png)\) and then choose **Support Center**\.
+
+1. Under **Open support cases**, choose the **Subject** of the support case\.
+
+1. Choose **Reply**\. In the **Correspondence** section, you can also make any of the following changes:
+   + Provide information that the support agent requested
+   + Upload file attachments
+   + Change your preferred contact method
+   + Add email addresses to receive case updates
+
+1.  Choose **Submit**\.
+
+**Tip**  
+If you closed a chat window and you want to start another live chat, add a **Reply** to your support case, choose **Chat**, and then choose **Submit**\. A new pop\-up chat window opens\.
 
 ## Resolving a support case<a name="resolve-a-support-case"></a>
 

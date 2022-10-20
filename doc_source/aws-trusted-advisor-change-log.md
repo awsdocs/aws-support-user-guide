@@ -7,6 +7,19 @@ If you use the Trusted Advisor console or the AWS Support API, checks that were 
 
 For more information about the available checks, see the [AWS Trusted Advisor check reference](trusted-advisor-check-reference.md)\.
 
+## New checks for Amazon EC2<a name="ec2-windows-server-check"></a>
+
+Trusted Advisor added the following check on September 1, 2022\.
++ Amazon EC2 instances with Microsoft Windows Server end of support
+
+For more information, see the [Security](security-checks.md) category\.
+
+## Added Security Hub checks to Trusted Advisor<a name="added-security-hub-controls-06-22-2022"></a>
+
+As of June 23, 2022, Trusted Advisor only supports Security Hub controls available through April 7, 2022\. This release supports all controls in the AWS Foundational Security Best Practices security standard except for controls in the Category: Recover > Resilience\. For more information, see [Viewing AWS Security Hub controls in AWS Trusted Advisor](security-hub-controls-with-trusted-advisor.md)\.
+
+For a list of supported controls, see [AWS Foundational Security Best Practices controls](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html) in the *AWS Security Hub User Guide*\.
+
 ## Added checks from AWS Compute Optimizer<a name="added-checks-compute-optimizer"></a>
 
 Trusted Advisor added the following checks on May 4, 2022\.

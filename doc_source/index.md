@@ -4,26 +4,27 @@
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
 + [Getting started with AWS Support](getting-started.md)
    + [Creating support cases and case management](case-management.md)
       + [Example: Create a support case for account and billing](case-example.md)
-      + [Creating a service quota increase](create-service-quota-increase.md)
-   + [Monitoring, resolving, and reopening your case](monitoring-your-case.md)
-   + [Access permissions for AWS Support](accessing-support.md)
-   + [Changing your AWS Support plan](changing-support-plans.md)
+   + [Creating a service quota increase](create-service-quota-increase.md)
+   + [Updating, resolving, and reopening your case](monitoring-your-case.md)
+   + [Troubleshooting](troubleshooting-support-cases.md)
    + [Using AWS Support with an AWS SDK](sdk-general-information-section.md)
 + [About the AWS Support API](Welcome.md)
 + [Programming an AWS Support case](Case_Life_Cycle.md)
++ [AWS Support Plans](aws-support-plans.md)
+   + [Changing AWS Support Plans](changing-support-plans.md)
 + [AWS Trusted Advisor](trusted-advisor.md)
    + [Get started with AWS Trusted Advisor](get-started-with-aws-trusted-advisor.md)
    + [Using Trusted Advisor as a web service](trustedadvisor.md)
@@ -40,16 +41,41 @@ Amazon's trademarks and trade dress may not be used in
       + [Fault tolerance](fault-tolerance-checks.md)
       + [Service limits](service-limits.md)
    + [Change log for AWS Trusted Advisor checks](aws-trusted-advisor-change-log.md)
++ [AWS Support App in Slack](aws-support-app-for-slack.md)
+   + [Prerequisites](prerequisites-support-app-for-slack.md)
+      + [Managing access to the AWS Support App widget](slack-authorization-permissions.md)
+      + [Managing access to the AWS Support App](support-app-permissions.md)
+   + [Authorize a Slack workspace](authorize-slack-workspace.md)
+   + [Configuring a Slack channel](add-your-slack-channel.md)
+   + [Creating support cases in a Slack channel](create-case-in-slack.md)
+   + [Replying to support cases in Slack](replying-to-support-cases-in-slack.md)
+   + [Joining a live chat session with AWS Support](joining-a-live-chat-session.md)
+   + [Searching for support cases in Slack](search-case.md)
+   + [Resolving a support case in Slack](resolve-support-cases.md)
+   + [Reopening a support case in Slack](reopen-a-support-case.md)
+   + [Requesting service quota increases](service-quota-increase.md)
+   + [Deleting a Slack channel configuration from the AWS Support App](delete-a-channel.md)
+   + [Deleting a Slack workspace configuration from the AWS Support App](delete-a-workspace.md)
+   + [AWS Support App in Slack commands](support-app-commands.md)
+   + [View AWS Support App correspondences in the AWS Support Center Console](view-slack-updates-in-support-center.md)
+   + [Creating AWS Support App in Slack resources with AWS CloudFormation](creating-resources-with-cloudformation.md)
 + [Security in AWS Support](security.md)
    + [Data protection in AWS Support](data-protection.md)
+   + [Security for your AWS Support cases](security-for-support-cases.md)
    + [Identity and access management for AWS Support](security-iam.md)
       + [How AWS Support works with IAM](security_iam_service-with-iam.md)
       + [AWS Support identity-based policy examples](security_iam_id-based-policy-examples.md)
       + [Using service-linked roles](using-service-linked-roles-intro.md)
          + [Using service-linked roles for AWS Support](using-service-linked-roles-sup.md)
          + [Using service-linked roles for Trusted Advisor](using-service-linked-roles-ta.md)
-      + [AWS managed policies for AWS Support and AWS Trusted Advisor](security-iam-awsmanpol.md)
-         + [Permission changes for AWSSupportServiceRolePolicy](aws-support-service-link-role-updates.md)
+      + [AWS managed policies for AWS Support](security-iam-awsmanpol.md)
+         + [AWS managed policies for AWS Support](aws-managed-policies-aws-support.md)
+            + [Permission changes for AWSSupportServiceRolePolicy](aws-support-service-link-role-updates.md)
+         + [AWS managed policies for AWS Support App in Slack](support-app-managed-policies.md)
+         + [AWS managed policies for AWS Trusted Advisor](aws-managed-policies-for-trusted-advisor.md)
+         + [AWS managed policies for AWS Support Plans](managed-policies-aws-support-plans.md)
+      + [Manage access for AWS Support](accessing-support.md)
+      + [Manage access for AWS Support Plans](security-support-plans.md)
       + [Manage access for AWS Trusted Advisor](security-trusted-advisor.md)
       + [Troubleshooting AWS Support identity and access](security_iam_troubleshoot.md)
    + [Incident response](incident-response.md)
@@ -61,6 +87,9 @@ Amazon's trademarks and trade dress may not be used in
 + [Monitoring and logging for AWS Support](monitoring-overview.md)
    + [Monitoring AWS Support cases with Amazon EventBridge](event-bridge-support.md)
    + [Logging AWS Support API calls with AWS CloudTrail](logging-using-cloudtrail.md)
+   + [Logging AWS Support App in Slack API calls using AWS CloudTrail](logging-using-cloudtrail-support-app.md)
++ [Monitoring and logging for AWS Support Plans](monitoring-overview-support-plans.md)
+   + [Logging AWS Support Plans API calls with AWS CloudTrail](logging-using-cloudtrail-support-plans.md)
 + [Monitoring and logging for AWS Trusted Advisor](cloudwatch-ta.md)
    + [Monitoring AWS Trusted Advisor check results with Amazon EventBridge](cloudwatch-events-ta.md)
    + [Creating Amazon CloudWatch alarms to monitor AWS Trusted Advisor metrics](cloudwatch-metrics-ta.md)

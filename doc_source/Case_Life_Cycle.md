@@ -28,7 +28,7 @@ If you exceed service quotas for your calls to AWS Support, see the following in
 
 ### Using IAM with the AWS Support API<a name="IAM_support"></a>
 
-AWS Identity and Access Management \(IAM\) is supported by the AWS Support API\. For more information, see [Access permissions for AWS Support](accessing-support.md)\.
+AWS Identity and Access Management \(IAM\) is supported by the AWS Support API\. For more information, see [Manage access for AWS Support](accessing-support.md)\.
 
 ## Create an AWS Support client<a name="getclient"></a>
 

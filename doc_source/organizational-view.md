@@ -33,9 +33,9 @@ You enable organizational view from the Trusted Advisor console\.
 
 1. Sign in as an administrator in the organization's management account and open the AWS Trusted Advisor console at [https://console\.aws\.amazon\.com/trustedadvisor](https://console.aws.amazon.com/trustedadvisor/)\.
 
-1. In the navigation pane, choose **Organizational view**\.
+1. In the navigation pane, under **Preferences**, choose **Your organization**\.
 
-1. Choose **Enable organizational view**\.
+1. Under **Enable trusted access with AWS Organizations**, turn on **Enabled**\.
 
 **Note**  
 Enabling organizational view for the management account doesn’t provide the same checks for all member accounts\. For example, if your member accounts all have Basic Support, those accounts won’t have the same checks available as your management account\. The AWS Support plan determines which Trusted Advisor checks are available for an account\. 

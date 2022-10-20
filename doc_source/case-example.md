@@ -10,7 +10,7 @@ If you have the Basic Support plan, you can't create a technical support case\.
 
 1. **Service** – If your question affects multiple services, choose the service that's most applicable\.
 
-1. **Category** – Choose the category that best fits your use case\.\. When you choose a category, links to information that might resolve your problem appear below\.
+1. **Category** – Choose the category that best fits your use case\. When you choose a category, links to information that might resolve your problem appear below\.
 
 1. **Severity** – Customers with a paid support plan can choose the **General guidance** \(1\-day response time\) or **System impaired** \(12\-hour response time\) severity level\. Customers with a Business Support plan can also choose **Production system impaired** \(4\-hour response\) or **Production system down** \(1\-hour response\)\. Customers with an Enterprise On\-Ramp or Enterprise Support plan can choose **Business\-critical system down** \(15\-minute response for Enterprise Support and 30\-minute response for Enterprise On\-Ramp\)\.
 
@@ -24,9 +24,11 @@ After you specify the case type and classification, you can specify the descript
 
 1. **Subject** – Enter a title that briefly describes your issue\.
 
-1. **Description** – This is the most important information that you provide to AWS Support\. For most service and category combinations, a prompt suggests information that's most helpful for the fastest resolution\. For more information, see [Describing your problem](case-management.md#describing-your-problem)\.
+1. **Description** – Describe your support case\. This is the most important information that you provide to AWS Support\. For some service and category combinations, a prompt appears with related information\. Use these links to help resolve your issue\. For more information, see [Describing your problem](case-management.md#describing-your-problem)\.
 
-1. **Attachments** – Screenshots and other attachments can help support agents resolve your case faster\.
+1. **Attachments** – Attach screenshots and other files that can help support agents resolve your case faster\.
+
+   
 
 After you add your case details, you can choose how you want to be contacted\.
 

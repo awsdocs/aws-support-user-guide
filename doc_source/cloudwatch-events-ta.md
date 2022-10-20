@@ -12,7 +12,7 @@ For more information about on how to use EventBridge and Lambda functions to aut
 
 **Notes**  
 Trusted Advisor delivers events on a best effort basis\. Events are not always guaranteed to be delivered to EventBridge\.
-You must have an AWS Support plan to create a rule for Trusted Advisor checks\. For more information, see [Changing your AWS Support plan](changing-support-plans.md)\.
+You must have an AWS Support plan to create a rule for Trusted Advisor checks\. For more information, see [Changing AWS Support Plans](changing-support-plans.md)\.
 
 Follow this procedure to create an EventBridge rule for Trusted Advisor\. Before you create event rules, do the following:
 + Familiarize yourself with events, rules, and targets in EventBridge\. For more information, see [What is Amazon EventBridge?](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html) in the *Amazon EventBridge User Guide*\.

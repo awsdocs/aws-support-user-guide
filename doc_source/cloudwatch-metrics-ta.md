@@ -145,7 +145,7 @@ You can sign in to the CloudWatch console and view the available metrics for Tru
 
 ### View Trusted Advisor metrics \(CLI\)<a name="view-metrics-aws-cli"></a>
 
-You can use the [aws cloudwatch list\-metrics](https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/list-metrics.html) AWS CLI command to view available metrics for Trusted Advisor\. 
+You can use the [list\-metrics](https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/list-metrics.html) AWS CLI command to view available metrics for Trusted Advisor\. 
 
 **Example : List all metrics for Trusted Advisor**  
 The following example specifies the `AWS/TrustedAdvisor` namespace to view all metrics for Trusted Advisor\.  
